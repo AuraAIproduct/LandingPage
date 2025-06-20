@@ -3,8 +3,15 @@ import { ArrowRight, Play, Shield } from 'lucide-react';
 import NetworkAnimation from './NetworkAnimation';
 
 const Hero: React.FC = () => {
+  const scrollToDemo = () => {
+    const demoSection = document.getElementById('demo-request');
+    if (demoSection) {
+      demoSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="relative min-h-screen flex items-center pt-4 bg-black">
+    <section className="relative min-h-screen flex items-center pt-24 bg-black">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%2306B6D4%22%20fill-opacity%3D%220.03%22%3E%3Cpath%20d%3D%22m36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
       {/* Glassmorphism Panel */}
@@ -16,7 +23,7 @@ const Hero: React.FC = () => {
             <div className="relative p-16">
               <div className="grid lg:grid-cols-2 gap-16 items-center">
                 <div className="space-y-10">
-                  <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 backdrop-blur-sm border border-purple-500/20 text-purple-400 rounded-full text-sm font-medium">
+                  <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 backdrop-blur-sm border border-purple-500/20 text-purple-400 rounded-full text-sm font-medium mt-16">
                     <Shield className="w-4 h-4 mr-2" />
                     Intelligence Uncompromised. Privacy Unmatched.
                   </div>
@@ -36,15 +43,23 @@ const Hero: React.FC = () => {
                   </div>
                   
                   <div className="flex flex-col sm:flex-row gap-6">
-                    <button className="group bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-5 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl hover:shadow-blue-500/25">
+                    <button 
+                      onClick={scrollToDemo}
+                      className="group bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-5 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl hover:shadow-blue-500/25"
+                    >
                       Request a Demo
                       <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </button>
                     
-                    <button className="group bg-white/5 backdrop-blur-sm text-gray-300 px-10 py-5 rounded-xl font-semibold text-lg border border-gray-600 hover:border-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center">
+                    <a 
+                      href="https://www.tella.tv/video/lychee-demo-1-7hun" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="group bg-white/5 backdrop-blur-sm text-gray-300 px-10 py-5 rounded-xl font-semibold text-lg border border-gray-600 hover:border-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center"
+                    >
                       <Play className="mr-2 w-5 h-5" />
-                      Watch Overview
-                    </button>
+                      Watch Demo
+                    </a>
                   </div>
                   
                   <div className="flex items-center space-x-12 pt-6">
