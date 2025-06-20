@@ -13,6 +13,14 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMobileMenuOpen(false); // Close mobile menu after clicking
+  };
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-black/95 backdrop-blur-md shadow-lg shadow-blue-500/10' : 'bg-transparent'
@@ -28,10 +36,28 @@ const Header: React.FC = () => {
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-gray-300 hover:text-purple-400 transition-colors">Features</a>
-            <a href="#how-it-works" className="text-gray-300 hover:text-purple-400 transition-colors">How It Works</a>
-            <a href="#about" className="text-gray-300 hover:text-purple-400 transition-colors">About</a>
-            <button className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-blue-500/25">
+            <button 
+              onClick={() => scrollToSection('features')}
+              className="text-gray-300 hover:text-purple-400 transition-colors"
+            >
+              Features
+            </button>
+            <button 
+              onClick={() => scrollToSection('how-it-works')}
+              className="text-gray-300 hover:text-purple-400 transition-colors"
+            >
+              How It Works
+            </button>
+            <button 
+              onClick={() => scrollToSection('about')}
+              className="text-gray-300 hover:text-purple-400 transition-colors"
+            >
+              About
+            </button>
+            <button 
+              onClick={() => scrollToSection('demo-request')}
+              className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-blue-500/25"
+            >
               Request Demo
             </button>
           </nav>
@@ -48,10 +74,28 @@ const Header: React.FC = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-black/95 backdrop-blur-md border-t border-gray-800">
           <div className="px-4 py-2 space-y-2">
-            <a href="#features" className="block py-2 text-gray-300 hover:text-purple-400 transition-colors">Features</a>
-            <a href="#how-it-works" className="block py-2 text-gray-300 hover:text-purple-400 transition-colors">How It Works</a>
-            <a href="#about" className="block py-2 text-gray-300 hover:text-purple-400 transition-colors">About</a>
-            <button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-2 rounded-lg mt-2 hover:from-blue-700 hover:to-blue-800 transition-all duration-300">
+            <button 
+              onClick={() => scrollToSection('features')}
+              className="block w-full text-left py-2 text-gray-300 hover:text-purple-400 transition-colors"
+            >
+              Features
+            </button>
+            <button 
+              onClick={() => scrollToSection('how-it-works')}
+              className="block w-full text-left py-2 text-gray-300 hover:text-purple-400 transition-colors"
+            >
+              How It Works
+            </button>
+            <button 
+              onClick={() => scrollToSection('about')}
+              className="block w-full text-left py-2 text-gray-300 hover:text-purple-400 transition-colors"
+            >
+              About
+            </button>
+            <button 
+              onClick={() => scrollToSection('demo-request')}
+              className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-2 rounded-lg mt-2 hover:from-blue-700 hover:to-blue-800 transition-all duration-300"
+            >
               Request Demo
             </button>
           </div>
