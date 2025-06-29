@@ -15,16 +15,16 @@ const Footer: React.FC = () => {
               <span className="text-xl font-bold">Aura</span>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Intelligence Uncompromised. Privacy Unmatched. The hybrid AI agent network designed for financial institutions that demand both advanced capabilities and complete data sovereignty.
+              Intelligence Uncompromised. Privacy Unmatched. The hybrid AI agent network designed for enterprises that demand both advanced capabilities and complete data sovereignty.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">
+              <a href="https://www.linkedin.com/in/arnav-arora-12a280189/" className="text-gray-400 hover:text-purple-400 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">
+              <a href="https://github.com/AuraAIproduct" className="text-gray-400 hover:text-purple-400 transition-colors">
                 <Github className="w-5 h-5" />
               </a>
             </div>
@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center text-gray-400">
                 <Phone className="w-4 h-4 mr-2" />
-                +1 (555) 123-4567
+                +1 (470) 747-9488
               </li>
             </ul>
             <div className="mt-6">

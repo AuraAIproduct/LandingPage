@@ -53,7 +53,7 @@ const DemoRequest: React.FC = () => {
             Ready to see Aura in action?
           </h2>
           <p className="text-xl text-gray-300">
-            Experience the future of private, autonomous business automation for finance.
+            Experience the future of private, autonomous business automation for enterprise.
           </p>
         </div>
         

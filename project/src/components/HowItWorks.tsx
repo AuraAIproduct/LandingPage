@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Download, Users, GitBranch, BarChart3, ArrowRight } from 'lucide-react';
+import { Download, Users, GitBranch, BarChart3, ArrowRight, Cpu, Shield, Settings, Network } from 'lucide-react';
 
 const HowItWorks: React.FC = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -7,30 +7,26 @@ const HowItWorks: React.FC = () => {
   const steps = [
     {
       icon: Download,
-      title: "Install & Connect",
-      description: "Every device becomes a node in your secure agent network, ready to automate and collaborate.",
-      details: "Deploy Aura agents across your organization's devices in minutes. Each installation creates a secure node that can process data locally while maintaining connection to your private network.",
+      title: "Install Aura on Any Device",
+      details: "Install Aura using Docker containers on any laptop, desktop, or server. Each installation creates a secure node that processes data locally while connecting to your private network.",
       color: "from-emerald-500 to-teal-500"
     },
     {
-      icon: Users,
+      icon: Cpu,
       title: "Choose Your Agents",
-      description: "Start with essential finance workflows—expand or import new ones as needed.",
-      details: "Begin with pre-built agents for accounting, compliance, reporting, and risk management. Customize workflows or import specialized agents as your needs evolve.",
+      details: "Choose from pre-built agents for document processing, data analysis, and communication. Add specialized agents as your requirements grow.",
       color: "from-cyan-500 to-blue-500"
     },
     {
-      icon: GitBranch,
-      title: "Hybrid Orchestration",
-      description: "Local agents handle sensitive data; cloud-based agents assist where needed, with no direct access to confidential information.",
-      details: "Smart routing ensures sensitive financial data never leaves your premises while leveraging cloud capabilities for non-sensitive computational tasks.",
+      icon: Network,
+      title: "Connect & Collaborate Securely",
+      details: "Agents work together using secure internal protocols. Sensitive data stays within your perimeter while enabling complex workflow automation.",
       color: "from-purple-500 to-indigo-500"
     },
     {
-      icon: BarChart3,
-      title: "Privacy Dashboard",
-      description: "Visual interface to manage agent permissions, workflow routing, and data sharing in real time.",
-      details: "Monitor all agent activity, set data sensitivity levels, and control which workflows can access external resources—all from a unified dashboard.",
+      icon: Settings,
+      title: "Stay in Control with Privacy Dashboard",
+      details: "Use the dashboard to set data sensitivity levels, control workflow access, and ensure compliance. Put data sovereignty directly in your hands.",
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -43,7 +39,7 @@ const HowItWorks: React.FC = () => {
             How Aura Works
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Simple deployment, powerful automation, complete control—get your hybrid AI network running in hours, not months.
+            Simple deployment, powerful automation, complete control—get your private AI network running in hours.
           </p>
         </div>
         

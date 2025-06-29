@@ -1,95 +1,77 @@
 import * as React from 'react';
-import { Network, GitMerge, Layers, Eye, Shield, Zap, Database, Lock, Settings, BarChart3, Cpu, Globe } from 'lucide-react';
+import { Lock, Network, Database, Brain, Shield, Cpu } from 'lucide-react';
 
 const Features: React.FC = () => {
   const features = [
     {
-      icon: Network,
-      title: "Hybrid Agent Network",
-      description: "Combine local device agents with access to advanced, privacy-compliant cloud models—your team gets the best of both worlds without sacrificing control.",
-      highlight: "Best of Both Worlds",
-      color: "from-purple-500 to-indigo-500",
-      bgColor: "from-purple-50 to-indigo-50",
-      textColor: "text-purple-600"
+      icon: Lock,
+      title: "Total Privacy & Control",
+      description: "Your sensitive data never leaves your secure perimeter. Aura deploys AI agents directly within your existing network, leveraging advanced privacy-preserving technologies like Federated Learning and Homomorphic Encryption.",
+      highlight: "Privacy by Design",
+      color: "from-green-500 to-emerald-500",
+      bgColor: "from-green-50 to-emerald-50",
+      textColor: "text-green-600"
     },
     {
-      icon: Settings,
-      title: "Dynamic Privacy Control",
-      description: "Instantly manage which agents and workflows use local resources or secure external processing, based on your data sensitivity and compliance needs.",
-      highlight: "Real-time Control",
+      icon: Network,
+      title: "Decentralized Intelligence",
+      description: "Containerized agent network operates within your private infrastructure. Distributed architecture eliminates single points of failure and enables parallel processing for always-available, robust intelligence.",
+      highlight: "Always Available",
       color: "from-blue-500 to-cyan-500",
       bgColor: "from-blue-50 to-cyan-50",
       textColor: "text-blue-600"
     },
     {
       icon: Database,
-      title: "Data Sovereignty",
-      description: "Sensitive company data stays local by default; only non-sensitive tasks interact with external models.",
-      highlight: "Local by Default",
+      title: "Multi-Modal Data Unification",
+      description: "Ingest and process data from any enterprise source—databases, documents, emails, and audio recordings. Transform fragmented data into a unified, searchable knowledge base.",
+      highlight: "Unified Data View",
+      color: "from-purple-500 to-indigo-500",
+      bgColor: "from-purple-50 to-indigo-50",
+      textColor: "text-purple-600"
+    },
+    {
+      icon: Brain,
+      title: "Semantic Intelligence",
+      description: "Transform data into high-dimensional vector embeddings stored in your local vector database. Enable semantic search and complex analytical tasks with fine-tuned AI agents that understand context and meaning.",
+      highlight: "Semantic Search",
       color: "from-indigo-500 to-purple-500",
       bgColor: "from-indigo-50 to-purple-50",
       textColor: "text-indigo-600"
     },
     {
       icon: Shield,
-      title: "Enterprise-Grade Security",
-      description: "Multi-level access controls, encryption standards, and a privacy dashboard for real-time oversight.",
-      highlight: "Bank-Level Security",
+      title: "Regulatory Ready",
+      description: "Instant compliance with GDPR, HIPAA, and other stringent privacy standards. Central dashboard provides granular control over data processing, sharing, and privacy-preserving techniques applied to workflows.",
+      highlight: "Compliance Ready",
       color: "from-violet-500 to-purple-500",
       bgColor: "from-violet-50 to-purple-50",
       textColor: "text-violet-600"
     },
     {
-      icon: Lock,
-      title: "Compliance Ready",
-      description: "Built with financial regulations in mind, ensuring your AI workflows meet the strictest compliance requirements.",
-      highlight: "Regulation Compliant",
-      color: "from-blue-600 to-indigo-600",
-      bgColor: "from-blue-50 to-indigo-50",
-      textColor: "text-blue-600"
-    },
-    {
-      icon: GitMerge,
-      title: "Dynamic Workflow Routing",
-      description: "Seamlessly switch between local and external processing, always under your control with smart data routing decisions.",
-      highlight: "Smart Routing",
-      color: "from-purple-600 to-violet-600",
-      bgColor: "from-purple-50 to-violet-50",
-      textColor: "text-purple-600"
-    },
-    {
-      icon: Eye,
-      title: "Real-Time Oversight",
-      description: "Monitor agent activity and manage permissions with a unified dashboard providing complete visibility and granular controls.",
-      highlight: "Complete Visibility",
-      color: "from-indigo-600 to-blue-600",
-      bgColor: "from-indigo-50 to-blue-50",
-      textColor: "text-indigo-600"
-    },
-    {
       icon: Cpu,
-      title: "Local Processing Power",
-      description: "Leverage your existing hardware for AI processing, reducing cloud dependency while maintaining high performance.",
-      highlight: "Hardware Optimized",
-      color: "from-violet-600 to-purple-600",
-      bgColor: "from-violet-50 to-purple-50",
-      textColor: "text-violet-600"
+      title: "Zero Cloud Dependency",
+      description: "Complete independence from external cloud services for sensitive data processing. Works offline, scales with your team, and ensures absolute control over your data and AI operations.",
+      highlight: "Offline Operation",
+      color: "from-emerald-600 to-teal-600",
+      bgColor: "from-emerald-50 to-teal-50",
+      textColor: "text-emerald-600"
     }
   ];
 
   return (
-    <section id="features" className="pt-20 pb-12 bg-black">
+    <section id="features" className="pt-32 pb-12 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
-            Enterprise AI Without Compromise
+            Unique Value Propositions
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Advanced capabilities designed specifically for financial institutions that demand both intelligence and privacy.
+            Advanced capabilities designed specifically for enterprises that demand both intelligence and privacy.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => {
             const IconComponent = feature.icon;
             return (
