@@ -52,13 +52,13 @@ const Hero: React.FC = () => {
                     </button>
                     
                     <a 
-                      href="https://www.tella.tv/video/lychee-demo-1-7hun" 
+                      href="https://docs.google.com/presentation/d/1oVor9xozqoCZ_bbSmVy8zMgH8CgfumEpkQanhbGOntU/edit?usp=sharing" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="group bg-white/5 backdrop-blur-sm text-gray-300 px-10 py-5 rounded-xl font-semibold text-lg border border-gray-600 hover:border-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center"
                     >
                       <Play className="mr-2 w-5 h-5" />
-                      View Platform Demo
+                      View Pitch Deck
                     </a>
                   </div>
                   
