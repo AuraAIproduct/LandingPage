@@ -1,5 +1,19 @@
 import React from 'react';
 import { Laptop, Monitor, Lock, Server, Cpu, Database, User, FileText, Mail, Mic, Building2, Calculator, Users } from 'lucide-react';
+import { 
+  SiGmail, 
+  SiGoogledrive, 
+  SiSalesforce,
+  SiZillow,
+  SiDropbox,
+  SiBox
+} from 'react-icons/si';
+import { 
+  FaHome,
+  FaBuilding,
+  FaFileAlt,
+  FaEnvelope
+} from 'react-icons/fa';
 
 const NetworkAnimation: React.FC = () => {
   return (
@@ -41,18 +55,18 @@ const NetworkAnimation: React.FC = () => {
           <User className="w-8 h-8 text-slate-300" />
         </div>
 
-        {/* Document/Data Source Nodes */}
+        {/* Real Estate Tool Nodes */}
         <div className="absolute left-[25%] top-[15%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-slate-600/50 bg-slate-800/30 backdrop-blur-sm device-node">
-          <FileText className="w-6 h-6 text-slate-400" />
+          <SiGoogledrive className="w-6 h-6 text-slate-400" />
         </div>
         <div className="absolute left-[75%] top-[15%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-slate-600/50 bg-slate-800/30 backdrop-blur-sm device-node">
-          <Mail className="w-6 h-6 text-slate-400" />
+          <SiGmail className="w-6 h-6 text-slate-400" />
         </div>
         <div className="absolute left-[20%] top-[80%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-slate-600/50 bg-slate-800/30 backdrop-blur-sm device-node">
-          <Building2 className="w-6 h-6 text-slate-400" />
+          <SiSalesforce className="w-6 h-6 text-slate-400" />
         </div>
         <div className="absolute left-[80%] top-[80%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-slate-600/50 bg-slate-800/30 backdrop-blur-sm device-node">
-          <Calculator className="w-6 h-6 text-slate-400" />
+          <SiZillow className="w-6 h-6 text-slate-400" />
         </div>
 
         {/* Agent Nodes */}
@@ -79,15 +93,15 @@ const NetworkAnimation: React.FC = () => {
           <Lock className="absolute -top-1 -right-1 w-4 h-4 text-emerald-400 bg-slate-800 rounded-full p-0.5 border border-emerald-500/50 lock-pulse" />
         </div>
 
-        {/* Data Source Nodes */}
+        {/* Additional Real Estate Tools */}
         <div className="absolute left-[15%] top-[40%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-slate-600/50 bg-slate-800/30 backdrop-blur-sm data-source-node">
-          <FileText className="w-6 h-6 text-slate-400" />
+          <FaFileAlt className="w-6 h-6 text-slate-400" />
         </div>
         <div className="absolute left-[85%] top-[30%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-slate-600/50 bg-slate-800/30 backdrop-blur-sm data-source-node">
-          <Mail className="w-6 h-6 text-slate-400" />
+          <SiDropbox className="w-6 h-6 text-slate-400" />
         </div>
         <div className="absolute left-[90%] top-[70%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-slate-600/50 bg-slate-800/30 backdrop-blur-sm data-source-node">
-          <Users className="w-6 h-6 text-slate-400" />
+          <SiBox className="w-6 h-6 text-slate-400" />
         </div>
       </div>
 
