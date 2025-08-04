@@ -14,8 +14,8 @@ const HowItWorks: React.FC = () => {
       icon: Upload,
       title: "Upload Your Documents",
       description: "Drop in contracts, property reports, or any real estate documents. I built this to handle the same files my parents were drowning in.",
-      color: "from-blue-500 to-cyan-500",
-      bgColor: "from-blue-500/10 to-cyan-500/10",
+      color: "from-blue-500 to-blue-600",
+      bgColor: "from-blue-500/10 to-blue-600/10",
       borderColor: "border-blue-500/20",
       iconColor: "text-blue-400"
     },
@@ -23,28 +23,28 @@ const HowItWorks: React.FC = () => {
       icon: Search,
       title: "Get Instant Answers",
       description: "AI analyzes your documents and highlights deadlines, red flags, and opportunities. No more missing important details buried in paperwork.",
-      color: "from-purple-500 to-indigo-500",
-      bgColor: "from-purple-500/10 to-indigo-500/10",
-      borderColor: "border-purple-500/20",
-      iconColor: "text-purple-400"
+      color: "from-cyan-500 to-blue-500",
+      bgColor: "from-cyan-500/10 to-blue-500/10",
+      borderColor: "border-cyan-500/20",
+      iconColor: "text-cyan-400"
     },
     {
       icon: Users,
       title: "Stay on Top of Leads",
       description: "Automatically tracks client communications and follows up at the right time. Based on patterns I saw that actually work in real estate.",
-      color: "from-emerald-500 to-teal-500",
-      bgColor: "from-emerald-500/10 to-teal-500/10",
-      borderColor: "border-emerald-500/20",
-      iconColor: "text-emerald-400"
+      color: "from-indigo-500 to-blue-500",
+      bgColor: "from-indigo-500/10 to-blue-500/10",
+      borderColor: "border-indigo-500/20",
+      iconColor: "text-indigo-400"
     },
     {
       icon: TrendingUp,
       title: "Close More Deals",
       description: "With better organization and fewer missed opportunities, you'll close more deals with less stress. Simple as that.",
-      color: "from-orange-500 to-red-500",
-      bgColor: "from-orange-500/10 to-red-500/10",
-      borderColor: "border-orange-500/20",
-      iconColor: "text-orange-400"
+      color: "from-green-500 to-emerald-500",
+      bgColor: "from-green-500/10 to-emerald-500/10",
+      borderColor: "border-green-500/20",
+      iconColor: "text-green-400"
     }
   ];
 
@@ -85,7 +85,7 @@ const HowItWorks: React.FC = () => {
   };
 
   return (
-    <section id="how-it-works" className="py-32 bg-gradient-to-br from-slate-900 via-purple-900/10 to-slate-900">
+    <section id="how-it-works" className="py-32 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -121,10 +121,10 @@ const HowItWorks: React.FC = () => {
                 key={index}
                 variants={cardVariants}
                 whileHover={{ y: -10, scale: 1.02 }}
-                className="group relative p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-purple-500/30 transition-all duration-300 overflow-hidden"
+                className="group relative p-8 bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-blue-500/30 transition-all duration-300 overflow-hidden"
               >
                 {/* Step Number */}
-                <div className="absolute top-4 right-4 w-8 h-8 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                <div className="absolute top-4 right-4 w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
                   {index + 1}
                 </div>
                 
@@ -156,7 +156,7 @@ const HowItWorks: React.FC = () => {
                     transition={{ duration: 2, repeat: Infinity, delay: index * 0.5 }}
                     className="absolute -right-4 top-1/2 transform -translate-y-1/2 hidden lg:block"
                   >
-                    <ArrowRight className="w-6 h-6 text-purple-400" />
+                    <ArrowRight className="w-6 h-6 text-blue-400" />
                   </motion.div>
                 )}
               </motion.div>
@@ -173,7 +173,7 @@ const HowItWorks: React.FC = () => {
         >
           <motion.div 
             variants={itemVariants}
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-2xl font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-2xl hover:shadow-purple-500/25"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-2xl font-semibold text-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25"
           >
             <CheckCircle className="w-5 h-5 mr-2" />
             Ready to Stop Losing Deals?

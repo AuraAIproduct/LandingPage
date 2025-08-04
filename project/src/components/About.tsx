@@ -68,7 +68,7 @@ const About: React.FC = () => {
   return (
     <>
       {/* About Section */}
-      <section id="about" className="py-32 bg-gradient-to-br from-slate-900 via-purple-900/10 to-slate-900">
+      <section id="about" className="py-32 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             ref={ref}
@@ -100,7 +100,7 @@ const About: React.FC = () => {
             <motion.div 
               variants={cardVariants}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="group relative p-8 bg-gradient-to-br from-blue-500/10 to-blue-600/10 backdrop-blur-sm rounded-3xl border border-blue-500/20 hover:border-blue-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 overflow-hidden"
+              className="group relative p-8 bg-blue-500/10 backdrop-blur-sm rounded-3xl border border-blue-500/20 hover:border-blue-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative z-10">
@@ -121,14 +121,14 @@ const About: React.FC = () => {
             <motion.div 
               variants={cardVariants}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="group relative p-8 bg-gradient-to-br from-purple-500/10 to-purple-600/10 backdrop-blur-sm rounded-3xl border border-purple-500/20 hover:border-purple-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20 overflow-hidden"
+              className="group relative p-8 bg-cyan-500/10 backdrop-blur-sm rounded-3xl border border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative z-10">
                 <motion.div
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
-                  className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg"
+                  className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg"
                 >
                   <Building2 className="w-8 h-8 text-white" />
                 </motion.div>
@@ -142,7 +142,7 @@ const About: React.FC = () => {
             <motion.div 
               variants={cardVariants}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="group relative p-8 bg-gradient-to-br from-indigo-500/10 to-indigo-600/10 backdrop-blur-sm rounded-3xl border border-indigo-500/20 hover:border-indigo-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/20 overflow-hidden"
+              className="group relative p-8 bg-indigo-500/10 backdrop-blur-sm rounded-3xl border border-indigo-500/20 hover:border-indigo-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/20 overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative z-10">
@@ -164,7 +164,7 @@ const About: React.FC = () => {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-32 bg-gradient-to-br from-slate-900 via-purple-900/5 to-slate-900">
+      <section id="faq" className="py-32 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             variants={containerVariants}
@@ -197,7 +197,7 @@ const About: React.FC = () => {
                 key={index}
                 variants={cardVariants}
                 whileHover={{ y: -5 }}
-                className="group bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-purple-500/30 overflow-hidden transition-all duration-300"
+                className="group bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-blue-500/30 overflow-hidden transition-all duration-300"
               >
                 <motion.button
                   className="w-full px-8 py-8 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-200"
@@ -205,7 +205,7 @@ const About: React.FC = () => {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <h3 className="text-lg font-semibold text-white pr-4 group-hover:text-purple-300 transition-colors">
+                  <h3 className="text-lg font-semibold text-white pr-4 group-hover:text-blue-300 transition-colors">
                     {faq.question}
                   </h3>
                   <motion.div
@@ -213,9 +213,9 @@ const About: React.FC = () => {
                     transition={{ duration: 0.3 }}
                   >
                     {openFaq === index ? (
-                      <ChevronUp className="w-6 h-6 text-purple-400 flex-shrink-0" />
+                      <ChevronUp className="w-6 h-6 text-blue-400 flex-shrink-0" />
                     ) : (
-                      <ChevronDown className="w-6 h-6 text-gray-400 flex-shrink-0 group-hover:text-purple-400 transition-colors" />
+                      <ChevronDown className="w-6 h-6 text-gray-400 flex-shrink-0 group-hover:text-blue-400 transition-colors" />
                     )}
                   </motion.div>
                 </motion.button>
