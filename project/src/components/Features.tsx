@@ -2,46 +2,13 @@ import * as React from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { TypeAnimation } from 'react-type-animation';
 
 const Features: React.FC = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
-
-  const [currentText, setCurrentText] = React.useState(0);
-  const [displayText, setDisplayText] = React.useState('');
-  const [isTyping, setIsTyping] = React.useState(false);
-
-  const texts = [
-    "Atlas is an AI copilot for real estate teams.",
-    "Replaces fragmented tools with one intelligent app.",
-    "Handles contracts, compliance, and client follow-ups.",
-    "No more missed deadlines or compliance landmines."
-  ];
-
-  React.useEffect(() => {
-    if (!inView) return;
-
-    const typeText = async () => {
-      const currentFullText = texts[currentText];
-      setIsTyping(true);
-      setDisplayText('');
-
-      for (let i = 0; i < currentFullText.length; i++) {
-        setDisplayText(currentFullText.slice(0, i + 1));
-        await new Promise(resolve => setTimeout(resolve, 30));
-      }
-
-      setIsTyping(false);
-      await new Promise(resolve => setTimeout(resolve, 1500));
-
-      setCurrentText((prev) => (prev + 1) % texts.length);
-    };
-
-    const interval = setInterval(typeText, 3000);
-    return () => clearInterval(interval);
-  }, [currentText, inView]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -98,14 +65,24 @@ const Features: React.FC = () => {
           >
             <div className="h-24 flex items-center justify-start">
               <div className="text-2xl lg:text-3xl text-white font-mono leading-relaxed">
-                {displayText}
-                <motion.span
-                  animate={{ opacity: [1, 0, 1] }}
-                  transition={{ duration: 0.6, repeat: Infinity }}
-                  className="ml-1 text-blue-400"
-                >
-                  |
-                </motion.span>
+                <TypeAnimation
+                  sequence={[
+                    'Atlas is an AI copilot for real estate teams.',
+                    1000,
+                    'Replaces fragmented tools with one intelligent app.',
+                    1000,
+                    'Handles contracts, compliance, and client follow-ups.',
+                    1000,
+                    'No more missed deadlines or compliance landmines.',
+                    1000,
+                  ]}
+                  wrapper="span"
+                  speed={50}
+                  repeat={Infinity}
+                  cursor={true}
+                  cursorStyle="|"
+                  className="text-blue-400"
+                />
               </div>
             </div>
           </motion.div>
