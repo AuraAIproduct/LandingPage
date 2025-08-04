@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, Users, Target, Award } from 'lucide-react';
+import { ChevronDown, ChevronUp, Users, Target, Award, Heart, Zap, Shield } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const About: React.FC = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
 
   const faqs = [
     {
@@ -23,90 +29,215 @@ const About: React.FC = () => {
     setOpenFaq(openFaq === index ? null : index);
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 50, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { y: 30, opacity: 0, scale: 0.9 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <>
-      {/* About the Cofounders Section */}
-      <section id="about" className="py-20 bg-black">
+      {/* About Section */}
+      <section id="about" className="py-32 bg-gradient-to-br from-slate-900 via-purple-900/10 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
+          <motion.div
+            ref={ref}
+            variants={containerVariants}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            className="text-center mb-20"
+          >
+            <motion.h2 
+              variants={itemVariants}
+              className="text-5xl lg:text-6xl font-bold text-white mb-6"
+            >
               We Built This Because We Had To
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            </motion.h2>
+            <motion.p 
+              variants={itemVariants}
+              className="text-xl text-gray-300 max-w-3xl mx-auto"
+            >
               After losing a $2.4M deal because we missed a deadline buried in page 47 of a contract, we decided enough was enough. We're real estate agents who learned to code, not the other way around.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-8 bg-gradient-to-br from-blue-500/15 to-blue-600/15 backdrop-blur-sm rounded-2xl border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
-              <Users className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-3">Who We Are</h3>
-              <p className="text-gray-300">
-                Former agents who got tired of losing deals to paperwork. We know the pain of missing deadlines, the stress of compliance, and the frustration of watching deals die in escrow.
-              </p>
-            </div>
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            className="grid md:grid-cols-3 gap-8"
+          >
+            <motion.div 
+              variants={cardVariants}
+              whileHover={{ y: -10, scale: 1.02 }}
+              className="group relative p-8 bg-gradient-to-br from-blue-500/10 to-blue-600/10 backdrop-blur-sm rounded-3xl border border-blue-500/20 hover:border-blue-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative z-10">
+                <motion.div
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                  className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg"
+                >
+                  <Users className="w-8 h-8 text-white" />
+                </motion.div>
+                <h3 className="text-xl font-bold text-white mb-4">Who We Are</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Former agents who got tired of losing deals to paperwork. We know the pain of missing deadlines, the stress of compliance, and the frustration of watching deals die in escrow.
+                </p>
+              </div>
+            </motion.div>
             
-            <div className="text-center p-8 bg-gradient-to-br from-purple-500/15 to-purple-600/15 backdrop-blur-sm rounded-2xl border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
-              <Target className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-3">Our Mission</h3>
-              <p className="text-gray-300">
-                Stop agents from losing deals to stupid paperwork mistakes. We're building tools that actually work in the real world, not some Silicon Valley fantasy of what real estate should be.
-              </p>
-            </div>
+            <motion.div 
+              variants={cardVariants}
+              whileHover={{ y: -10, scale: 1.02 }}
+              className="group relative p-8 bg-gradient-to-br from-purple-500/10 to-purple-600/10 backdrop-blur-sm rounded-3xl border border-purple-500/20 hover:border-purple-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20 overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative z-10">
+                <motion.div
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                  className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg"
+                >
+                  <Target className="w-8 h-8 text-white" />
+                </motion.div>
+                <h3 className="text-xl font-bold text-white mb-4">Our Mission</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Stop agents from losing deals to stupid paperwork mistakes. We're building tools that actually work in the real world, not some Silicon Valley fantasy of what real estate should be.
+                </p>
+              </div>
+            </motion.div>
             
-            <div className="text-center p-8 bg-gradient-to-br from-indigo-500/15 to-indigo-600/15 backdrop-blur-sm rounded-2xl border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/20">
-              <Award className="w-12 h-12 text-indigo-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-3">Our Values</h3>
-              <p className="text-gray-300">
-                Keep it simple, keep it working, keep your data yours. No fancy buzzwords, no overpromising—just tools that help you close more deals with less stress.
-              </p>
-            </div>
-          </div>
+            <motion.div 
+              variants={cardVariants}
+              whileHover={{ y: -10, scale: 1.02 }}
+              className="group relative p-8 bg-gradient-to-br from-indigo-500/10 to-indigo-600/10 backdrop-blur-sm rounded-3xl border border-indigo-500/20 hover:border-indigo-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/20 overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative z-10">
+                <motion.div
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                  className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg"
+                >
+                  <Heart className="w-8 h-8 text-white" />
+                </motion.div>
+                <h3 className="text-xl font-bold text-white mb-4">Our Values</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Keep it simple, keep it working, keep your data yours. No fancy buzzwords, no overpromising—just tools that help you close more deals with less stress.
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-20 bg-black">
+      <section id="faq" className="py-32 bg-gradient-to-br from-slate-900 via-purple-900/5 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            className="text-center mb-20"
+          >
+            <motion.h2 
+              variants={itemVariants}
+              className="text-5xl lg:text-6xl font-bold text-white mb-6"
+            >
               Frequently Asked Questions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            </motion.h2>
+            <motion.p 
+              variants={itemVariants}
+              className="text-xl text-gray-300 max-w-3xl mx-auto"
+            >
               Get answers to the most common questions about Atlas AI's real estate intelligence platform.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
           
-          <div className="max-w-4xl mx-auto space-y-4">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            className="max-w-4xl mx-auto space-y-6"
+          >
             {faqs.map((faq, index) => (
-              <div 
+              <motion.div 
                 key={index}
-                className="bg-white/5 backdrop-blur-sm rounded-2xl border border-gray-800 overflow-hidden"
+                variants={cardVariants}
+                whileHover={{ y: -5 }}
+                className="group bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-purple-500/30 overflow-hidden transition-all duration-300"
               >
-                <button
-                  className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-200"
+                <motion.button
+                  className="w-full px-8 py-8 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-200"
                   onClick={() => toggleFaq(index)}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                 >
-                  <h3 className="text-lg font-semibold text-white pr-4">
+                  <h3 className="text-lg font-semibold text-white pr-4 group-hover:text-purple-300 transition-colors">
                     {faq.question}
                   </h3>
-                  {openFaq === index ? (
-                    <ChevronUp className="w-5 h-5 text-gray-400 flex-shrink-0" />
-                  ) : (
-                    <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
-                  )}
-                </button>
+                  <motion.div
+                    animate={{ rotate: openFaq === index ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {openFaq === index ? (
+                      <ChevronUp className="w-6 h-6 text-purple-400 flex-shrink-0" />
+                    ) : (
+                      <ChevronDown className="w-6 h-6 text-gray-400 flex-shrink-0 group-hover:text-purple-400 transition-colors" />
+                    )}
+                  </motion.div>
+                </motion.button>
                 
-                {openFaq === index && (
-                  <div className="px-8 pb-6">
+                <motion.div
+                  initial={false}
+                  animate={{ 
+                    height: openFaq === index ? "auto" : 0,
+                    opacity: openFaq === index ? 1 : 0
+                  }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="overflow-hidden"
+                >
+                  <div className="px-8 pb-8">
                     <p className="text-gray-300 leading-relaxed">
                       {faq.answer}
                     </p>
                   </div>
-                )}
-              </div>
+                </motion.div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
     </>
