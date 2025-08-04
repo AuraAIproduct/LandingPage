@@ -32,7 +32,6 @@ const Header: React.FC = () => {
               <Shield className="w-8 h-8 text-purple-400" />
               <div className="absolute inset-0 bg-purple-400/20 rounded-full animate-pulse"></div>
             </div>
-<<<<<<< HEAD
             <span className="text-xl font-bold text-white">Atlas AI</span>
           </div>
           
