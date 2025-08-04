@@ -94,7 +94,7 @@ const Hero: React.FC = () => {
                   Losing Deals
                 </span>{' '}
                 to{' '}
-                <span className="text-gray-300 relative inline-block min-w-[400px]">
+                <span className="text-gray-300 relative inline-block min-w-[400px] h-[120px]">
                   <AnimatePresence mode="wait">
                     <motion.span
                       key={currentPainPoint}
@@ -103,7 +103,7 @@ const Hero: React.FC = () => {
                       animate="center"
                       exit="exit"
                       transition={{ duration: 0.5, ease: "easeInOut" }}
-                      className="absolute top-0 left-0"
+                      className="absolute top-0 left-0 w-full"
                     >
                       {painPoints[currentPainPoint]}
                     </motion.span>
@@ -111,7 +111,7 @@ const Hero: React.FC = () => {
                 </span>
               </h1>
               
-              <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl">
+              <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl mt-8">
                 Atlas is a deployable AI assistant for real estate agents and ops teams. It handles end-to-end workflows like lead management, showings, contracts, and compliance — replacing fragmented tools with one intelligent app.
               </p>
             </motion.div>
