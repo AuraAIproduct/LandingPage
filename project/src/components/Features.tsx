@@ -9,6 +9,40 @@ const Features: React.FC = () => {
     threshold: 0.1,
   });
 
+  const [currentText, setCurrentText] = React.useState(0);
+  const [displayText, setDisplayText] = React.useState('');
+  const [isTyping, setIsTyping] = React.useState(false);
+
+  const texts = [
+    "Atlas is an AI copilot for real estate teams.",
+    "Replaces fragmented tools with one intelligent app.",
+    "Handles contracts, compliance, and client follow-ups.",
+    "No more missed deadlines or compliance landmines."
+  ];
+
+  React.useEffect(() => {
+    if (!inView) return;
+
+    const typeText = async () => {
+      const currentFullText = texts[currentText];
+      setIsTyping(true);
+      setDisplayText('');
+
+      for (let i = 0; i < currentFullText.length; i++) {
+        setDisplayText(currentFullText.slice(0, i + 1));
+        await new Promise(resolve => setTimeout(resolve, 50));
+      }
+
+      setIsTyping(false);
+      await new Promise(resolve => setTimeout(resolve, 2000));
+
+      setCurrentText((prev) => (prev + 1) % texts.length);
+    };
+
+    const interval = setInterval(typeText, 4000);
+    return () => clearInterval(interval);
+  }, [currentText, inView]);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -62,42 +96,23 @@ const Features: React.FC = () => {
             variants={cardVariants}
             className="bg-white/5 border border-white/10 rounded-2xl p-12 backdrop-blur-sm"
           >
-            <div className="space-y-6">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5, duration: 0.8 }}
-                className="text-2xl lg:text-3xl text-white font-mono leading-relaxed"
+            <div className="h-32 flex items-center justify-center">
+              <motion.p 
+                className="text-3xl lg:text-4xl text-white font-mono leading-relaxed"
+                key={currentText}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
               >
-                <span className="text-blue-400">Atlas</span> is an AI copilot that automates real estate operations, replacing a patchwork of single-use tools with a unified agent for residential and commercial teams.
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.2, duration: 0.8 }}
-                className="text-xl lg:text-2xl text-gray-300 font-mono leading-relaxed"
-              >
-                Atlas connects directly to your MLS, CRM, email, and document vault. When a deal starts, Atlas handles all admin: drafting and verifying contracts, guiding agents through compliance, doing client follow-ups, and chasing down missing pieces—automatically, with full audit trails.
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 2.0, duration: 0.8 }}
-                className="text-lg lg:text-xl text-gray-400 font-mono leading-relaxed"
-              >
-                Atlas gives every user a simple dashboard and chat interface, plus phone and chat assistants. It extracts and unifies context across all their data, proactively handles custom workflows, and ensures every AI output is verifiable.
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 2.8, duration: 0.8 }}
-                className="text-xl lg:text-2xl text-green-400 font-mono font-semibold"
-              >
-                No more missed deadlines, doc chaos, or compliance landmines.
-              </motion.div>
+                {displayText}
+                <motion.span
+                  animate={{ opacity: [1, 0, 1] }}
+                  transition={{ duration: 0.8, repeat: Infinity }}
+                  className="ml-1"
+                >
+                  |
+                </motion.span>
+              </motion.p>
             </div>
           </motion.div>
         </motion.div>
