@@ -88,9 +88,9 @@ const About: React.FC = () => {
               >
                 <FileText className="w-8 h-8 text-white" />
               </motion.div>
-              <h3 className="text-xl font-bold text-white mb-4">Deep Process Knowledge</h3>
+              <h3 className="text-xl font-bold text-white mb-4">Real Estate Expertise</h3>
               <p className="text-gray-300 leading-relaxed">
-                Worked through every aspect of real estate operations, from scheduling to contract review.
+                Built from hands-on experience with every aspect of real estate operations, from lead management to closing deals.
               </p>
             </div>
           </motion.div>
@@ -108,9 +108,9 @@ const About: React.FC = () => {
               >
                 <Building2 className="w-8 h-8 text-white" />
               </motion.div>
-              <h3 className="text-xl font-bold text-white mb-4">Why Existing Tools Failed</h3>
+              <h3 className="text-xl font-bold text-white mb-4">Why Others Failed</h3>
               <p className="text-gray-300 leading-relaxed">
-                Tested multiple AI tools that failed in real-world usage due to generic approaches.
+                Most AI tools are built generically and don't understand the specific challenges real estate teams face daily.
               </p>
             </div>
           </motion.div>
@@ -128,9 +128,9 @@ const About: React.FC = () => {
               >
                 <Phone className="w-8 h-8 text-white" />
               </motion.div>
-              <h3 className="text-xl font-bold text-white mb-4">Built for Real Agents</h3>
+              <h3 className="text-xl font-bold text-white mb-4">Purpose-Built Solution</h3>
               <p className="text-gray-300 leading-relaxed">
-                Created tools that actually understand real estate workflows and agent needs.
+                Atlas is designed specifically for real estate workflows, not adapted from generic business tools.
               </p>
             </div>
           </motion.div>
