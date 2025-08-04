@@ -12,17 +12,10 @@ const Footer: React.FC = () => {
                 <Shield className="w-8 h-8 text-purple-400" />
                 <div className="absolute inset-0 bg-purple-400/20 rounded-full animate-pulse"></div>
               </div>
-<<<<<<< HEAD
-              <span className="text-xl font-bold">Atlas</span>
+              <span className="text-xl font-bold">Atlas AI</span>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Intelligence Uncompromised. Privacy Unmatched. The AI assistant designed for real estate professionals who demand both advanced capabilities and complete data sovereignty.
-=======
-              <span className="text-xl font-bold">Aura</span>
-            </div>
-            <p className="text-gray-400 mb-6 leading-relaxed">
-              Intelligence Uncompromised. Privacy Unmatched. The hybrid AI agent network designed for enterprises that demand both advanced capabilities and complete data sovereignty.
->>>>>>> 0e7cecf723347f29465f8af606b3d42f5b531529
+              Intelligence Uncompromised. Privacy Unmatched. The vertical-specific real estate intelligence platform that connects to your tools and provides intelligent real estate workflows.
             </p>
             <div className="flex space-x-4">
               <a href="https://www.linkedin.com/in/arnav-arora-12a280189/" className="text-gray-400 hover:text-purple-400 transition-colors">
@@ -62,11 +55,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li className="flex items-center text-gray-400">
                 <Mail className="w-4 h-4 mr-2" />
-<<<<<<< HEAD
                 hello@atlas.ai
-=======
-                hello@aura.ai
->>>>>>> 0e7cecf723347f29465f8af606b3d42f5b531529
               </li>
               <li className="flex items-center text-gray-400">
                 <Phone className="w-4 h-4 mr-2" />
@@ -91,30 +80,18 @@ const Footer: React.FC = () => {
         
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="flex flex-wrap items-center space-x-6 text-sm text-gray-400">
-<<<<<<< HEAD
-            <span>© 2024 Atlas. All rights reserved.</span>
-=======
-            <span>© 2024 Aura. All rights reserved.</span>
->>>>>>> 0e7cecf723347f29465f8af606b3d42f5b531529
+            <span>© 2024 Atlas AI. All rights reserved.</span>
             <a href="#" className="hover:text-purple-400 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-purple-400 transition-colors">Terms of Service</a>
             <a href="#" className="hover:text-purple-400 transition-colors">Cookie Policy</a>
           </div>
           
           <div className="flex items-center space-x-4 mt-4 md:mt-0">
-<<<<<<< HEAD
-            <span className="text-sm text-gray-400">Real Estate Focused</span>
+            <span className="text-sm text-gray-400">Multi-Agent AI</span>
             <div className="w-px h-4 bg-gray-700"></div>
-            <span className="text-sm text-gray-400">AI-Powered</span>
+            <span className="text-sm text-gray-400">Tool Integration</span>
             <div className="w-px h-4 bg-gray-700"></div>
-            <span className="text-sm text-gray-400">Privacy First</span>
-=======
-            <span className="text-sm text-gray-400">SOC 2 Certified</span>
-            <div className="w-px h-4 bg-gray-700"></div>
-            <span className="text-sm text-gray-400">ISO 27001</span>
-            <div className="w-px h-4 bg-gray-700"></div>
-            <span className="text-sm text-gray-400">GDPR Compliant</span>
->>>>>>> 0e7cecf723347f29465f8af606b3d42f5b531529
+            <span className="text-sm text-gray-400">Real Estate Intelligence</span>
           </div>
         </div>
       </div>
