@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Laptop, Monitor, Lock, Server, Cpu, Database, User, FileText, Mail, Mic, Building2, Calculator, Users } from 'lucide-react';
+=======
+import { Laptop, Monitor, Lock, Server, Cpu, Database, User, FileText, Mail, Mic } from 'lucide-react';
+>>>>>>> 0e7cecf723347f29465f8af606b3d42f5b531529
 
 const NetworkAnimation: React.FC = () => {
   return (
@@ -10,7 +14,11 @@ const NetworkAnimation: React.FC = () => {
         <line x1="10%" y1="20%" x2="40%" y2="35%" stroke="#6366f1" strokeWidth="1.5" className="connection-line" style={{ animationDelay: '0.8s' }} />
         <line x1="10%" y1="20%" x2="70%" y2="50%" stroke="#6366f1" strokeWidth="1.5" className="connection-line" style={{ animationDelay: '1.2s' }} />
         
+<<<<<<< HEAD
         {/* Document to Agent connections */}
+=======
+        {/* Device to Agent connections */}
+>>>>>>> 0e7cecf723347f29465f8af606b3d42f5b531529
         <line x1="25%" y1="15%" x2="40%" y2="35%" stroke="#6366f1" strokeWidth="1.5" className="connection-line" style={{ animationDelay: '2.4s' }} />
         <line x1="75%" y1="15%" x2="70%" y2="50%" stroke="#6366f1" strokeWidth="1.5" className="connection-line" style={{ animationDelay: '3.2s' }} />
         <line x1="20%" y1="80%" x2="50%" y2="85%" stroke="#6366f1" strokeWidth="1.5" className="connection-line" style={{ animationDelay: '4.0s' }} />
@@ -41,6 +49,7 @@ const NetworkAnimation: React.FC = () => {
           <User className="w-8 h-8 text-slate-300" />
         </div>
 
+<<<<<<< HEAD
         {/* Document/Data Source Nodes */}
         <div className="absolute left-[25%] top-[15%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-slate-600/50 bg-slate-800/30 backdrop-blur-sm device-node">
           <FileText className="w-6 h-6 text-slate-400" />
@@ -53,6 +62,20 @@ const NetworkAnimation: React.FC = () => {
         </div>
         <div className="absolute left-[80%] top-[80%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-slate-600/50 bg-slate-800/30 backdrop-blur-sm device-node">
           <Calculator className="w-6 h-6 text-slate-400" />
+=======
+        {/* Device Nodes */}
+        <div className="absolute left-[25%] top-[15%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-slate-600/50 bg-slate-800/30 backdrop-blur-sm device-node">
+          <Server className="w-6 h-6 text-slate-400" />
+        </div>
+        <div className="absolute left-[75%] top-[15%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-slate-600/50 bg-slate-800/30 backdrop-blur-sm device-node">
+          <Laptop className="w-6 h-6 text-slate-400" />
+        </div>
+        <div className="absolute left-[20%] top-[80%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-slate-600/50 bg-slate-800/30 backdrop-blur-sm device-node">
+          <Monitor className="w-6 h-6 text-slate-400" />
+        </div>
+        <div className="absolute left-[80%] top-[80%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-slate-600/50 bg-slate-800/30 backdrop-blur-sm device-node">
+          <Server className="w-6 h-6 text-slate-400" />
+>>>>>>> 0e7cecf723347f29465f8af606b3d42f5b531529
         </div>
 
         {/* Agent Nodes */}
@@ -87,7 +110,11 @@ const NetworkAnimation: React.FC = () => {
           <Mail className="w-6 h-6 text-slate-400" />
         </div>
         <div className="absolute left-[90%] top-[70%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-slate-600/50 bg-slate-800/30 backdrop-blur-sm data-source-node">
+<<<<<<< HEAD
           <Users className="w-6 h-6 text-slate-400" />
+=======
+          <Mic className="w-6 h-6 text-slate-400" />
+>>>>>>> 0e7cecf723347f29465f8af606b3d42f5b531529
         </div>
       </div>
 
