@@ -65,7 +65,7 @@ const About: React.FC = () => {
             variants={itemVariants}
             className="text-xl text-gray-300 max-w-4xl mx-auto"
           >
-            Six years working alongside my parents as they built their real estate brokerage from scratch.
+            Piloted with real estate teams who know the inner workings of the entire process.
           </motion.p>
         </motion.div>
         
@@ -88,9 +88,9 @@ const About: React.FC = () => {
               >
                 <FileText className="w-8 h-8 text-white" />
               </motion.div>
-              <h3 className="text-xl font-bold text-white mb-4">The Unofficial Assistant</h3>
+              <h3 className="text-xl font-bold text-white mb-4">Deep Process Knowledge</h3>
               <p className="text-gray-300 leading-relaxed">
-                Did everything from scheduling to reviewing contracts and cold calling.
+                Worked through every aspect of real estate operations, from scheduling to contract review.
               </p>
             </div>
           </motion.div>
@@ -110,7 +110,7 @@ const About: React.FC = () => {
               </motion.div>
               <h3 className="text-xl font-bold text-white mb-4">Why Existing Tools Failed</h3>
               <p className="text-gray-300 leading-relaxed">
-                Saw them test several AI tools, but they all failed in real-world usage.
+                Tested multiple AI tools that failed in real-world usage due to generic approaches.
               </p>
             </div>
           </motion.div>
@@ -130,7 +130,7 @@ const About: React.FC = () => {
               </motion.div>
               <h3 className="text-xl font-bold text-white mb-4">Built for Real Agents</h3>
               <p className="text-gray-300 leading-relaxed">
-                Built something that actually understands real estate workflows.
+                Created tools that actually understand real estate workflows and agent needs.
               </p>
             </div>
           </motion.div>

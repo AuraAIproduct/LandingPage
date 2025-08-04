@@ -57,7 +57,7 @@ const Hero: React.FC = () => {
               className="inline-flex items-center px-6 py-3 bg-blue-500/10 border border-blue-500/20 text-blue-300 rounded-full text-sm font-medium"
             >
               <Sparkles className="w-4 h-4 mr-2" />
-              Built from real estate experience
+              Built with real estate teams
             </motion.div>
             
             {/* Main Heading */}
