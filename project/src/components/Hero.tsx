@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { ArrowRight, Play, Sparkles, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -9,40 +9,6 @@ const Hero: React.FC = () => {
     triggerOnce: true,
     threshold: 0.1,
   });
-
-  const [currentText, setCurrentText] = useState(0);
-  const [displayText, setDisplayText] = useState('');
-  const [isTyping, setIsTyping] = useState(false);
-
-  const texts = [
-    "Atlas is an AI copilot for real estate teams",
-    "Replaces fragmented tools with one intelligent app",
-    "Handles contracts, compliance, and client follow-ups",
-    "No more missed deadlines or compliance landmines"
-  ];
-
-  useEffect(() => {
-    if (!inView) return;
-
-    const typeText = async () => {
-      const currentFullText = texts[currentText];
-      setIsTyping(true);
-      setDisplayText('');
-
-      for (let i = 0; i < currentFullText.length; i++) {
-        setDisplayText(currentFullText.slice(0, i + 1));
-        await new Promise(resolve => setTimeout(resolve, 50));
-      }
-
-      setIsTyping(false);
-      await new Promise(resolve => setTimeout(resolve, 2000));
-
-      setCurrentText((prev) => (prev + 1) % texts.length);
-    };
-
-    const interval = setInterval(typeText, 4000);
-    return () => clearInterval(interval);
-  }, [currentText, inView]);
 
   const scrollToDemo = () => {
     const demoSection = document.getElementById('demo-request');
@@ -104,25 +70,9 @@ const Hero: React.FC = () => {
                 to Paperwork
               </h1>
               
-              {/* Typing Animation */}
-              <div className="h-16 flex items-center">
-                <motion.p 
-                  className="text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl"
-                  key={currentText}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  {displayText}
-                  <motion.span
-                    animate={{ opacity: [1, 0, 1] }}
-                    transition={{ duration: 0.8, repeat: Infinity }}
-                    className="ml-1"
-                  >
-                    |
-                  </motion.span>
-                </motion.p>
-              </div>
+              <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl">
+                Atlas is a deployable AI assistant for real estate agents and ops teams. It handles end-to-end workflows like lead management, showings, contracts, and compliance — replacing fragmented tools with one intelligent app.
+              </p>
             </motion.div>
             
             {/* CTA Buttons */}

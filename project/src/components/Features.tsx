@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { FileText, Mail, Building2, Calculator, ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -8,41 +8,6 @@ const Features: React.FC = () => {
     triggerOnce: true,
     threshold: 0.1,
   });
-
-  const features = [
-    {
-      icon: FileText,
-      title: "Reads Your Contracts",
-      description: "Finds deadlines, contingencies, and gotchas that could kill your deal.",
-      step: "1. Upload",
-      color: "bg-blue-600",
-      iconColor: "text-blue-400"
-    },
-    {
-      icon: Mail,
-      title: "Tracks Your Leads",
-      description: "Connects to your Gmail and CRM to automatically follow up with prospects.",
-      step: "2. Analyze",
-      color: "bg-cyan-600",
-      iconColor: "text-cyan-400"
-    },
-    {
-      icon: Building2,
-      title: "Spots Red Flags",
-      description: "Analyzes property reports and finds issues before they become problems.",
-      step: "3. Alert",
-      color: "bg-indigo-600",
-      iconColor: "text-indigo-400"
-    },
-    {
-      icon: Calculator,
-      title: "Does Your Math",
-      description: "Calculates mortgage payments, ROI, and cash flow automatically.",
-      step: "4. Calculate",
-      color: "bg-green-600",
-      iconColor: "text-green-400"
-    }
-  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -82,76 +47,59 @@ const Features: React.FC = () => {
             variants={cardVariants}
             className="text-5xl lg:text-6xl font-bold text-white mb-6"
           >
-            What It Does
+            What Atlas Does
           </motion.h2>
-          <motion.p 
-            variants={cardVariants}
-            className="text-xl text-gray-300 max-w-3xl mx-auto"
-          >
-            Upload documents, get answers, close more deals.
-          </motion.p>
         </motion.div>
         
+        {/* Typing Animation Section */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="grid md:grid-cols-2 gap-8"
+          className="max-w-4xl mx-auto"
         >
-          {features.map((feature, index) => {
-            const IconComponent = feature.icon;
-            return (
-              <motion.div 
-                key={index}
-                variants={cardVariants}
-                whileHover={{ 
-                  y: -5,
-                  scale: 1.01,
-                  transition: { duration: 0.2 }
-                }}
-                className="group relative p-8 bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 rounded-xl"
+          <motion.div 
+            variants={cardVariants}
+            className="bg-white/5 border border-white/10 rounded-2xl p-12 backdrop-blur-sm"
+          >
+            <div className="space-y-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+                className="text-2xl lg:text-3xl text-white font-mono leading-relaxed"
               >
-                {/* Step Number */}
-                <div className="absolute top-4 right-4 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                  {index + 1}
-                </div>
-                
-                <div className="relative z-10">
-                  <div className="mb-6">
-                    <motion.div 
-                      whileHover={{ rotate: 360 }}
-                      transition={{ duration: 0.6 }}
-                      className={`w-16 h-16 ${feature.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
-                    >
-                      <IconComponent className={`w-8 h-8 ${feature.iconColor}`} />
-                    </motion.div>
-                    <span className={`text-xs font-semibold ${feature.iconColor} bg-white/10 px-3 py-1 rounded-full border border-white/20`}>
-                      {feature.step}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-gray-100 transition-colors">
-                    {feature.title}
-                  </h3>
-                  
-                  <p className="text-gray-300 text-sm leading-relaxed group-hover:text-gray-200 transition-colors">
-                    {feature.description}
-                  </p>
-                </div>
-                
-                {/* Arrow to next step */}
-                {index < features.length - 1 && (
-                  <motion.div
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ duration: 2, repeat: Infinity, delay: index * 0.5 }}
-                    className="absolute -right-4 top-1/2 transform -translate-y-1/2 hidden lg:block"
-                  >
-                    <ArrowRight className="w-6 h-6 text-blue-400" />
-                  </motion.div>
-                )}
+                <span className="text-blue-400">Atlas</span> is an AI copilot that automates real estate operations, replacing a patchwork of single-use tools with a unified agent for residential and commercial teams.
               </motion.div>
-            );
-          })}
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.2, duration: 0.8 }}
+                className="text-xl lg:text-2xl text-gray-300 font-mono leading-relaxed"
+              >
+                Atlas connects directly to your MLS, CRM, email, and document vault. When a deal starts, Atlas handles all admin: drafting and verifying contracts, guiding agents through compliance, doing client follow-ups, and chasing down missing pieces—automatically, with full audit trails.
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 2.0, duration: 0.8 }}
+                className="text-lg lg:text-xl text-gray-400 font-mono leading-relaxed"
+              >
+                Atlas gives every user a simple dashboard and chat interface, plus phone and chat assistants. It extracts and unifies context across all their data, proactively handles custom workflows, and ensures every AI output is verifiable.
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 2.8, duration: 0.8 }}
+                className="text-xl lg:text-2xl text-green-400 font-mono font-semibold"
+              >
+                No more missed deadlines, doc chaos, or compliance landmines.
+              </motion.div>
+            </div>
+          </motion.div>
         </motion.div>
         
         {/* CTA Section */}
