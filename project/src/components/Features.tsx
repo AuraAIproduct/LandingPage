@@ -30,16 +30,16 @@ const Features: React.FC = () => {
 
       for (let i = 0; i < currentFullText.length; i++) {
         setDisplayText(currentFullText.slice(0, i + 1));
-        await new Promise(resolve => setTimeout(resolve, 50));
+        await new Promise(resolve => setTimeout(resolve, 30));
       }
 
       setIsTyping(false);
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 1500));
 
       setCurrentText((prev) => (prev + 1) % texts.length);
     };
 
-    const interval = setInterval(typeText, 4000);
+    const interval = setInterval(typeText, 3000);
     return () => clearInterval(interval);
   }, [currentText, inView]);
 
@@ -90,29 +90,23 @@ const Features: React.FC = () => {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="max-w-4xl mx-auto"
+          className="max-w-6xl mx-auto"
         >
           <motion.div 
             variants={cardVariants}
-            className="bg-white/5 border border-white/10 rounded-2xl p-12 backdrop-blur-sm"
+            className="bg-white/5 border border-white/10 rounded-2xl p-16 backdrop-blur-sm"
           >
-            <div className="h-32 flex items-center justify-center">
-              <motion.p 
-                className="text-3xl lg:text-4xl text-white font-mono leading-relaxed"
-                key={currentText}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
-              >
+            <div className="h-24 flex items-center justify-start">
+              <div className="text-2xl lg:text-3xl text-white font-mono leading-relaxed">
                 {displayText}
                 <motion.span
                   animate={{ opacity: [1, 0, 1] }}
-                  transition={{ duration: 0.8, repeat: Infinity }}
-                  className="ml-1"
+                  transition={{ duration: 0.6, repeat: Infinity }}
+                  className="ml-1 text-blue-400"
                 >
                   |
                 </motion.span>
-              </motion.p>
+              </div>
             </div>
           </motion.div>
         </motion.div>
