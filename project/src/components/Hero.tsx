@@ -57,7 +57,7 @@ const Hero: React.FC = () => {
               className="inline-flex items-center px-6 py-3 bg-blue-500/10 border border-blue-500/20 text-blue-300 rounded-full text-sm font-medium"
             >
               <Sparkles className="w-4 h-4 mr-2" />
-              Built from real estate family experience
+              Built from real estate experience
             </motion.div>
             
             {/* Main Heading */}
@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
               </h1>
               
               <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl">
-                I spent six years watching my parents lose time and money to administrative chaos. Atlas AI reads your documents, spots issues before they become problems, and keeps your deals moving forward.
+                Upload documents, get answers, close more deals.
               </p>
             </motion.div>
             
@@ -105,17 +105,17 @@ const Hero: React.FC = () => {
             <motion.div variants={itemVariants} className="flex items-center space-x-12 pt-8">
               <div className="text-center">
                 <div className="text-4xl font-bold text-white">5 min</div>
-                <div className="text-sm text-gray-400">Setup Time</div>
+                <div className="text-sm text-gray-400">Setup</div>
               </div>
               <div className="w-px h-12 bg-gray-600"></div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-white">24/7</div>
-                <div className="text-sm text-gray-400">Document Review</div>
+                <div className="text-sm text-gray-400">Review</div>
               </div>
               <div className="w-px h-12 bg-gray-600"></div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-white">$0</div>
-                <div className="text-sm text-gray-400">Setup Fee</div>
+                <div className="text-sm text-gray-400">Setup</div>
               </div>
             </motion.div>
           </div>

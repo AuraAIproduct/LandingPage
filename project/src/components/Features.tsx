@@ -13,7 +13,7 @@ const Features: React.FC = () => {
     {
       icon: FileText,
       title: "Reads Your Contracts",
-      description: "Upload any contract and it finds deadlines, contingencies, and gotchas that could kill your deal. I watched my parents miss important dates buried in page 47.",
+      description: "Finds deadlines, contingencies, and gotchas that could kill your deal.",
       step: "1. Upload",
       color: "bg-blue-600",
       iconColor: "text-blue-400"
@@ -21,7 +21,7 @@ const Features: React.FC = () => {
     {
       icon: Mail,
       title: "Tracks Your Leads",
-      description: "Connects to your Gmail and CRM to automatically follow up with prospects. Knows when someone's serious vs just window shopping.",
+      description: "Connects to your Gmail and CRM to automatically follow up with prospects.",
       step: "2. Analyze",
       color: "bg-cyan-600",
       iconColor: "text-cyan-400"
@@ -29,7 +29,7 @@ const Features: React.FC = () => {
     {
       icon: Building2,
       title: "Spots Red Flags",
-      description: "Analyzes property reports and finds issues before they become problems. Foundation cracks, title issues, zoning problems—it catches what agents miss.",
+      description: "Analyzes property reports and finds issues before they become problems.",
       step: "3. Alert",
       color: "bg-indigo-600",
       iconColor: "text-indigo-400"
@@ -37,7 +37,7 @@ const Features: React.FC = () => {
     {
       icon: Calculator,
       title: "Does Your Math",
-      description: "Calculates mortgage payments, ROI, and cash flow automatically. No more spreadsheet errors that could cost you thousands.",
+      description: "Calculates mortgage payments, ROI, and cash flow automatically.",
       step: "4. Calculate",
       color: "bg-green-600",
       iconColor: "text-green-400"
@@ -82,13 +82,13 @@ const Features: React.FC = () => {
             variants={cardVariants}
             className="text-5xl lg:text-6xl font-bold text-white mb-6"
           >
-            What It Does & How It Works
+            What It Does
           </motion.h2>
           <motion.p 
             variants={cardVariants}
             className="text-xl text-gray-300 max-w-3xl mx-auto"
           >
-            No marketing fluff—here's what it actually does to help you close more deals, based on real problems I saw agents face every day.
+            Upload documents, get answers, close more deals.
           </motion.p>
         </motion.div>
         

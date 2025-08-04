@@ -65,7 +65,7 @@ const About: React.FC = () => {
             variants={itemVariants}
             className="text-xl text-gray-300 max-w-4xl mx-auto"
           >
-            I spent six years working alongside my parents as they built their residential real estate brokerage from scratch. I saw firsthand how much time and money was lost to administrative chaos — chasing documents, following up with leads, handling compliance, and trying to keep dozens of systems in sync.
+            Six years working alongside my parents as they built their real estate brokerage from scratch.
           </motion.p>
         </motion.div>
         
@@ -90,7 +90,7 @@ const About: React.FC = () => {
               </motion.div>
               <h3 className="text-xl font-bold text-white mb-4">The Unofficial Assistant</h3>
               <p className="text-gray-300 leading-relaxed">
-                I was the unofficial assistant doing everything from scheduling to helping review contracts and even cold calling. Over time I saw exactly what slowed the business down and what could be automated.
+                Did everything from scheduling to reviewing contracts and cold calling.
               </p>
             </div>
           </motion.div>
@@ -110,7 +110,7 @@ const About: React.FC = () => {
               </motion.div>
               <h3 className="text-xl font-bold text-white mb-4">Why Existing Tools Failed</h3>
               <p className="text-gray-300 leading-relaxed">
-                I saw them test several AI tools, but they all failed in real-world usage because they were built generically and didn't understand how real estate agents actually work.
+                Saw them test several AI tools, but they all failed in real-world usage.
               </p>
             </div>
           </motion.div>
@@ -130,7 +130,7 @@ const About: React.FC = () => {
               </motion.div>
               <h3 className="text-xl font-bold text-white mb-4">Built for Real Agents</h3>
               <p className="text-gray-300 leading-relaxed">
-                So I built something that actually understands real estate workflows. No fancy buzzwords, no overpromising—just tools that help you close more deals with less stress.
+                Built something that actually understands real estate workflows.
               </p>
             </div>
           </motion.div>
