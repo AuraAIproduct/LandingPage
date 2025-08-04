@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Play, Shield, Sparkles, Zap, Target } from 'lucide-react';
+import { ArrowRight, Play, Sparkles, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import NetworkAnimation from './NetworkAnimation';
@@ -42,11 +42,6 @@ const Hero: React.FC = () => {
 
   return (
     <section className="relative min-h-screen flex items-center bg-black overflow-hidden">
-      {/* Clean Background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%2306B6D4%22%20fill-opacity%3D%220.03%22%3E%3Cpath%20d%3D%22m36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-      </div>
-
       <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -59,9 +54,9 @@ const Hero: React.FC = () => {
             {/* Badge */}
             <motion.div
               variants={itemVariants}
-              className="inline-flex items-center px-6 py-3 bg-blue-500/10 backdrop-blur-sm border border-blue-500/20 text-blue-300 rounded-full text-sm font-medium shadow-lg"
+              className="inline-flex items-center px-6 py-3 bg-blue-500/10 border border-blue-500/20 text-blue-300 rounded-full text-sm font-medium"
             >
-              <Sparkles className="w-4 h-4 mr-2 animate-pulse" />
+              <Sparkles className="w-4 h-4 mr-2" />
               Built from real estate family experience
             </motion.div>
             
@@ -69,21 +64,8 @@ const Hero: React.FC = () => {
             <motion.div variants={itemVariants} className="space-y-6">
               <h1 className="text-6xl lg:text-8xl font-bold text-white leading-tight">
                 Stop{' '}
-                <span className="relative">
-                  <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                    Losing Deals
-                  </span>
-                  <motion.div
-                    animate={{
-                      scale: [1, 1.1, 1],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                    className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"
-                  />
+                <span className="text-blue-400">
+                  Losing Deals
                 </span>{' '}
                 to Paperwork
               </h1>
@@ -97,9 +79,9 @@ const Hero: React.FC = () => {
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-6">
               <motion.button 
                 onClick={scrollToDemo}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="group bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-5 rounded-2xl font-semibold text-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 flex items-center justify-center shadow-2xl hover:shadow-blue-500/25"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="group bg-blue-600 text-white px-10 py-5 rounded-xl font-semibold text-lg hover:bg-blue-700 transition-all duration-300 flex items-center justify-center"
               >
                 <Zap className="mr-2 w-5 h-5" />
                 Start Free Trial
@@ -110,9 +92,9 @@ const Hero: React.FC = () => {
                 href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="group bg-white/5 backdrop-blur-sm text-gray-300 px-10 py-5 rounded-2xl font-semibold text-lg border border-gray-600 hover:border-blue-400 hover:text-white transition-all duration-300 flex items-center justify-center shadow-lg"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="group bg-white/5 text-gray-300 px-10 py-5 rounded-xl font-semibold text-lg border border-gray-600 hover:border-blue-400 hover:text-white transition-all duration-300 flex items-center justify-center"
               >
                 <Play className="mr-2 w-5 h-5" />
                 Watch Demo
@@ -122,35 +104,17 @@ const Hero: React.FC = () => {
             {/* Stats */}
             <motion.div variants={itemVariants} className="flex items-center space-x-12 pt-8">
               <div className="text-center">
-                <motion.div
-                  animate={{ scale: [1, 1.1, 1] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                  className="text-4xl font-bold text-white"
-                >
-                  5 min
-                </motion.div>
+                <div className="text-4xl font-bold text-white">5 min</div>
                 <div className="text-sm text-gray-400">Setup Time</div>
               </div>
               <div className="w-px h-12 bg-gray-600"></div>
               <div className="text-center">
-                <motion.div
-                  animate={{ scale: [1, 1.1, 1] }}
-                  transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-                  className="text-4xl font-bold text-white"
-                >
-                  24/7
-                </motion.div>
+                <div className="text-4xl font-bold text-white">24/7</div>
                 <div className="text-sm text-gray-400">Document Review</div>
               </div>
               <div className="w-px h-12 bg-gray-600"></div>
               <div className="text-center">
-                <motion.div
-                  animate={{ scale: [1, 1.1, 1] }}
-                  transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-                  className="text-4xl font-bold text-white"
-                >
-                  $0
-                </motion.div>
+                <div className="text-4xl font-bold text-white">$0</div>
                 <div className="text-sm text-gray-400">Setup Fee</div>
               </div>
             </motion.div>

@@ -77,15 +77,14 @@ const About: React.FC = () => {
         >
           <motion.div 
             variants={cardVariants}
-            whileHover={{ y: -10, scale: 1.02 }}
-            className="group relative p-8 bg-blue-500/10 backdrop-blur-sm rounded-3xl border border-blue-500/20 hover:border-blue-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 overflow-hidden"
+            whileHover={{ y: -5, scale: 1.01 }}
+            className="group relative p-8 bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 rounded-xl"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <div className="relative z-10">
               <motion.div
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.6 }}
-                className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg"
+                className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
               >
                 <FileText className="w-8 h-8 text-white" />
               </motion.div>
@@ -98,15 +97,14 @@ const About: React.FC = () => {
           
           <motion.div 
             variants={cardVariants}
-            whileHover={{ y: -10, scale: 1.02 }}
-            className="group relative p-8 bg-cyan-500/10 backdrop-blur-sm rounded-3xl border border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 overflow-hidden"
+            whileHover={{ y: -5, scale: 1.01 }}
+            className="group relative p-8 bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 rounded-xl"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <div className="relative z-10">
               <motion.div
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.6 }}
-                className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg"
+                className="w-16 h-16 bg-cyan-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
               >
                 <Building2 className="w-8 h-8 text-white" />
               </motion.div>
@@ -119,15 +117,14 @@ const About: React.FC = () => {
           
           <motion.div 
             variants={cardVariants}
-            whileHover={{ y: -10, scale: 1.02 }}
-            className="group relative p-8 bg-indigo-500/10 backdrop-blur-sm rounded-3xl border border-indigo-500/20 hover:border-indigo-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/20 overflow-hidden"
+            whileHover={{ y: -5, scale: 1.01 }}
+            className="group relative p-8 bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 rounded-xl"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <div className="relative z-10">
               <motion.div
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.6 }}
-                className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg"
+                className="w-16 h-16 bg-indigo-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
               >
                 <Phone className="w-8 h-8 text-white" />
               </motion.div>

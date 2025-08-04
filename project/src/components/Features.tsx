@@ -15,9 +15,7 @@ const Features: React.FC = () => {
       title: "Reads Your Contracts",
       description: "Upload any contract and it finds deadlines, contingencies, and gotchas that could kill your deal. I watched my parents miss important dates buried in page 47.",
       step: "1. Upload",
-      color: "from-blue-500 to-blue-600",
-      bgColor: "from-blue-500/10 to-blue-600/10",
-      borderColor: "border-blue-500/20",
+      color: "bg-blue-600",
       iconColor: "text-blue-400"
     },
     {
@@ -25,9 +23,7 @@ const Features: React.FC = () => {
       title: "Tracks Your Leads",
       description: "Connects to your Gmail and CRM to automatically follow up with prospects. Knows when someone's serious vs just window shopping.",
       step: "2. Analyze",
-      color: "from-cyan-500 to-blue-500",
-      bgColor: "from-cyan-500/10 to-blue-500/10",
-      borderColor: "border-cyan-500/20",
+      color: "bg-cyan-600",
       iconColor: "text-cyan-400"
     },
     {
@@ -35,9 +31,7 @@ const Features: React.FC = () => {
       title: "Spots Red Flags",
       description: "Analyzes property reports and finds issues before they become problems. Foundation cracks, title issues, zoning problems—it catches what agents miss.",
       step: "3. Alert",
-      color: "from-indigo-500 to-blue-500",
-      bgColor: "from-indigo-500/10 to-blue-500/10",
-      borderColor: "border-indigo-500/20",
+      color: "bg-indigo-600",
       iconColor: "text-indigo-400"
     },
     {
@@ -45,9 +39,7 @@ const Features: React.FC = () => {
       title: "Does Your Math",
       description: "Calculates mortgage payments, ROI, and cash flow automatically. No more spreadsheet errors that could cost you thousands.",
       step: "4. Calculate",
-      color: "from-green-500 to-emerald-500",
-      bgColor: "from-green-500/10 to-emerald-500/10",
-      borderColor: "border-green-500/20",
+      color: "bg-green-600",
       iconColor: "text-green-400"
     }
   ];
@@ -113,14 +105,14 @@ const Features: React.FC = () => {
                 key={index}
                 variants={cardVariants}
                 whileHover={{ 
-                  y: -10,
-                  scale: 1.02,
+                  y: -5,
+                  scale: 1.01,
                   transition: { duration: 0.2 }
                 }}
-                className={`group relative p-8 rounded-3xl bg-gradient-to-br ${feature.bgColor} border ${feature.borderColor} hover:border-opacity-50 transition-all duration-300 backdrop-blur-sm overflow-hidden`}
+                className="group relative p-8 bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 rounded-xl"
               >
                 {/* Step Number */}
-                <div className="absolute top-4 right-4 w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                <div className="absolute top-4 right-4 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
                   {index + 1}
                 </div>
                 
@@ -129,11 +121,11 @@ const Features: React.FC = () => {
                     <motion.div 
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.6 }}
-                      className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                      className={`w-16 h-16 ${feature.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
                     >
                       <IconComponent className={`w-8 h-8 ${feature.iconColor}`} />
                     </motion.div>
-                    <span className={`text-xs font-semibold ${feature.iconColor} bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full border border-white/20`}>
+                    <span className={`text-xs font-semibold ${feature.iconColor} bg-white/10 px-3 py-1 rounded-full border border-white/20`}>
                       {feature.step}
                     </span>
                   </div>
@@ -171,7 +163,7 @@ const Features: React.FC = () => {
         >
           <motion.div 
             variants={cardVariants}
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-2xl font-semibold text-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25"
+            className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-xl font-semibold text-lg hover:bg-blue-700 transition-all duration-300"
           >
             <CheckCircle className="w-5 h-5 mr-2" />
             Ready to Stop Losing Deals?
