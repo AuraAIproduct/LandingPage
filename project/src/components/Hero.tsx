@@ -104,7 +104,7 @@ const Hero: React.FC = () => {
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500/10 to-blue-500/10 backdrop-blur-sm border border-purple-500/20 text-purple-300 rounded-full text-sm font-medium shadow-lg"
             >
               <Sparkles className="w-4 h-4 mr-2 animate-pulse" />
-              Built by real estate agents, for real estate agents
+              Built from real estate family experience
             </motion.div>
             
             {/* Main Heading */}
@@ -131,7 +131,7 @@ const Hero: React.FC = () => {
               </h1>
               
               <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl">
-                We've been there—drowning in contracts, missing deadlines, losing clients to competitors who move faster. Atlas AI reads your documents, spots issues before they become problems, and keeps your deals moving forward.
+                I spent six years watching my parents lose time and money to administrative chaos. Atlas AI reads your documents, spots issues before they become problems, and keeps your deals moving forward.
               </p>
             </motion.div>
             

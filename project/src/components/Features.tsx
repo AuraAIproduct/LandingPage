@@ -13,7 +13,7 @@ const Features: React.FC = () => {
     {
       icon: FileText,
       title: "Reads Your Contracts",
-      description: "Upload any contract and it finds the deadlines, contingencies, and gotchas that could kill your deal. No more missing important dates buried in page 47.",
+      description: "Upload any contract and it finds the deadlines, contingencies, and gotchas that could kill your deal. I watched my parents miss important dates buried in page 47 of contracts.",
       highlight: "Saves Deals",
       color: "from-emerald-500 to-teal-500",
       bgColor: "from-emerald-500/10 to-teal-500/10",
@@ -23,7 +23,7 @@ const Features: React.FC = () => {
     {
       icon: Mail,
       title: "Tracks Your Leads",
-      description: "Connects to your Gmail and CRM to automatically follow up with prospects. Knows when someone's serious vs just window shopping.",
+      description: "Connects to your Gmail and CRM to automatically follow up with prospects. Knows when someone's serious vs just window shopping based on real patterns I observed.",
       highlight: "Never Miss a Lead",
       color: "from-blue-500 to-cyan-500",
       bgColor: "from-blue-500/10 to-cyan-500/10",
@@ -33,7 +33,7 @@ const Features: React.FC = () => {
     {
       icon: Database,
       title: "Checks Your Comps",
-      description: "Pulls MLS data to verify your pricing is competitive. Shows you exactly why a property is worth what you're asking.",
+      description: "Pulls MLS data to verify your pricing is competitive. Shows you exactly why a property is worth what you're asking, based on real market data.",
       highlight: "Price Right",
       color: "from-purple-500 to-indigo-500",
       bgColor: "from-purple-500/10 to-indigo-500/10",
@@ -43,7 +43,7 @@ const Features: React.FC = () => {
     {
       icon: Building2,
       title: "Spots Red Flags",
-      description: "Analyzes property reports and finds issues before they become problems. Foundation cracks, title issues, zoning problems—it catches what you might miss.",
+      description: "Analyzes property reports and finds issues before they become problems. Foundation cracks, title issues, zoning problems—it catches what I saw agents miss all the time.",
       highlight: "Avoid Disasters",
       color: "from-orange-500 to-red-500",
       bgColor: "from-orange-500/10 to-red-500/10",
@@ -53,7 +53,7 @@ const Features: React.FC = () => {
     {
       icon: Calculator,
       title: "Does Your Math",
-      description: "Calculates mortgage payments, ROI, and cash flow automatically. No more spreadsheet errors that could cost you thousands.",
+      description: "Calculates mortgage payments, ROI, and cash flow automatically. No more spreadsheet errors that could cost you thousands—I saw this happen too many times.",
       highlight: "No Math Mistakes",
       color: "from-violet-500 to-purple-500",
       bgColor: "from-violet-500/10 to-purple-500/10",
@@ -63,7 +63,7 @@ const Features: React.FC = () => {
     {
       icon: Users,
       title: "Remembers Everything",
-      description: "Keeps track of client preferences, past conversations, and deal history. Never ask a client the same question twice.",
+      description: "Keeps track of client preferences, past conversations, and deal history. Never ask a client the same question twice—builds trust and saves time.",
       highlight: "Personal Touch",
       color: "from-pink-500 to-rose-500",
       bgColor: "from-pink-500/10 to-rose-500/10",
@@ -116,7 +116,7 @@ const Features: React.FC = () => {
             variants={cardVariants}
             className="text-xl text-gray-300 max-w-3xl mx-auto"
           >
-            No marketing fluff—here's what it actually does to help you close more deals.
+            No marketing fluff—here's what it actually does to help you close more deals, based on real problems I saw agents face every day.
           </motion.p>
         </motion.div>
         

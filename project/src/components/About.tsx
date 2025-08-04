@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, Users, Target, Award, Heart, Zap, Shield } from 'lucide-react';
+import { ChevronDown, ChevronUp, Users, Target, Award, Heart, Zap, Shield, Building2, FileText, Phone } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -13,11 +13,11 @@ const About: React.FC = () => {
   const faqs = [
     {
       question: "Will this actually save me time or just create more work?",
-      answer: "We built this because we were drowning in paperwork ourselves. It takes 5 minutes to set up, then it just works. No training, no complex workflows—just upload your docs and get answers. We're not trying to replace you, just make the boring stuff less painful."
+      answer: "We built this because we lived the chaos. It takes 5 minutes to set up, then it just works. No training, no complex workflows—just upload your docs and get answers. We're not trying to replace you, just make the boring stuff less painful."
     },
     {
       question: "What if I'm not tech-savvy?",
-      answer: "Neither were we when we started. If you can use Gmail, you can use this. We made it dead simple because we know you're busy closing deals, not learning new software. Upload a document, get an email with the important stuff highlighted."
+      answer: "Neither were my parents when they started. If you can use Gmail, you can use this. We made it dead simple because we know you're busy closing deals, not learning new software. Upload a document, get an email with the important stuff highlighted."
     },
     {
       question: "How much does it cost?",
@@ -81,13 +81,13 @@ const About: React.FC = () => {
               variants={itemVariants}
               className="text-5xl lg:text-6xl font-bold text-white mb-6"
             >
-              We Built This Because We Had To
+              Built From Real Experience
             </motion.h2>
             <motion.p 
               variants={itemVariants}
-              className="text-xl text-gray-300 max-w-3xl mx-auto"
+              className="text-xl text-gray-300 max-w-4xl mx-auto"
             >
-              After losing a $2.4M deal because we missed a deadline buried in page 47 of a contract, we decided enough was enough. We're real estate agents who learned to code, not the other way around.
+              I spent six years working alongside my parents as they built their residential real estate brokerage from scratch. I saw firsthand how much time and money was lost to administrative chaos — chasing documents, following up with leads, handling compliance, and trying to keep dozens of systems in sync.
             </motion.p>
           </motion.div>
           
@@ -109,11 +109,11 @@ const About: React.FC = () => {
                   transition={{ duration: 0.6 }}
                   className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg"
                 >
-                  <Users className="w-8 h-8 text-white" />
+                  <FileText className="w-8 h-8 text-white" />
                 </motion.div>
-                <h3 className="text-xl font-bold text-white mb-4">Who We Are</h3>
+                <h3 className="text-xl font-bold text-white mb-4">The Unofficial Assistant</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Former agents who got tired of losing deals to paperwork. We know the pain of missing deadlines, the stress of compliance, and the frustration of watching deals die in escrow.
+                  I was the unofficial assistant doing everything from scheduling to helping review contracts and even cold calling. Over time I saw exactly what slowed the business down and what could be automated.
                 </p>
               </div>
             </motion.div>
@@ -130,11 +130,11 @@ const About: React.FC = () => {
                   transition={{ duration: 0.6 }}
                   className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg"
                 >
-                  <Target className="w-8 h-8 text-white" />
+                  <Building2 className="w-8 h-8 text-white" />
                 </motion.div>
-                <h3 className="text-xl font-bold text-white mb-4">Our Mission</h3>
+                <h3 className="text-xl font-bold text-white mb-4">Why Existing Tools Failed</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Stop agents from losing deals to stupid paperwork mistakes. We're building tools that actually work in the real world, not some Silicon Valley fantasy of what real estate should be.
+                  I saw them test several AI tools, but they all failed in real-world usage because they were built generically and didn't understand how real estate agents actually work.
                 </p>
               </div>
             </motion.div>
@@ -151,11 +151,11 @@ const About: React.FC = () => {
                   transition={{ duration: 0.6 }}
                   className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg"
                 >
-                  <Heart className="w-8 h-8 text-white" />
+                  <Phone className="w-8 h-8 text-white" />
                 </motion.div>
-                <h3 className="text-xl font-bold text-white mb-4">Our Values</h3>
+                <h3 className="text-xl font-bold text-white mb-4">Built for Real Agents</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Keep it simple, keep it working, keep your data yours. No fancy buzzwords, no overpromising—just tools that help you close more deals with less stress.
+                  So I built something that actually understands real estate workflows. No fancy buzzwords, no overpromising—just tools that help you close more deals with less stress.
                 </p>
               </div>
             </motion.div>

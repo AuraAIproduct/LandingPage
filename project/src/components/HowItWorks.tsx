@@ -1,101 +1,184 @@
-import React, { useState } from 'react';
-import { Download, Users, GitBranch, BarChart3, ArrowRight, Cpu, Shield, Settings, Network, FileText, Mail, Building2 } from 'lucide-react';
+import React from 'react';
+import { Upload, Search, Users, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const HowItWorks: React.FC = () => {
-  const [activeStep, setActiveStep] = useState(0);
-  
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   const steps = [
     {
-      icon: FileText,
+      icon: Upload,
       title: "Upload Your Documents",
-      details: "Drag and drop any contract, listing, or document. It works with PDFs, Word docs, even photos of handwritten notes. No formatting required.",
-      color: "from-emerald-500 to-teal-500"
+      description: "Drop in contracts, property reports, or any real estate documents. I built this to handle the same files my parents were drowning in.",
+      color: "from-blue-500 to-cyan-500",
+      bgColor: "from-blue-500/10 to-cyan-500/10",
+      borderColor: "border-blue-500/20",
+      iconColor: "text-blue-400"
     },
     {
-      icon: Cpu,
+      icon: Search,
       title: "Get Instant Answers",
-      details: "Within seconds, you get an email highlighting deadlines, red flags, and action items. No more reading through 50-page contracts line by line.",
-      color: "from-cyan-500 to-blue-500"
+      description: "AI analyzes your documents and highlights deadlines, red flags, and opportunities. No more missing important details buried in paperwork.",
+      color: "from-purple-500 to-indigo-500",
+      bgColor: "from-purple-500/10 to-indigo-500/10",
+      borderColor: "border-purple-500/20",
+      iconColor: "text-purple-400"
     },
     {
-      icon: Mail,
+      icon: Users,
       title: "Stay on Top of Leads",
-      details: "It monitors your emails and CRM to track which prospects are serious. Automatically reminds you to follow up when someone's ready to buy.",
-      color: "from-purple-500 to-indigo-500"
+      description: "Automatically tracks client communications and follows up at the right time. Based on patterns I saw that actually work in real estate.",
+      color: "from-emerald-500 to-teal-500",
+      bgColor: "from-emerald-500/10 to-teal-500/10",
+      borderColor: "border-emerald-500/20",
+      iconColor: "text-emerald-400"
     },
     {
-      icon: Building2,
+      icon: TrendingUp,
       title: "Close More Deals",
-      details: "With deadlines tracked and issues spotted early, you can focus on what you do best—building relationships and closing deals.",
-      color: "from-orange-500 to-red-500"
+      description: "With better organization and fewer missed opportunities, you'll close more deals with less stress. Simple as that.",
+      color: "from-orange-500 to-red-500",
+      bgColor: "from-orange-500/10 to-red-500/10",
+      borderColor: "border-orange-500/20",
+      iconColor: "text-orange-400"
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 50, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { y: 30, opacity: 0, scale: 0.9 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
-    <section id="how-it-works" className="py-20 bg-black">
+    <section id="how-it-works" className="py-32 bg-gradient-to-br from-slate-900 via-purple-900/10 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">
+        <motion.div
+          ref={ref}
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          className="text-center mb-20"
+        >
+          <motion.h2 
+            variants={itemVariants}
+            className="text-5xl lg:text-6xl font-bold text-white mb-6"
+          >
             How It Actually Works
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            No complicated setup, no training required—just upload your docs and get answers.
-          </p>
-        </div>
+          </motion.h2>
+          <motion.p 
+            variants={itemVariants}
+            className="text-xl text-gray-300 max-w-3xl mx-auto"
+          >
+            No complicated setup, no training required—just upload your docs and get answers. Built for real agents who don't have time for complex software.
+          </motion.p>
+        </motion.div>
         
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-4">
-            {steps.map((step, index) => {
-              const IconComponent = step.icon;
-              return (
-                <div 
-                  key={index}
-                  className={`relative p-6 rounded-xl cursor-pointer transition-all duration-300 ${
-                    activeStep === index 
-                      ? 'bg-white/10 backdrop-blur-sm shadow-lg shadow-blue-500/20 border border-blue-500/30' 
-                      : 'bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-gray-800'
-                  }`}
-                  onClick={() => setActiveStep(index)}
-                >
-                  <div className="flex items-start space-x-4">
-                    <div className={`w-12 h-12 bg-gradient-to-br ${step.color} rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg`}>
-                      <IconComponent className="w-6 h-6 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-bold text-white mb-2">
-                        {step.title}
-                      </h3>
-                      <p className="text-gray-300 text-sm">
-                        {step.details}
-                      </p>
-                    </div>
-                    <ArrowRight className={`w-5 h-5 text-gray-400 transition-transform duration-300 ${
-                      activeStep === index ? 'rotate-90 text-blue-400' : ''
-                    }`} />
-                  </div>
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+        >
+          {steps.map((step, index) => {
+            const IconComponent = step.icon;
+            return (
+              <motion.div 
+                key={index}
+                variants={cardVariants}
+                whileHover={{ y: -10, scale: 1.02 }}
+                className="group relative p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-purple-500/30 transition-all duration-300 overflow-hidden"
+              >
+                {/* Step Number */}
+                <div className="absolute top-4 right-4 w-8 h-8 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                  {index + 1}
                 </div>
-              );
-            })}
-          </div>
-          
-          <div className="relative">
-            <div className="bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-gray-800 shadow-2xl">
-              <div className="space-y-6">
-                <div className="flex items-center space-x-3">
-                  <div className={`w-10 h-10 bg-gradient-to-br ${steps[activeStep].color} rounded-lg flex items-center justify-center`}>
-                    {React.createElement(steps[activeStep].icon, { className: "w-5 h-5 text-white" })}
-                  </div>
-                  <h3 className="text-xl font-bold text-white">
-                    {steps[activeStep].title}
+                
+                {/* Animated Background */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                
+                <div className="relative z-10">
+                  <motion.div
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                    className={`w-16 h-16 bg-gradient-to-br ${step.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                  >
+                    <IconComponent className={`w-8 h-8 ${step.iconColor}`} />
+                  </motion.div>
+                  
+                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-gray-100 transition-colors">
+                    {step.title}
                   </h3>
+                  
+                  <p className="text-gray-300 text-sm leading-relaxed group-hover:text-gray-200 transition-colors">
+                    {step.description}
+                  </p>
                 </div>
-                <p className="text-gray-300 leading-relaxed">
-                  {steps[activeStep].details}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+                
+                {/* Arrow to next step */}
+                {index < steps.length - 1 && (
+                  <motion.div
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ duration: 2, repeat: Infinity, delay: index * 0.5 }}
+                    className="absolute -right-4 top-1/2 transform -translate-y-1/2 hidden lg:block"
+                  >
+                    <ArrowRight className="w-6 h-6 text-purple-400" />
+                  </motion.div>
+                )}
+              </motion.div>
+            );
+          })}
+        </motion.div>
+        
+        {/* CTA Section */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          className="text-center mt-16"
+        >
+          <motion.div 
+            variants={itemVariants}
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-2xl font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-2xl hover:shadow-purple-500/25"
+          >
+            <CheckCircle className="w-5 h-5 mr-2" />
+            Ready to Stop Losing Deals?
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
