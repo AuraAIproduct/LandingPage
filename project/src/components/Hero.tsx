@@ -1,8 +1,7 @@
 import React from 'react';
 import { ArrowRight, Play, Sparkles, Zap } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { TypeAnimation } from 'react-type-animation';
 import NetworkAnimation from './NetworkAnimation';
 
 const Hero: React.FC = () => {
@@ -10,6 +9,26 @@ const Hero: React.FC = () => {
     triggerOnce: true,
     threshold: 0.1,
   });
+
+  const [currentPainPoint, setCurrentPainPoint] = React.useState(0);
+
+  const painPoints = [
+    'missed deadlines.',
+    'missed follow-ups.',
+    'compliance errors.',
+    'paperwork chaos.',
+    'lost opportunities.',
+  ];
+
+  React.useEffect(() => {
+    if (!inView) return;
+    
+    const interval = setInterval(() => {
+      setCurrentPainPoint((prev) => (prev + 1) % painPoints.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [inView]);
 
   const scrollToDemo = () => {
     const demoSection = document.getElementById('demo-request');
@@ -41,6 +60,12 @@ const Hero: React.FC = () => {
     },
   };
 
+  const textVariants = {
+    enter: { opacity: 0, y: 20 },
+    center: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -20 },
+  };
+
   return (
     <section className="relative min-h-screen flex items-center bg-black overflow-hidden">
       <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -69,27 +94,20 @@ const Hero: React.FC = () => {
                   Losing Deals
                 </span>{' '}
                 to{' '}
-                <span className="text-red-400">
-                  <TypeAnimation
-                    sequence={[
-                      'missed deadlines.',
-                      2000,
-                      'missed follow-ups.',
-                      2000,
-                      'compliance errors.',
-                      2000,
-                      'paperwork chaos.',
-                      2000,
-                      'lost opportunities.',
-                      2000,
-                    ]}
-                    wrapper="span"
-                    speed={50}
-                    deletionSpeed={60}
-                    repeat={Infinity}
-                    cursor={true}
-                    className="inline-block"
-                  />
+                <span className="text-gray-300 relative inline-block min-w-[400px]">
+                  <AnimatePresence mode="wait">
+                    <motion.span
+                      key={currentPainPoint}
+                      variants={textVariants}
+                      initial="enter"
+                      animate="center"
+                      exit="exit"
+                      transition={{ duration: 0.5, ease: "easeInOut" }}
+                      className="absolute top-0 left-0"
+                    >
+                      {painPoints[currentPainPoint]}
+                    </motion.span>
+                  </AnimatePresence>
                 </span>
               </h1>
               
