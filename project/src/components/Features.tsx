@@ -93,19 +93,13 @@ const Features: React.FC = () => {
                       'No more missed deadlines or compliance landmines.',
                       800,
                     ]}
-                    wrapper="div"
+                    wrapper="span"
                     speed={60}
                     deletionSpeed={80}
                     repeat={Infinity}
                     cursor={true}
                     cursorStyle="█"
-                    className="text-white text-xl lg:text-2xl font-mono leading-relaxed"
-                    style={{
-                      minHeight: '120px',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      justifyContent: 'flex-start'
-                    }}
+                    className="text-white text-xl lg:text-2xl font-mono leading-relaxed inline-block"
                   />
                 </div>
               </div>
