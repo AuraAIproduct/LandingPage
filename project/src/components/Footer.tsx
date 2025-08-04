@@ -3,74 +3,73 @@ import { Shield, Linkedin, Twitter, Github, Mail, Phone } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black text-white border-t border-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <footer className="bg-black text-white border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="relative">
-                <Shield className="w-8 h-8 text-purple-400" />
-                <div className="absolute inset-0 bg-purple-400/20 rounded-full animate-pulse"></div>
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="w-8 h-8 bg-blue-600 flex items-center justify-center">
+                <Shield className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold">Atlas AI</span>
+              <span className="text-lg font-semibold tracking-tight">Atlas AI</span>
             </div>
-            <p className="text-gray-400 mb-6 leading-relaxed">
+            <p className="text-gray-400 mb-6 leading-relaxed font-light">
               Intelligence Uncompromised. Privacy Unmatched. The vertical-specific real estate intelligence platform that connects to your tools and provides intelligent real estate workflows.
             </p>
             <div className="flex space-x-4">
-              <a href="https://www.linkedin.com/in/arnav-arora-12a280189/" className="text-gray-400 hover:text-purple-400 transition-colors">
+              <a href="https://www.linkedin.com/in/arnav-arora-12a280189/" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="https://github.com/AuraAIproduct" className="text-gray-400 hover:text-purple-400 transition-colors">
+              <a href="https://github.com/AuraAIproduct" className="text-gray-400 hover:text-white transition-colors">
                 <Github className="w-5 h-5" />
               </a>
             </div>
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-6">Product</h3>
+            <h3 className="text-lg font-semibold mb-6 tracking-tight">Product</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">Features</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">How It Works</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">Pricing</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">Documentation</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Features</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">How It Works</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Pricing</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Documentation</a></li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-6">Company</h3>
+            <h3 className="text-lg font-semibold mb-6 tracking-tight">Company</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">About</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">Blog</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">Careers</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">Press</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">About</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Blog</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Careers</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Press</a></li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-6">Contact</h3>
+            <h3 className="text-lg font-semibold mb-6 tracking-tight">Contact</h3>
             <ul className="space-y-3">
-              <li className="flex items-center text-gray-400">
+              <li className="flex items-center text-gray-400 text-sm">
                 <Mail className="w-4 h-4 mr-2" />
                 hello@atlas.ai
               </li>
-              <li className="flex items-center text-gray-400">
+              <li className="flex items-center text-gray-400 text-sm">
                 <Phone className="w-4 h-4 mr-2" />
                 +1 (470) 747-9488
               </li>
             </ul>
             <div className="mt-6">
-              <h4 className="text-sm font-semibold mb-3">Stay Updated</h4>
+              <h4 className="text-sm font-semibold mb-3 tracking-wide">Stay Updated</h4>
               <div className="flex">
                 <input 
                   type="email" 
                   placeholder="Enter your email"
-                  className="bg-gray-900/50 text-white px-3 py-2 rounded-l-lg flex-1 text-sm border border-gray-700 focus:border-purple-400 focus:outline-none placeholder-gray-400"
+                  className="bg-white/5 text-white px-3 py-2 flex-1 text-sm border border-white/20 focus:border-white/40 focus:outline-none placeholder-gray-400"
                 />
-                <button className="bg-gradient-to-r from-blue-600 to-blue-700 px-4 py-2 rounded-r-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 text-sm">
+                <button className="bg-white text-black px-4 py-2 text-sm font-medium hover:bg-gray-100 transition-colors">
                   Subscribe
                 </button>
               </div>
@@ -78,19 +77,19 @@ const Footer: React.FC = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="flex flex-wrap items-center space-x-6 text-sm text-gray-400">
             <span>© 2024 Atlas AI. All rights reserved.</span>
-            <a href="#" className="hover:text-purple-400 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-purple-400 transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-purple-400 transition-colors">Cookie Policy</a>
+            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
           </div>
           
           <div className="flex items-center space-x-4 mt-4 md:mt-0">
             <span className="text-sm text-gray-400">Multi-Agent AI</span>
-            <div className="w-px h-4 bg-gray-700"></div>
+            <div className="w-px h-4 bg-white/20"></div>
             <span className="text-sm text-gray-400">Tool Integration</span>
-            <div className="w-px h-4 bg-gray-700"></div>
+            <div className="w-px h-4 bg-white/20"></div>
             <span className="text-sm text-gray-400">Real Estate Intelligence</span>
           </div>
         </div>

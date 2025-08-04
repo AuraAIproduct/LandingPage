@@ -80,7 +80,7 @@ const Hero: React.FC = () => {
             {/* Badge */}
             <motion.div
               variants={itemVariants}
-              className="inline-flex items-center px-6 py-3 bg-blue-500/10 border border-blue-500/20 text-blue-300 rounded-full text-sm font-medium"
+              className="inline-flex items-center px-4 py-2 bg-white/10 border border-white/20 text-white text-sm font-medium tracking-wide"
             >
               <Sparkles className="w-4 h-4 mr-2" />
               Built with real estate teams
@@ -88,7 +88,7 @@ const Hero: React.FC = () => {
             
             {/* Main Heading */}
             <motion.div variants={itemVariants} className="space-y-6">
-              <h1 className="text-6xl lg:text-8xl font-bold text-white leading-tight">
+              <h1 className="text-6xl lg:text-8xl font-bold text-white leading-tight tracking-tight">
                 Stop{' '}
                 <span className="text-blue-400">
                   Losing Deals
@@ -111,7 +111,7 @@ const Hero: React.FC = () => {
                 </span>
               </h1>
               
-              <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl mt-12">
+              <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl mt-12 font-light">
                 Atlas is a deployable AI assistant for real estate agents and ops teams. It handles end-to-end workflows like lead management, showings, contracts, and compliance — replacing fragmented tools with one intelligent app.
               </p>
             </motion.div>
@@ -122,7 +122,7 @@ const Hero: React.FC = () => {
                 onClick={scrollToDemo}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="group bg-blue-600 text-white px-10 py-5 rounded-xl font-semibold text-lg hover:bg-blue-700 transition-all duration-300 flex items-center justify-center"
+                className="group bg-white text-black px-10 py-5 font-semibold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center tracking-wide"
               >
                 <Zap className="mr-2 w-5 h-5" />
                 Start Free Trial
@@ -135,7 +135,7 @@ const Hero: React.FC = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="group bg-white/5 text-gray-300 px-10 py-5 rounded-xl font-semibold text-lg border border-gray-600 hover:border-blue-400 hover:text-white transition-all duration-300 flex items-center justify-center"
+                className="group bg-white/10 text-white px-10 py-5 font-semibold text-lg border border-white/20 hover:border-white/40 transition-all duration-300 flex items-center justify-center tracking-wide"
               >
                 <Play className="mr-2 w-5 h-5" />
                 Watch Demo
@@ -145,18 +145,18 @@ const Hero: React.FC = () => {
             {/* Stats */}
             <motion.div variants={itemVariants} className="flex items-center space-x-12 pt-8">
               <div className="text-center">
-                <div className="text-4xl font-bold text-white">5 min</div>
-                <div className="text-sm text-gray-400">Setup</div>
+                <div className="text-4xl font-bold text-white tracking-tight">5 min</div>
+                <div className="text-sm text-gray-400 font-light">Setup</div>
               </div>
               <div className="w-px h-12 bg-gray-600"></div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-white">24/7</div>
-                <div className="text-sm text-gray-400">Review</div>
+                <div className="text-4xl font-bold text-white tracking-tight">24/7</div>
+                <div className="text-sm text-gray-400 font-light">Review</div>
               </div>
               <div className="w-px h-12 bg-gray-600"></div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-white">$0</div>
-                <div className="text-sm text-gray-400">Setup</div>
+                <div className="text-4xl font-bold text-white tracking-tight">$0</div>
+                <div className="text-sm text-gray-400 font-light">Setup</div>
               </div>
             </motion.div>
           </div>

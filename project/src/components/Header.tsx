@@ -18,97 +18,76 @@ const Header: React.FC = () => {
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsMobileMenuOpen(false); // Close mobile menu after clicking
+    setIsMobileMenuOpen(false);
   };
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-black/95 backdrop-blur-md shadow-lg shadow-blue-500/10' : 'bg-transparent'
+      isScrolled ? 'bg-black/95 backdrop-blur-sm border-b border-white/10' : 'bg-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20 py-2">
-          <div className="flex items-center space-x-2">
-            <div className="relative">
-              <Shield className="w-8 h-8 text-purple-400" />
-              <div className="absolute inset-0 bg-purple-400/20 rounded-full animate-pulse"></div>
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex items-center space-x-3">
+            <div className="w-8 h-8 bg-blue-600 flex items-center justify-center">
+              <Shield className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-white">Atlas AI</span>
+            <span className="text-lg font-semibold text-white tracking-tight">Atlas AI</span>
           </div>
           
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('features')}
-              className="text-gray-300 hover:text-purple-400 transition-colors"
+              className="text-sm text-gray-300 hover:text-white transition-colors font-medium tracking-wide"
             >
               Features
             </button>
             <button 
-              onClick={() => scrollToSection('how-it-works')}
-              className="text-gray-300 hover:text-purple-400 transition-colors"
-            >
-              How It Works
-            </button>
-            <button 
               onClick={() => scrollToSection('about')}
-              className="text-gray-300 hover:text-purple-400 transition-colors"
+              className="text-sm text-gray-300 hover:text-white transition-colors font-medium tracking-wide"
             >
               About
             </button>
             <button 
-              onClick={() => scrollToSection('faq')}
-              className="text-gray-300 hover:text-purple-400 transition-colors"
-            >
-              FAQ
-            </button>
-            <button 
               onClick={() => scrollToSection('demo-request')}
-              className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-blue-500/25"
+              className="bg-white text-black px-4 py-2 text-sm font-medium hover:bg-gray-100 transition-colors tracking-wide"
             >
-              Request Demo
+              See Atlas in Action
             </button>
           </nav>
 
+          {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-gray-300 hover:text-purple-400 transition-colors"
+            className="md:hidden text-gray-300 hover:text-white transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-black/95 backdrop-blur-md border-t border-gray-800">
-          <div className="px-4 py-2 space-y-2">
+        <div className="md:hidden bg-black/95 backdrop-blur-sm border-t border-white/10">
+          <div className="px-6 py-4 space-y-1">
             <button 
               onClick={() => scrollToSection('features')}
-              className="block w-full text-left py-2 text-gray-300 hover:text-purple-400 transition-colors"
+              className="block w-full text-left py-3 text-sm text-gray-300 hover:text-white transition-colors font-medium"
             >
               Features
             </button>
             <button 
-              onClick={() => scrollToSection('how-it-works')}
-              className="block w-full text-left py-2 text-gray-300 hover:text-purple-400 transition-colors"
-            >
-              How It Works
-            </button>
-            <button 
               onClick={() => scrollToSection('about')}
-              className="block w-full text-left py-2 text-gray-300 hover:text-purple-400 transition-colors"
+              className="block w-full text-left py-3 text-sm text-gray-300 hover:text-white transition-colors font-medium"
             >
               About
             </button>
             <button 
-              onClick={() => scrollToSection('faq')}
-              className="block w-full text-left py-2 text-gray-300 hover:text-purple-400 transition-colors"
-            >
-              FAQ
-            </button>
-            <button 
               onClick={() => scrollToSection('demo-request')}
-              className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-2 rounded-lg mt-2 hover:from-blue-700 hover:to-blue-800 transition-all duration-300"
+              className="w-full bg-white text-black px-4 py-3 text-sm font-medium hover:bg-gray-100 transition-colors mt-4"
             >
-              Request Demo
+              See Atlas in Action
             </button>
           </div>
         </div>

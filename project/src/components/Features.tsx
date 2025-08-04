@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { TypeAnimation } from 'react-type-animation';
@@ -29,7 +29,7 @@ const Features: React.FC = () => {
       scale: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       },
     },
   };
@@ -46,7 +46,7 @@ const Features: React.FC = () => {
         >
           <motion.h2 
             variants={cardVariants}
-            className="text-5xl lg:text-6xl font-bold text-white mb-6"
+            className="text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight"
           >
             What Atlas Does
           </motion.h2>
@@ -61,13 +61,8 @@ const Features: React.FC = () => {
         >
           <motion.div 
             variants={cardVariants}
-            className="relative bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700/50 rounded-3xl p-12 backdrop-blur-xl shadow-2xl"
+            className="relative bg-white/5 border border-white/20 p-12"
           >
-            {/* Animated background elements */}
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-cyan-500/5 rounded-3xl"></div>
-            <div className="absolute top-0 left-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 right-0 w-40 h-40 bg-cyan-500/10 rounded-full blur-3xl"></div>
-            
             {/* Content */}
             <div className="relative z-10">
               <div className="flex items-center mb-6">
@@ -98,28 +93,11 @@ const Features: React.FC = () => {
                     deletionSpeed={80}
                     repeat={Infinity}
                     cursor={true}
-                    cursorStyle="█"
                     className="text-white text-xl lg:text-2xl font-mono leading-relaxed inline-block"
                   />
                 </div>
               </div>
             </div>
-          </motion.div>
-        </motion.div>
-        
-        {/* CTA Section */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          className="text-center mt-16"
-        >
-          <motion.div 
-            variants={cardVariants}
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
-            <CheckCircle className="w-5 h-5 mr-2" />
-            Ready to Stop Losing Deals?
           </motion.div>
         </motion.div>
       </div>
