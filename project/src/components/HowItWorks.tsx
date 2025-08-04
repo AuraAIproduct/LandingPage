@@ -7,26 +7,26 @@ const HowItWorks: React.FC = () => {
   const steps = [
     {
       icon: FileText,
-      title: "Upload Real Estate Documents",
-      details: "Upload contracts, purchase agreements, and legal documents to Atlas AI. The AI automatically analyzes document structure and extracts key information for compliance checking and processing.",
+      title: "Upload Your Documents",
+      details: "Drag and drop any contract, listing, or document. It works with PDFs, Word docs, even photos of handwritten notes. No formatting required.",
       color: "from-emerald-500 to-teal-500"
     },
     {
       icon: Cpu,
-      title: "AI Analysis & Compliance Check",
-      details: "Atlas AI runs comprehensive TRID, RESPA, and state-specific compliance checks. The AI identifies potential issues, calculates transfer taxes, and validates document integrity automatically.",
+      title: "Get Instant Answers",
+      details: "Within seconds, you get an email highlighting deadlines, red flags, and action items. No more reading through 50-page contracts line by line.",
       color: "from-cyan-500 to-blue-500"
     },
     {
       icon: Mail,
-      title: "Lead Management & Communication",
-      details: "Integrate with Gmail and CRM systems to track leads, schedule follow-ups, and manage client communications. Atlas AI analyzes email content and provides intelligent recommendations.",
+      title: "Stay on Top of Leads",
+      details: "It monitors your emails and CRM to track which prospects are serious. Automatically reminds you to follow up when someone's ready to buy.",
       color: "from-purple-500 to-indigo-500"
     },
     {
       icon: Building2,
-      title: "Property Intelligence & Reports",
-      details: "Generate detailed property reports, market analysis, and investment insights. Atlas AI combines MLS data, market trends, and property valuations to provide comprehensive intelligence.",
+      title: "Close More Deals",
+      details: "With deadlines tracked and issues spotted early, you can focus on what you do best—building relationships and closing deals.",
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -36,10 +36,10 @@ const HowItWorks: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
-            How Atlas AI Works
+            How It Actually Works
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Simple document upload, intelligent analysis, complete automation—get your real estate AI assistant running in minutes.
+            No complicated setup, no training required—just upload your docs and get answers.
           </p>
         </div>
         

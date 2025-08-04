@@ -5,54 +5,54 @@ const Features: React.FC = () => {
   const features = [
     {
       icon: FileText,
-      title: "Document Analysis & Compliance",
-      description: "Automatically analyze real estate contracts, purchase agreements, and legal documents. Check TRID, RESPA, and state-specific compliance requirements with AI-powered accuracy.",
-      highlight: "Smart Compliance",
+      title: "Reads Your Contracts",
+      description: "Upload any contract and it finds the deadlines, contingencies, and gotchas that could kill your deal. No more missing important dates buried in page 47.",
+      highlight: "Saves Deals",
       color: "from-green-500 to-emerald-500",
       bgColor: "from-green-50 to-emerald-50",
       textColor: "text-green-600"
     },
     {
       icon: Mail,
-      title: "Lead Management & Communication",
-      description: "Integrate with Gmail and CRM systems to automatically track leads, schedule follow-ups, and manage client communications. AI analyzes email content for intent and urgency.",
-      highlight: "Smart Communication",
+      title: "Tracks Your Leads",
+      description: "Connects to your Gmail and CRM to automatically follow up with prospects. Knows when someone's serious vs just window shopping.",
+      highlight: "Never Miss a Lead",
       color: "from-blue-500 to-cyan-500",
       bgColor: "from-blue-50 to-cyan-50",
       textColor: "text-blue-600"
     },
     {
       icon: Database,
-      title: "Market Data Integration",
-      description: "Connect to MLS databases, property listings, and market analytics. Atlas AI processes and analyzes market trends, comparable sales, and property valuations in real-time.",
-      highlight: "Real-time Data",
+      title: "Checks Your Comps",
+      description: "Pulls MLS data to verify your pricing is competitive. Shows you exactly why a property is worth what you're asking.",
+      highlight: "Price Right",
       color: "from-purple-500 to-indigo-500",
       bgColor: "from-purple-50 to-indigo-50",
       textColor: "text-purple-600"
     },
     {
       icon: Building2,
-      title: "Property Intelligence",
-      description: "Generate detailed property reports, neighborhood analysis, and investment insights. Atlas AI combines multiple data sources to provide comprehensive property intelligence.",
-      highlight: "Property Insights",
+      title: "Spots Red Flags",
+      description: "Analyzes property reports and finds issues before they become problems. Foundation cracks, title issues, zoning problems—it catches what you might miss.",
+      highlight: "Avoid Disasters",
       color: "from-indigo-500 to-purple-500",
       bgColor: "from-indigo-50 to-purple-50",
       textColor: "text-indigo-600"
     },
     {
       icon: Calculator,
-      title: "Financial Analysis & Calculations",
-      description: "Automate mortgage calculations, ROI analysis, and investment modeling. Atlas AI handles complex financial scenarios and provides detailed breakdowns for clients.",
-      highlight: "Smart Calculations",
+      title: "Does Your Math",
+      description: "Calculates mortgage payments, ROI, and cash flow automatically. No more spreadsheet errors that could cost you thousands.",
+      highlight: "No Math Mistakes",
       color: "from-violet-500 to-purple-500",
       bgColor: "from-violet-50 to-purple-50",
       textColor: "text-violet-600"
     },
     {
       icon: Users,
-      title: "Client Relationship Management",
-      description: "Track client interactions, preferences, and transaction history. Atlas AI provides personalized recommendations and automates follow-up sequences based on client behavior.",
-      highlight: "Client Focused",
+      title: "Remembers Everything",
+      description: "Keeps track of client preferences, past conversations, and deal history. Never ask a client the same question twice.",
+      highlight: "Personal Touch",
       color: "from-emerald-600 to-teal-600",
       bgColor: "from-emerald-50 to-teal-50",
       textColor: "text-emerald-600"
@@ -64,10 +64,10 @@ const Features: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
-            Real Estate AI Capabilities
+            What It Actually Does
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Advanced AI features designed specifically for real estate professionals who demand both intelligence and privacy.
+            No marketing fluff—here's what it actually does to help you close more deals.
           </p>
         </div>
         

@@ -25,20 +25,20 @@ const Hero: React.FC = () => {
                 <div className="space-y-10">
                   <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 backdrop-blur-sm border border-purple-500/20 text-purple-400 rounded-full text-sm font-medium">
                     <Shield className="w-4 h-4 mr-2" />
-                    Multi-Agent Real Estate Intelligence. Zero Data Compromise.
+                    Built by real estate agents, for real estate agents
                   </div>
                   
                   <div className="space-y-8">
                     <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
-                      Transform Your{' '}
+                      Stop{' '}
                       <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                        Real Estate
+                        Losing Deals
                       </span>{' '}
-                      Workflow with Multi-Agent AI
+                      to Paperwork
                     </h1>
                     
                     <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl">
-                      Streamline document analysis, compliance checking, and lead management with Atlas AI. Our multi-agent platform processes contracts, analyzes market data, and manages client relationships while keeping your data secure and private.
+                      We've been there—drowning in contracts, missing deadlines, losing clients to competitors who move faster. Atlas AI reads your documents, spots issues before they become problems, and keeps your deals moving forward.
                     </p>
                   </div>
                   
@@ -64,16 +64,16 @@ const Hero: React.FC = () => {
                   
                   <div className="flex items-center space-x-12 pt-6">
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-white">100%</div>
-                      <div className="text-sm text-gray-400">Data Privacy</div>
+                      <div className="text-3xl font-bold text-white">5 min</div>
+                      <div className="text-sm text-gray-400">Setup Time</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-white">Real Estate</div>
-                      <div className="text-sm text-gray-400">Focused</div>
+                      <div className="text-3xl font-bold text-white">24/7</div>
+                      <div className="text-sm text-gray-400">Document Review</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-white">Multi-Agent</div>
-                      <div className="text-sm text-gray-400">AI Platform</div>
+                      <div className="text-3xl font-bold text-white">$0</div>
+                      <div className="text-sm text-gray-400">Setup Fee</div>
                     </div>
                   </div>
                 </div>
