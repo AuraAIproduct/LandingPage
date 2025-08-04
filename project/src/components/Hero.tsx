@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight, Play, Sparkles, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { TypeAnimation } from 'react-type-animation';
 import NetworkAnimation from './NetworkAnimation';
 
 const Hero: React.FC = () => {
@@ -35,7 +36,7 @@ const Hero: React.FC = () => {
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       },
     },
   };
@@ -67,7 +68,29 @@ const Hero: React.FC = () => {
                 <span className="text-blue-400">
                   Losing Deals
                 </span>{' '}
-                to Paperwork
+                to{' '}
+                <span className="text-red-400">
+                  <TypeAnimation
+                    sequence={[
+                      'missed deadlines.',
+                      2000,
+                      'missed follow-ups.',
+                      2000,
+                      'compliance errors.',
+                      2000,
+                      'paperwork chaos.',
+                      2000,
+                      'lost opportunities.',
+                      2000,
+                    ]}
+                    wrapper="span"
+                    speed={50}
+                    deletionSpeed={60}
+                    repeat={Infinity}
+                    cursor={true}
+                    className="inline-block"
+                  />
+                </span>
               </h1>
               
               <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl">
