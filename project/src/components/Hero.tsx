@@ -94,7 +94,7 @@ const Hero: React.FC = () => {
                   Losing Deals
                 </span>{' '}
                 to{' '}
-                <span className="text-cyan-300 relative inline-block min-w-[400px] h-[80px] text-4xl lg:text-5xl">
+                <span className="text-cyan-300 relative inline-block min-w-[600px] h-[80px] text-4xl lg:text-5xl">
                   <AnimatePresence mode="wait">
                     <motion.span
                       key={currentPainPoint}
@@ -103,7 +103,7 @@ const Hero: React.FC = () => {
                       animate="center"
                       exit="exit"
                       transition={{ duration: 0.5, ease: "easeInOut" }}
-                      className="absolute top-0 left-0 w-full"
+                      className="absolute top-0 left-0 w-full whitespace-nowrap"
                     >
                       {painPoints[currentPainPoint]}
                     </motion.span>
