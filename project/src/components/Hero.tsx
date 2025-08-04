@@ -25,36 +25,20 @@ const Hero: React.FC = () => {
                 <div className="space-y-10">
                   <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 backdrop-blur-sm border border-purple-500/20 text-purple-400 rounded-full text-sm font-medium">
                     <Shield className="w-4 h-4 mr-2" />
-<<<<<<< HEAD
-                    AI-Powered Real Estate Intelligence. Zero Data Compromise.
-=======
-                    Enterprise-Grade AI Intelligence. Zero Data Compromise.
->>>>>>> 0e7cecf723347f29465f8af606b3d42f5b531529
+                    Multi-Agent Real Estate Intelligence. Zero Data Compromise.
                   </div>
                   
                   <div className="space-y-8">
                     <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
-<<<<<<< HEAD
                       Transform Your{' '}
                       <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                         Real Estate
                       </span>{' '}
-                      Workflow with AI
+                      Workflow with Multi-Agent AI
                     </h1>
                     
                     <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl">
-                      Streamline document analysis, compliance checking, and lead management with Atlas. Our AI assistant processes contracts, analyzes market data, and manages client relationships while keeping your data secure and private.
-=======
-                      Deploy{' '}
-                      <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                        Private AI
-                      </span>{' '}
-                      Across Your Enterprise Infrastructure
-                    </h1>
-                    
-                    <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl">
-                      Transform your organization's data into actionable intelligence while maintaining complete sovereignty. Our on-premises AI platform delivers enterprise-grade insights without compromising security or compliance.
->>>>>>> 0e7cecf723347f29465f8af606b3d42f5b531529
+                      Streamline document analysis, compliance checking, and lead management with Atlas AI. Our multi-agent platform processes contracts, analyzes market data, and manages client relationships while keeping your data secure and private.
                     </p>
                   </div>
                   
@@ -63,37 +47,24 @@ const Hero: React.FC = () => {
                       onClick={scrollToDemo}
                       className="group bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-5 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl hover:shadow-blue-500/25"
                     >
-<<<<<<< HEAD
                       Schedule Demo
-=======
-                      Schedule Enterprise Demo
->>>>>>> 0e7cecf723347f29465f8af606b3d42f5b531529
                       <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </button>
                     
                     <a 
-<<<<<<< HEAD
                       href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
-=======
-                      href="https://docs.google.com/presentation/d/1oVor9xozqoCZ_bbSmVy8zMgH8CgfumEpkQanhbGOntU/edit?usp=sharing" 
->>>>>>> 0e7cecf723347f29465f8af606b3d42f5b531529
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="group bg-white/5 backdrop-blur-sm text-gray-300 px-10 py-5 rounded-xl font-semibold text-lg border border-gray-600 hover:border-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center"
                     >
                       <Play className="mr-2 w-5 h-5" />
-<<<<<<< HEAD
                       Watch Demo Video
-=======
-                      View Pitch Deck
->>>>>>> 0e7cecf723347f29465f8af606b3d42f5b531529
                     </a>
                   </div>
                   
                   <div className="flex items-center space-x-12 pt-6">
                     <div className="text-center">
                       <div className="text-3xl font-bold text-white">100%</div>
-<<<<<<< HEAD
                       <div className="text-sm text-gray-400">Data Privacy</div>
                     </div>
                     <div className="text-center">
@@ -101,19 +72,8 @@ const Hero: React.FC = () => {
                       <div className="text-sm text-gray-400">Focused</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-white">24/7</div>
-                      <div className="text-sm text-gray-400">AI Assistant</div>
-=======
-                      <div className="text-sm text-gray-400">Data Sovereignty</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-white">Enterprise</div>
-                      <div className="text-sm text-gray-400">Ready</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-white">SOC2</div>
-                      <div className="text-sm text-gray-400">Certified</div>
->>>>>>> 0e7cecf723347f29465f8af606b3d42f5b531529
+                      <div className="text-3xl font-bold text-white">Multi-Agent</div>
+                      <div className="text-sm text-gray-400">AI Platform</div>
                     </div>
                   </div>
                 </div>

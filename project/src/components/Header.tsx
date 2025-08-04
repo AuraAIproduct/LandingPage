@@ -33,10 +33,7 @@ const Header: React.FC = () => {
               <div className="absolute inset-0 bg-purple-400/20 rounded-full animate-pulse"></div>
             </div>
 <<<<<<< HEAD
-            <span className="text-xl font-bold text-white">Atlas</span>
-=======
-            <span className="text-xl font-bold text-white">Aura</span>
->>>>>>> 0e7cecf723347f29465f8af606b3d42f5b531529
+            <span className="text-xl font-bold text-white">Atlas AI</span>
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">

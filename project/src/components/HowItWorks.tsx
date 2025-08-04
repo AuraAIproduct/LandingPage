@@ -1,59 +1,32 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import { Download, Users, GitBranch, BarChart3, ArrowRight, Cpu, Shield, Settings, Network, FileText, Mail, Building2 } from 'lucide-react';
-=======
-import { Download, Users, GitBranch, BarChart3, ArrowRight, Cpu, Shield, Settings, Network } from 'lucide-react';
->>>>>>> 0e7cecf723347f29465f8af606b3d42f5b531529
 
 const HowItWorks: React.FC = () => {
   const [activeStep, setActiveStep] = useState(0);
   
   const steps = [
     {
-<<<<<<< HEAD
       icon: FileText,
       title: "Upload Real Estate Documents",
-      details: "Upload contracts, purchase agreements, and legal documents to Atlas. The AI automatically analyzes document structure and extracts key information for compliance checking and processing.",
-=======
-      icon: Download,
-      title: "Install Aura on Any Device",
-      details: "Install Aura using Docker containers on any laptop, desktop, or server. Each installation creates a secure node that processes data locally while connecting to your private network.",
->>>>>>> 0e7cecf723347f29465f8af606b3d42f5b531529
+      details: "Upload contracts, purchase agreements, and legal documents to Atlas AI. The AI automatically analyzes document structure and extracts key information for compliance checking and processing.",
       color: "from-emerald-500 to-teal-500"
     },
     {
       icon: Cpu,
-<<<<<<< HEAD
       title: "AI Analysis & Compliance Check",
-      details: "Atlas runs comprehensive TRID, RESPA, and state-specific compliance checks. The AI identifies potential issues, calculates transfer taxes, and validates document integrity automatically.",
+      details: "Atlas AI runs comprehensive TRID, RESPA, and state-specific compliance checks. The AI identifies potential issues, calculates transfer taxes, and validates document integrity automatically.",
       color: "from-cyan-500 to-blue-500"
     },
     {
       icon: Mail,
       title: "Lead Management & Communication",
-      details: "Integrate with Gmail and CRM systems to track leads, schedule follow-ups, and manage client communications. Atlas analyzes email content and provides intelligent recommendations.",
+      details: "Integrate with Gmail and CRM systems to track leads, schedule follow-ups, and manage client communications. Atlas AI analyzes email content and provides intelligent recommendations.",
       color: "from-purple-500 to-indigo-500"
     },
     {
       icon: Building2,
       title: "Property Intelligence & Reports",
-      details: "Generate detailed property reports, market analysis, and investment insights. Atlas combines MLS data, market trends, and property valuations to provide comprehensive intelligence.",
-=======
-      title: "Choose Your Agents",
-      details: "Choose from pre-built agents for document processing, data analysis, and communication. Add specialized agents as your requirements grow.",
-      color: "from-cyan-500 to-blue-500"
-    },
-    {
-      icon: Network,
-      title: "Connect & Collaborate Securely",
-      details: "Agents work together using secure internal protocols. Sensitive data stays within your perimeter while enabling complex workflow automation.",
-      color: "from-purple-500 to-indigo-500"
-    },
-    {
-      icon: Settings,
-      title: "Stay in Control with Privacy Dashboard",
-      details: "Use the dashboard to set data sensitivity levels, control workflow access, and ensure compliance. Put data sovereignty directly in your hands.",
->>>>>>> 0e7cecf723347f29465f8af606b3d42f5b531529
+      details: "Generate detailed property reports, market analysis, and investment insights. Atlas AI combines MLS data, market trends, and property valuations to provide comprehensive intelligence.",
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -63,17 +36,10 @@ const HowItWorks: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD
-            How Atlas Works
+            How Atlas AI Works
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Simple document upload, intelligent analysis, complete automation—get your real estate AI assistant running in minutes.
-=======
-            How Aura Works
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Simple deployment, powerful automation, complete control—get your private AI network running in hours.
->>>>>>> 0e7cecf723347f29465f8af606b3d42f5b531529
           </p>
         </div>
         
@@ -100,11 +66,7 @@ const HowItWorks: React.FC = () => {
                         {step.title}
                       </h3>
                       <p className="text-gray-300 text-sm">
-<<<<<<< HEAD
                         {step.details}
-=======
-                        {step.description}
->>>>>>> 0e7cecf723347f29465f8af606b3d42f5b531529
                       </p>
                     </div>
                     <ArrowRight className={`w-5 h-5 text-gray-400 transition-transform duration-300 ${
