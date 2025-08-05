@@ -12,7 +12,11 @@ import {
   FaHome,
   FaBuilding,
   FaFileAlt,
-  FaEnvelope
+  FaEnvelope,
+  FaCalendarAlt,
+  FaFileContract,
+  FaShieldAlt,
+  FaUserTie
 } from 'react-icons/fa';
 
 const NetworkAnimation: React.FC = () => {
@@ -20,52 +24,53 @@ const NetworkAnimation: React.FC = () => {
     <div className="relative w-full h-96 bg-gradient-to-br from-slate-900 via-slate-800/50 to-slate-900 rounded-2xl overflow-hidden border border-slate-700/50">
       {/* SVG Connections */}
       <svg className="absolute inset-0 w-full h-full">
-        {/* Customer to Tools connections */}
+        {/* Atlas to Workflow connections */}
         <line x1="50%" y1="50%" x2="25%" y2="15%" stroke="#6366f1" strokeWidth="1.5" className="connection-line" style={{ animationDelay: '0.8s' }} />
         <line x1="50%" y1="50%" x2="75%" y2="15%" stroke="#6366f1" strokeWidth="1.5" className="connection-line" style={{ animationDelay: '1.2s' }} />
         <line x1="50%" y1="50%" x2="20%" y2="80%" stroke="#6366f1" strokeWidth="1.5" className="connection-line" style={{ animationDelay: '1.6s' }} />
         <line x1="50%" y1="50%" x2="80%" y2="80%" stroke="#6366f1" strokeWidth="1.5" className="connection-line" style={{ animationDelay: '2.0s' }} />
-        <line x1="50%" y1="50%" x2="15%" y2="40%" stroke="#6366f1" strokeWidth="1.5" className="connection-line" style={{ animationDelay: '2.4s' }} />
-        <line x1="50%" y1="50%" x2="85%" y2="30%" stroke="#6366f1" strokeWidth="1.5" className="connection-line" style={{ animationDelay: '2.8s' }} />
-        <line x1="50%" y1="50%" x2="90%" y2="70%" stroke="#6366f1" strokeWidth="1.5" className="connection-line" style={{ animationDelay: '3.2s' }} />
         
-        {/* Tool to Tool interactions */}
-        <line x1="25%" y1="15%" x2="75%" y2="15%" stroke="#10b981" strokeWidth="1" className="tool-interaction-line" style={{ animationDelay: '4.0s' }} />
-        <line x1="20%" y1="80%" x2="80%" y2="80%" stroke="#10b981" strokeWidth="1" className="tool-interaction-line" style={{ animationDelay: '4.4s' }} />
-        <line x1="15%" y1="40%" x2="85%" y2="30%" stroke="#10b981" strokeWidth="1" className="tool-interaction-line" style={{ animationDelay: '4.8s' }} />
-        <line x1="85%" y1="30%" x2="90%" y2="70%" stroke="#10b981" strokeWidth="1" className="tool-interaction-line" style={{ animationDelay: '5.2s' }} />
+        {/* Workflow to Workflow connections */}
+        <line x1="25%" y1="15%" x2="75%" y2="15%" stroke="#10b981" strokeWidth="1" className="workflow-line" style={{ animationDelay: '3.0s' }} />
+        <line x1="20%" y1="80%" x2="80%" y2="80%" stroke="#10b981" strokeWidth="1" className="workflow-line" style={{ animationDelay: '3.4s' }} />
+        <line x1="75%" y1="15%" x2="20%" y2="80%" stroke="#10b981" strokeWidth="1" className="workflow-line" style={{ animationDelay: '3.8s' }} />
+        <line x1="25%" y1="15%" x2="80%" y2="80%" stroke="#10b981" strokeWidth="1" className="workflow-line" style={{ animationDelay: '4.2s' }} />
       </svg>
 
       {/* Nodes */}
       <div className="absolute inset-0">
-        {/* Customer Node - Bigger and Centered */}
+        {/* Atlas AI Node - Centered */}
         <div className="absolute left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2 p-6 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm user-node">
-          <User className="w-12 h-12 text-white" />
+          <FaShieldAlt className="w-12 h-12 text-white" />
         </div>
 
-        {/* Real Estate Tool Nodes */}
-        <div className="absolute left-[25%] top-[15%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm device-node">
-          <SiGoogledrive className="w-6 h-6 text-white" />
+        {/* Workflow Nodes */}
+        <div className="absolute left-[25%] top-[15%] transform -translate-x-1/2 -translate-y-1/2 p-4 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm device-node">
+          <FaUserTie className="w-6 h-6 text-white" />
+          <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs text-white/80 font-medium whitespace-nowrap">
+            Lead Management
+          </div>
         </div>
-        <div className="absolute left-[75%] top-[15%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm device-node">
-          <SiGmail className="w-6 h-6 text-white" />
+        
+        <div className="absolute left-[75%] top-[15%] transform -translate-x-1/2 -translate-y-1/2 p-4 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm device-node">
+          <FaCalendarAlt className="w-6 h-6 text-white" />
+          <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs text-white/80 font-medium whitespace-nowrap">
+            Showings
+          </div>
         </div>
-        <div className="absolute left-[20%] top-[80%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm device-node">
-          <SiSalesforce className="w-6 h-6 text-white" />
+        
+        <div className="absolute left-[20%] top-[80%] transform -translate-x-1/2 -translate-y-1/2 p-4 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm device-node">
+          <FaFileContract className="w-6 h-6 text-white" />
+          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs text-white/80 font-medium whitespace-nowrap">
+            Contracts
+          </div>
         </div>
-        <div className="absolute left-[80%] top-[80%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm device-node">
-          <SiZillow className="w-6 h-6 text-white" />
-        </div>
-
-        {/* Additional Real Estate Tools */}
-        <div className="absolute left-[15%] top-[40%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm data-source-node">
-          <FaFileAlt className="w-6 h-6 text-white" />
-        </div>
-        <div className="absolute left-[85%] top-[30%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm data-source-node">
-          <SiDropbox className="w-6 h-6 text-white" />
-        </div>
-        <div className="absolute left-[90%] top-[70%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm data-source-node">
-          <SiBox className="w-6 h-6 text-white" />
+        
+        <div className="absolute left-[80%] top-[80%] transform -translate-x-1/2 -translate-y-1/2 p-4 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm device-node">
+          <FaShieldAlt className="w-6 h-6 text-white" />
+          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs text-white/80 font-medium whitespace-nowrap">
+            Compliance
+          </div>
         </div>
       </div>
 
@@ -79,10 +84,6 @@ const NetworkAnimation: React.FC = () => {
             animation: nodeActivate 1.2s ease-out forwards;
           }
           
-          .data-source-node {
-            animation: nodeActivate 1.2s ease-out forwards;
-          }
-          
           .connection-line {
             stroke-dasharray: 1000;
             stroke-dashoffset: 1000;
@@ -90,10 +91,10 @@ const NetworkAnimation: React.FC = () => {
             opacity: 0.6;
           }
           
-          .tool-interaction-line {
+          .workflow-line {
             stroke-dasharray: 1000;
             stroke-dashoffset: 1000;
-            animation: drawToolInteraction 1.2s ease-out forwards;
+            animation: drawWorkflow 1.2s ease-out forwards;
             opacity: 0.4;
           }
           
@@ -147,7 +148,7 @@ const NetworkAnimation: React.FC = () => {
             }
           }
           
-          @keyframes drawToolInteraction {
+          @keyframes drawWorkflow {
             0% {
               stroke-dashoffset: 1000;
               opacity: 0;
@@ -163,35 +164,23 @@ const NetworkAnimation: React.FC = () => {
           
           /* Connection hit animations - nodes bob when connections reach them */
           .user-node {
-            animation: userActivate 1.2s ease-out forwards, userBob 0.4s ease-out 0.8s, userBob 0.4s ease-out 1.2s, userBob 0.4s ease-out 1.6s, userBob 0.4s ease-out 2.0s, userBob 0.4s ease-out 2.4s, userBob 0.4s ease-out 2.8s, userBob 0.4s ease-out 3.2s;
+            animation: userActivate 1.2s ease-out forwards, userBob 0.4s ease-out 0.8s, userBob 0.4s ease-out 1.2s, userBob 0.4s ease-out 1.6s, userBob 0.4s ease-out 2.0s;
           }
           
           .device-node:nth-child(1) {
-            animation: nodeActivate 1.2s ease-out forwards, nodeBob 0.4s ease-out 0.8s, toolBob 0.4s ease-out 4.0s;
+            animation: nodeActivate 1.2s ease-out forwards, nodeBob 0.4s ease-out 0.8s, workflowBob 0.4s ease-out 3.0s, workflowBob 0.4s ease-out 3.8s, workflowBob 0.4s ease-out 4.2s;
           }
           
           .device-node:nth-child(2) {
-            animation: nodeActivate 1.2s ease-out forwards, nodeBob 0.4s ease-out 1.2s, toolBob 0.4s ease-out 4.0s;
+            animation: nodeActivate 1.2s ease-out forwards, nodeBob 0.4s ease-out 1.2s, workflowBob 0.4s ease-out 3.0s, workflowBob 0.4s ease-out 3.8s, workflowBob 0.4s ease-out 4.2s;
           }
           
           .device-node:nth-child(3) {
-            animation: nodeActivate 1.2s ease-out forwards, nodeBob 0.4s ease-out 1.6s, toolBob 0.4s ease-out 4.4s;
+            animation: nodeActivate 1.2s ease-out forwards, nodeBob 0.4s ease-out 1.6s, workflowBob 0.4s ease-out 3.4s, workflowBob 0.4s ease-out 3.8s, workflowBob 0.4s ease-out 4.2s;
           }
           
           .device-node:nth-child(4) {
-            animation: nodeActivate 1.2s ease-out forwards, nodeBob 0.4s ease-out 2.0s, toolBob 0.4s ease-out 4.4s;
-          }
-          
-          .data-source-node:nth-child(1) {
-            animation: nodeActivate 1.2s ease-out forwards, nodeBob 0.4s ease-out 2.4s, toolBob 0.4s ease-out 4.8s;
-          }
-          
-          .data-source-node:nth-child(2) {
-            animation: nodeActivate 1.2s ease-out forwards, nodeBob 0.4s ease-out 2.8s, toolBob 0.4s ease-out 4.8s, toolBob 0.4s ease-out 5.2s;
-          }
-          
-          .data-source-node:nth-child(3) {
-            animation: nodeActivate 1.2s ease-out forwards, nodeBob 0.4s ease-out 3.2s, toolBob 0.4s ease-out 5.2s;
+            animation: nodeActivate 1.2s ease-out forwards, nodeBob 0.4s ease-out 2.0s, workflowBob 0.4s ease-out 3.4s, workflowBob 0.4s ease-out 3.8s, workflowBob 0.4s ease-out 4.2s;
           }
           
           @keyframes userBob {
@@ -218,7 +207,7 @@ const NetworkAnimation: React.FC = () => {
             }
           }
           
-          @keyframes toolBob {
+          @keyframes workflowBob {
             0% {
               transform: translate(-50%, -50%) scale(1);
             }
