@@ -74,7 +74,7 @@ const Hero: React.FC = () => {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="grid lg:grid-cols-2 gap-16 items-center min-h-screen py-20"
+          className="grid lg:grid-cols-2 gap-16 items-center min-h-screen py-8"
         >
           <div className="space-y-8">
             {/* Badge */}
