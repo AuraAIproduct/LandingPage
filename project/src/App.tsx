@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="min-h-screen">
       <Header />
-      <div className="h-48 bg-black"></div>
+      <div className="h-16 bg-black"></div>
       <Hero />
       <Features />
       <DemoRequest />
