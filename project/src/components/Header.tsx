@@ -29,8 +29,11 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-blue-600 flex items-center justify-center">
-              <Shield className="w-5 h-5 text-white" />
+            <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-teal-600 flex items-center justify-center rounded-lg">
+              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9,22 9,12 15,12 15,22" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} />
+              </svg>
             </div>
             <span className="text-lg font-semibold text-white tracking-tight">Atlas AI</span>
           </div>

@@ -8,8 +8,11 @@ const Footer: React.FC = () => {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-8 h-8 bg-blue-600 flex items-center justify-center">
-                <Shield className="w-5 h-5 text-white" />
+              <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-teal-600 flex items-center justify-center rounded-lg">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                  <polyline points="9,22 9,12 15,12 15,22" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} />
+                </svg>
               </div>
               <span className="text-lg font-semibold tracking-tight">Atlas AI</span>
             </div>
@@ -69,7 +72,7 @@ const Footer: React.FC = () => {
                   placeholder="Enter your email"
                   className="bg-white/5 text-white px-3 py-2 flex-1 text-sm border border-white/20 focus:border-white/40 focus:outline-none placeholder-gray-400"
                 />
-                <button className="bg-white text-black px-4 py-2 text-sm font-medium hover:bg-gray-100 transition-colors">
+                <button className="bg-orange-500 text-white px-4 py-2 text-sm font-medium hover:bg-orange-600 transition-colors">
                   Subscribe
                 </button>
               </div>

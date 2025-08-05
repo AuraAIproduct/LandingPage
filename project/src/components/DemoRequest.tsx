@@ -49,7 +49,7 @@ const DemoRequest: React.FC = () => {
     <section id="demo-request" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4 tracking-tight">
+          <h2 className="text-4xl font-bold text-white mb-4 tracking-tight font-serif">
             Ready to see Atlas in action?
           </h2>
           <p className="text-xl text-gray-300 font-light">
@@ -59,7 +59,7 @@ const DemoRequest: React.FC = () => {
         
         {/* Form Panel */}
         <div className="relative">
-          <div className="relative bg-white/5 border border-white/20 p-12">
+          <div className="relative bg-white/5 border border-white/20 p-12 hover-lift">
             <form onSubmit={handleSubmit} className="space-y-8">
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
@@ -156,7 +156,7 @@ const DemoRequest: React.FC = () => {
               <div className="text-center pt-4">
                 <button 
                   type="submit"
-                  className="group bg-white text-black px-10 py-5 font-semibold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center mx-auto tracking-wide"
+                  className="group bg-white text-black px-10 py-5 font-semibold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center mx-auto tracking-wide hover-lift glow-on-hover"
                 >
                   Request Demo
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />

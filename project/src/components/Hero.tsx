@@ -80,21 +80,20 @@ const Hero: React.FC = () => {
             {/* Badge */}
             <motion.div
               variants={itemVariants}
-              className="inline-flex items-center px-4 py-2 bg-white/10 border border-white/20 text-white text-sm font-medium tracking-wide"
+              className="inline-flex items-center px-4 py-2 bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-medium tracking-wide hover-lift"
             >
-              <Sparkles className="w-4 h-4 mr-2" />
               Built with real estate teams
             </motion.div>
             
             {/* Main Heading */}
             <motion.div variants={itemVariants} className="space-y-6">
               <h1 className="text-6xl lg:text-8xl font-bold text-white leading-tight tracking-tight">
-                Stop{' '}
-                <span className="text-blue-400">
+                <span className="font-serif">Stop</span>{' '}
+                <span className="text-orange-400 font-serif">
                   Losing Deals
                 </span>{' '}
                 to{' '}
-                <span className="text-cyan-300 relative inline-block min-w-[600px] h-[80px] text-4xl lg:text-5xl">
+                <span className="text-orange-300 relative inline-block min-w-[600px] h-[80px] text-4xl lg:text-5xl">
                   <AnimatePresence mode="wait">
                     <motion.span
                       key={currentPainPoint}
@@ -122,7 +121,7 @@ const Hero: React.FC = () => {
                 onClick={scrollToDemo}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="group bg-white text-black px-10 py-5 font-semibold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center tracking-wide"
+                className="group bg-orange-500 text-white px-10 py-5 font-semibold text-lg hover:bg-orange-600 transition-all duration-300 flex items-center justify-center tracking-wide hover-lift glow-on-hover"
               >
                 <Zap className="mr-2 w-5 h-5" />
                 Start Free Trial
@@ -135,7 +134,7 @@ const Hero: React.FC = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="group bg-white/10 text-white px-10 py-5 font-semibold text-lg border border-white/20 hover:border-white/40 transition-all duration-300 flex items-center justify-center tracking-wide"
+                className="group bg-white/10 text-white px-10 py-5 font-semibold text-lg border border-white/20 hover:border-white/40 transition-all duration-300 flex items-center justify-center tracking-wide hover-lift"
               >
                 <Play className="mr-2 w-5 h-5" />
                 Watch Demo

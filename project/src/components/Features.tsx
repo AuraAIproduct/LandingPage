@@ -2,7 +2,7 @@ import * as React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { TypeAnimation } from 'react-type-animation';
+import ChatbotDemo from './ChatbotDemo';
 
 const Features: React.FC = () => {
   const [ref, inView] = useInView({
@@ -46,13 +46,13 @@ const Features: React.FC = () => {
         >
           <motion.h2 
             variants={cardVariants}
-            className="text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight"
+            className="text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight font-serif"
           >
             What Atlas Does
           </motion.h2>
         </motion.div>
         
-        {/* Typing Animation Section */}
+        {/* Chatbot Demo Section */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -61,43 +61,9 @@ const Features: React.FC = () => {
         >
           <motion.div 
             variants={cardVariants}
-            className="relative bg-white/5 border border-white/20 p-12"
+            className="relative"
           >
-            {/* Content */}
-            <div className="relative z-10">
-              <div className="flex items-center mb-6">
-                <div className="flex space-x-2 mr-4">
-                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                </div>
-                <span className="text-gray-400 text-sm font-mono">atlas.ai</span>
-              </div>
-              
-              <div className="min-h-[120px] flex items-start">
-                <span className="text-green-400 mr-3 font-mono">$</span>
-                <div className="flex-1">
-                  <TypeAnimation
-                    sequence={[
-                      'Atlas is an AI copilot for real estate teams.',
-                      800,
-                      'Replaces fragmented tools with one intelligent app.',
-                      800,
-                      'Handles contracts, compliance, and client follow-ups.',
-                      800,
-                      'No more missed deadlines or compliance landmines.',
-                      800,
-                    ]}
-                    wrapper="span"
-                    speed={60}
-                    deletionSpeed={80}
-                    repeat={Infinity}
-                    cursor={true}
-                    className="text-white text-xl lg:text-2xl font-mono leading-relaxed inline-block"
-                  />
-                </div>
-              </div>
-            </div>
+            <ChatbotDemo />
           </motion.div>
         </motion.div>
       </div>

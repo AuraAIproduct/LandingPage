@@ -1,7 +1,7 @@
 import React from 'react';
-import { FileText, Building2, Phone } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { PropertyIcon, ContractIcon, ComplianceIcon } from './RealEstateIcons';
 
 const About: React.FC = () => {
   const [ref, inView] = useInView({
@@ -56,7 +56,7 @@ const About: React.FC = () => {
         >
           <motion.h2 
             variants={itemVariants}
-            className="text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight"
+            className="text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight font-serif"
           >
             Built From Real Experience
           </motion.h2>
@@ -79,8 +79,8 @@ const About: React.FC = () => {
             className="group relative"
           >
             <div className="relative z-10">
-              <div className="w-12 h-12 bg-white/10 border border-white/20 flex items-center justify-center mb-8">
-                <FileText className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 bg-orange-500/10 border border-orange-500/20 flex items-center justify-center mb-8 hover-lift">
+                <PropertyIcon className="w-6 h-6 text-orange-400" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-4 tracking-tight">Real Estate Expertise</h3>
               <p className="text-gray-300 leading-relaxed font-light">
@@ -94,8 +94,8 @@ const About: React.FC = () => {
             className="group relative"
           >
             <div className="relative z-10">
-              <div className="w-12 h-12 bg-white/10 border border-white/20 flex items-center justify-center mb-8">
-                <Building2 className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 bg-teal-500/10 border border-teal-500/20 flex items-center justify-center mb-8 hover-lift">
+                <ContractIcon className="w-6 h-6 text-teal-400" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-4 tracking-tight">Why Others Lack</h3>
               <p className="text-gray-300 leading-relaxed font-light">
@@ -109,8 +109,8 @@ const About: React.FC = () => {
             className="group relative"
           >
             <div className="relative z-10">
-              <div className="w-12 h-12 bg-white/10 border border-white/20 flex items-center justify-center mb-8">
-                <Phone className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-8 hover-lift">
+                <ComplianceIcon className="w-6 h-6 text-blue-400" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-4 tracking-tight">Purpose-Built Solution</h3>
               <p className="text-gray-300 leading-relaxed font-light">
