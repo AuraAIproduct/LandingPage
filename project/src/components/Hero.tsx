@@ -145,18 +145,18 @@ const Hero: React.FC = () => {
             {/* Stats */}
             <motion.div variants={itemVariants} className="flex items-center space-x-12 pt-8">
               <div className="text-center">
-                <div className="text-4xl font-bold text-white tracking-tight">5 min</div>
-                <div className="text-sm text-gray-400 font-light">Setup</div>
+                <div className="text-4xl font-bold text-white tracking-tight">20+</div>
+                <div className="text-sm text-gray-400 font-light">Tools Unified</div>
+              </div>
+              <div className="w-px h-12 bg-gray-600"></div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-white tracking-tight">60%</div>
+                <div className="text-sm text-gray-400 font-light">Deal Acceleration</div>
               </div>
               <div className="w-px h-12 bg-gray-600"></div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-white tracking-tight">24/7</div>
-                <div className="text-sm text-gray-400 font-light">Review</div>
-              </div>
-              <div className="w-px h-12 bg-gray-600"></div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-white tracking-tight">$0</div>
-                <div className="text-sm text-gray-400 font-light">Setup</div>
+                <div className="text-sm text-gray-400 font-light">AI Assistance</div>
               </div>
             </motion.div>
           </div>
