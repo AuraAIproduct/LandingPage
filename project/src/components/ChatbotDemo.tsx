@@ -6,14 +6,16 @@ const questions = [
   "What does Atlas do?",
   "How does it actually help agents?",
   "What makes Atlas different?",
-  "How does it handle compliance?"
+  "How does it help scale my business?",
+  "How do I know it actually works?"
 ];
 
 const responses = [
   "Atlas is an AI admin for real estate teams.",
   "Atlas automates compliance checks, lead follow-ups, and lead generation workflows.",
-  "Built by real estate agents for real estate agents, not a generic AI tool.",
-  "Automated compliance monitoring with real-time alerts and deadline tracking."
+  "It's built by real estate agents for real estate agents, not just another generic AI chatbot.",
+  "Automates repetitive tasks so you can focus on closing more deals and growing your team.",
+  "Piloted with real teams seeing 15+ hours saved weekly and 90% fewer missed deadlines."
 ];
 
 const ChatbotDemo: React.FC = () => {
