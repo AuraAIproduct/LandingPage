@@ -130,7 +130,7 @@ const Hero: React.FC = () => {
               </motion.button>
               
               <motion.a 
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
+                href="https://www.tella.tv/video/streamlining-real-estate-with-ai-8cal" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
