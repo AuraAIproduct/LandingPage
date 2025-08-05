@@ -36,12 +36,12 @@ const NetworkAnimation: React.FC = () => {
         <line x1="45%" y1="50%" x2="65%" y2="70%" stroke="#8b5cf6" strokeWidth="1.5" className="backend-line" style={{ animationDelay: '1.4s' }} />
         
         {/* Backend to Tools connections */}
-        <line x1="65%" y1="30%" x2="85%" y2="20%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '2.0s' }} />
-        <line x1="65%" y1="30%" x2="85%" y2="35%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '2.2s' }} />
-        <line x1="65%" y1="50%" x2="85%" y2="50%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '2.4s' }} />
-        <line x1="65%" y1="50%" x2="85%" y2="65%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '2.6s' }} />
-        <line x1="65%" y1="70%" x2="85%" y2="80%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '2.8s' }} />
-        <line x1="65%" y1="70%" x2="85%" y2="85%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '3.0s' }} />
+        <line x1="65%" y1="30%" x2="85%" y2="15%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '2.0s' }} />
+        <line x1="65%" y1="30%" x2="85%" y2="30%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '2.2s' }} />
+        <line x1="65%" y1="50%" x2="85%" y2="45%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '2.4s' }} />
+        <line x1="65%" y1="50%" x2="85%" y2="60%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '2.6s' }} />
+        <line x1="65%" y1="70%" x2="85%" y2="75%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '2.8s' }} />
+        <line x1="65%" y1="70%" x2="85%" y2="90%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '3.0s' }} />
       </svg>
 
       {/* Nodes */}
@@ -70,27 +70,27 @@ const NetworkAnimation: React.FC = () => {
         </div>
 
         {/* Tool Nodes - Clean and Simple */}
-        <div className="absolute left-[85%] top-[20%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm tool-node">
+        <div className="absolute left-[85%] top-[15%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm tool-node">
           <SiGoogledrive className="w-5 h-5 text-white" />
         </div>
         
-        <div className="absolute left-[85%] top-[35%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm tool-node">
+        <div className="absolute left-[85%] top-[30%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm tool-node">
           <SiGmail className="w-5 h-5 text-white" />
         </div>
         
-        <div className="absolute left-[85%] top-[50%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm tool-node">
+        <div className="absolute left-[85%] top-[45%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm tool-node">
           <SiSalesforce className="w-5 h-5 text-white" />
         </div>
         
-        <div className="absolute left-[85%] top-[65%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm tool-node">
+        <div className="absolute left-[85%] top-[60%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm tool-node">
           <SiZillow className="w-5 h-5 text-white" />
         </div>
         
-        <div className="absolute left-[85%] top-[80%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm tool-node">
+        <div className="absolute left-[85%] top-[75%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm tool-node">
           <FaFileContract className="w-5 h-5 text-white" />
         </div>
         
-        <div className="absolute left-[85%] top-[85%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm tool-node">
+        <div className="absolute left-[85%] top-[90%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm tool-node">
           <FaCalendarAlt className="w-5 h-5 text-white" />
         </div>
       </div>
