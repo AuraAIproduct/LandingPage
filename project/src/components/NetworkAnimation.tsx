@@ -1,5 +1,5 @@
 import React from 'react';
-import { Laptop, Monitor, Lock, Server, Cpu, Database, User, FileText, Mail, Mic, Building2, Calculator, Users } from 'lucide-react';
+import { Laptop, Monitor, Lock, Server, Cpu, Database, User, FileText, Mail, Mic, Building2, Calculator, Users, Bot, MessageCircle, Brain } from 'lucide-react';
 import { 
   SiGmail, 
   SiGoogledrive, 
@@ -19,7 +19,10 @@ import {
   FaUserTie,
   FaDatabase,
   FaServer,
-  FaCog
+  FaCog,
+  FaRobot,
+  FaBrain,
+  FaComments
 } from 'react-icons/fa';
 
 const NetworkAnimation: React.FC = () => {
@@ -59,7 +62,7 @@ const NetworkAnimation: React.FC = () => {
 
         {/* Atlas Hub - User Interface */}
         <div className="absolute left-[45%] top-[50%] transform -translate-x-1/2 -translate-y-1/2 p-5 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm hub-node">
-          <FaShieldAlt className="w-10 h-10 text-white" />
+          <FaRobot className="w-10 h-10 text-white" />
         </div>
 
         {/* Backend Orchestration Nodes */}
