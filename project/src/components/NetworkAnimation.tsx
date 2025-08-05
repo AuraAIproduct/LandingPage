@@ -38,10 +38,16 @@ const NetworkAnimation: React.FC = () => {
         {/* Backend to Tools connections */}
         <line x1="65%" y1="30%" x2="85%" y2="15%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '2.0s' }} />
         <line x1="65%" y1="30%" x2="85%" y2="30%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '2.2s' }} />
-        <line x1="65%" y1="50%" x2="85%" y2="45%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '2.4s' }} />
-        <line x1="65%" y1="50%" x2="85%" y2="60%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '2.6s' }} />
-        <line x1="65%" y1="70%" x2="85%" y2="75%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '2.8s' }} />
-        <line x1="65%" y1="70%" x2="85%" y2="90%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '3.0s' }} />
+        <line x1="65%" y1="30%" x2="85%" y2="45%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '2.4s' }} />
+        <line x1="65%" y1="50%" x2="85%" y2="30%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '2.6s' }} />
+        <line x1="65%" y1="50%" x2="85%" y2="45%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '2.8s' }} />
+        <line x1="65%" y1="50%" x2="85%" y2="60%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '3.0s' }} />
+        <line x1="65%" y1="50%" x2="85%" y2="75%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '3.2s' }} />
+        <line x1="65%" y1="70%" x2="85%" y2="60%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '3.4s' }} />
+        <line x1="65%" y1="70%" x2="85%" y2="75%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '3.6s' }} />
+        <line x1="65%" y1="70%" x2="85%" y2="90%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '3.8s' }} />
+        <line x1="65%" y1="30%" x2="85%" y2="90%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '4.0s' }} />
+        <line x1="65%" y1="70%" x2="85%" y2="15%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '4.2s' }} />
       </svg>
 
       {/* Nodes */}
@@ -258,39 +264,39 @@ const NetworkAnimation: React.FC = () => {
           }
           
           .backend-node:nth-child(1) {
-            animation: backendActivate 1.2s ease-out forwards, backendBob 0.4s ease-out 1.0s, backendBob 0.4s ease-out 2.0s, backendBob 0.4s ease-out 2.2s;
+            animation: backendActivate 1.2s ease-out forwards, backendBob 0.4s ease-out 1.0s, backendBob 0.4s ease-out 2.0s, backendBob 0.4s ease-out 2.2s, backendBob 0.4s ease-out 2.4s, backendBob 0.4s ease-out 4.0s;
           }
           
           .backend-node:nth-child(2) {
-            animation: backendActivate 1.2s ease-out forwards, backendBob 0.4s ease-out 1.2s, backendBob 0.4s ease-out 2.4s, backendBob 0.4s ease-out 2.6s;
+            animation: backendActivate 1.2s ease-out forwards, backendBob 0.4s ease-out 1.2s, backendBob 0.4s ease-out 2.6s, backendBob 0.4s ease-out 2.8s, backendBob 0.4s ease-out 3.0s, backendBob 0.4s ease-out 3.2s;
           }
           
           .backend-node:nth-child(3) {
-            animation: backendActivate 1.2s ease-out forwards, backendBob 0.4s ease-out 1.4s, backendBob 0.4s ease-out 2.8s, backendBob 0.4s ease-out 3.0s;
+            animation: backendActivate 1.2s ease-out forwards, backendBob 0.4s ease-out 1.4s, backendBob 0.4s ease-out 3.4s, backendBob 0.4s ease-out 3.6s, backendBob 0.4s ease-out 3.8s, backendBob 0.4s ease-out 4.2s;
           }
           
           .tool-node:nth-child(1) {
-            animation: toolActivate 1.2s ease-out forwards, toolBob 0.4s ease-out 2.0s;
+            animation: toolActivate 1.2s ease-out forwards, toolBob 0.4s ease-out 2.0s, toolBob 0.4s ease-out 4.2s;
           }
           
           .tool-node:nth-child(2) {
-            animation: toolActivate 1.2s ease-out forwards, toolBob 0.4s ease-out 2.2s;
+            animation: toolActivate 1.2s ease-out forwards, toolBob 0.4s ease-out 2.2s, toolBob 0.4s ease-out 2.6s;
           }
           
           .tool-node:nth-child(3) {
-            animation: toolActivate 1.2s ease-out forwards, toolBob 0.4s ease-out 2.4s;
+            animation: toolActivate 1.2s ease-out forwards, toolBob 0.4s ease-out 2.4s, toolBob 0.4s ease-out 2.8s;
           }
           
           .tool-node:nth-child(4) {
-            animation: toolActivate 1.2s ease-out forwards, toolBob 0.4s ease-out 2.6s;
+            animation: toolActivate 1.2s ease-out forwards, toolBob 0.4s ease-out 3.0s, toolBob 0.4s ease-out 3.4s;
           }
           
           .tool-node:nth-child(5) {
-            animation: toolActivate 1.2s ease-out forwards, toolBob 0.4s ease-out 2.8s;
+            animation: toolActivate 1.2s ease-out forwards, toolBob 0.4s ease-out 3.2s, toolBob 0.4s ease-out 3.6s;
           }
           
           .tool-node:nth-child(6) {
-            animation: toolActivate 1.2s ease-out forwards, toolBob 0.4s ease-out 3.0s;
+            animation: toolActivate 1.2s ease-out forwards, toolBob 0.4s ease-out 3.8s, toolBob 0.4s ease-out 4.0s;
           }
           
           @keyframes userBob {
