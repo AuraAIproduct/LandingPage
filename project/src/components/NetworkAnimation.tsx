@@ -18,7 +18,8 @@ import {
   FaShieldAlt,
   FaUserTie,
   FaDatabase,
-  FaServer
+  FaServer,
+  FaCog
 } from 'react-icons/fa';
 
 const NetworkAnimation: React.FC = () => {
@@ -26,123 +27,111 @@ const NetworkAnimation: React.FC = () => {
     <div className="relative w-full h-96 bg-gradient-to-br from-slate-900 via-slate-800/50 to-slate-900 rounded-2xl overflow-hidden border border-slate-700/50">
       {/* SVG Connections */}
       <svg className="absolute inset-0 w-full h-full">
-        {/* Customer to Hub connection */}
-        <line x1="20%" y1="50%" x2="40%" y2="50%" stroke="#6366f1" strokeWidth="2" className="connection-line" style={{ animationDelay: '0.8s' }} />
+        {/* User to Atlas connection */}
+        <line x1="25%" y1="50%" x2="45%" y2="50%" stroke="#6366f1" strokeWidth="2" className="connection-line" style={{ animationDelay: '0.5s' }} />
         
-        {/* Hub to Tools connections */}
-        <line x1="40%" y1="50%" x2="60%" y2="20%" stroke="#8b5cf6" strokeWidth="1.5" className="hub-line" style={{ animationDelay: '2.0s' }} />
-        <line x1="40%" y1="50%" x2="75%" y2="25%" stroke="#8b5cf6" strokeWidth="1.5" className="hub-line" style={{ animationDelay: '2.4s' }} />
-        <line x1="40%" y1="50%" x2="85%" y2="40%" stroke="#8b5cf6" strokeWidth="1.5" className="hub-line" style={{ animationDelay: '2.8s' }} />
-        <line x1="40%" y1="50%" x2="80%" y2="70%" stroke="#8b5cf6" strokeWidth="1.5" className="hub-line" style={{ animationDelay: '3.2s' }} />
-        <line x1="40%" y1="50%" x2="65%" y2="85%" stroke="#8b5cf6" strokeWidth="1.5" className="hub-line" style={{ animationDelay: '3.6s' }} />
-        <line x1="40%" y1="50%" x2="55%" y2="80%" stroke="#8b5cf6" strokeWidth="1.5" className="hub-line" style={{ animationDelay: '4.0s' }} />
-        <line x1="40%" y1="50%" x2="45%" y2="75%" stroke="#8b5cf6" strokeWidth="1.5" className="hub-line" style={{ animationDelay: '4.4s' }} />
-        <line x1="40%" y1="50%" x2="35%" y2="60%" stroke="#8b5cf6" strokeWidth="1.5" className="hub-line" style={{ animationDelay: '4.8s' }} />
+        {/* Atlas to Backend connections */}
+        <line x1="45%" y1="50%" x2="65%" y2="30%" stroke="#8b5cf6" strokeWidth="1.5" className="backend-line" style={{ animationDelay: '1.0s' }} />
+        <line x1="45%" y1="50%" x2="65%" y2="50%" stroke="#8b5cf6" strokeWidth="1.5" className="backend-line" style={{ animationDelay: '1.2s' }} />
+        <line x1="45%" y1="50%" x2="65%" y2="70%" stroke="#8b5cf6" strokeWidth="1.5" className="backend-line" style={{ animationDelay: '1.4s' }} />
         
-        {/* Interweaving Tool to Tool connections */}
-        <line x1="60%" y1="20%" x2="75%" y2="25%" stroke="#64748b" strokeWidth="1" className="tool-line" style={{ animationDelay: '5.5s' }} />
-        <line x1="75%" y1="25%" x2="85%" y2="40%" stroke="#64748b" strokeWidth="1" className="tool-line" style={{ animationDelay: '5.8s' }} />
-        <line x1="85%" y1="40%" x2="80%" y2="70%" stroke="#64748b" strokeWidth="1" className="tool-line" style={{ animationDelay: '6.1s' }} />
-        <line x1="80%" y1="70%" x2="65%" y2="85%" stroke="#64748b" strokeWidth="1" className="tool-line" style={{ animationDelay: '6.4s' }} />
-        <line x1="65%" y1="85%" x2="55%" y2="80%" stroke="#64748b" strokeWidth="1" className="tool-line" style={{ animationDelay: '6.7s' }} />
-        <line x1="55%" y1="80%" x2="45%" y2="75%" stroke="#64748b" strokeWidth="1" className="tool-line" style={{ animationDelay: '7.0s' }} />
-        <line x1="45%" y1="75%" x2="35%" y2="60%" stroke="#64748b" strokeWidth="1" className="tool-line" style={{ animationDelay: '7.3s' }} />
-        <line x1="35%" y1="60%" x2="60%" y2="20%" stroke="#64748b" strokeWidth="1" className="tool-line" style={{ animationDelay: '7.6s' }} />
-        
-        {/* Additional cross-connections for more interweaving */}
-        <line x1="60%" y1="20%" x2="80%" y2="70%" stroke="#475569" strokeWidth="0.8" className="cross-line" style={{ animationDelay: '8.0s' }} />
-        <line x1="75%" y1="25%" x2="65%" y2="85%" stroke="#475569" strokeWidth="0.8" className="cross-line" style={{ animationDelay: '8.3s' }} />
-        <line x1="85%" y1="40%" x2="55%" y2="80%" stroke="#475569" strokeWidth="0.8" className="cross-line" style={{ animationDelay: '8.6s' }} />
-        <line x1="80%" y1="70%" x2="45%" y2="75%" stroke="#475569" strokeWidth="0.8" className="cross-line" style={{ animationDelay: '8.9s' }} />
-        <line x1="65%" y1="85%" x2="35%" y2="60%" stroke="#475569" strokeWidth="0.8" className="cross-line" style={{ animationDelay: '9.2s' }} />
+        {/* Backend to Tools connections */}
+        <line x1="65%" y1="30%" x2="85%" y2="20%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '2.0s' }} />
+        <line x1="65%" y1="30%" x2="85%" y2="35%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '2.2s' }} />
+        <line x1="65%" y1="50%" x2="85%" y2="50%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '2.4s' }} />
+        <line x1="65%" y1="50%" x2="85%" y2="65%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '2.6s' }} />
+        <line x1="65%" y1="70%" x2="85%" y2="80%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '2.8s' }} />
+        <line x1="65%" y1="70%" x2="85%" y2="85%" stroke="#10b981" strokeWidth="1" className="tool-line" style={{ animationDelay: '3.0s' }} />
       </svg>
 
       {/* Nodes */}
       <div className="absolute inset-0">
-        {/* Customer Node - Left Side */}
-        <div className="absolute left-[20%] top-[50%] transform -translate-x-1/2 -translate-y-1/2 p-4 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm user-node">
+        {/* User Node - Simple Interface */}
+        <div className="absolute left-[25%] top-[50%] transform -translate-x-1/2 -translate-y-1/2 p-4 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm user-node">
           <FaUserTie className="w-8 h-8 text-white" />
         </div>
 
-        {/* Atlas Hub - Center */}
-        <div className="absolute left-[40%] top-[50%] transform -translate-x-1/2 -translate-y-1/2 p-5 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm hub-node">
+        {/* Atlas Hub - User Interface */}
+        <div className="absolute left-[45%] top-[50%] transform -translate-x-1/2 -translate-y-1/2 p-5 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm hub-node">
           <FaShieldAlt className="w-10 h-10 text-white" />
         </div>
 
-        {/* Tool Nodes - All on the right side */}
-        <div className="absolute left-[60%] top-[20%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm tool-node">
+        {/* Backend Orchestration Nodes */}
+        <div className="absolute left-[65%] top-[30%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm backend-node">
+          <FaCog className="w-6 h-6 text-white" />
+        </div>
+        
+        <div className="absolute left-[65%] top-[50%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm backend-node">
+          <FaDatabase className="w-6 h-6 text-white" />
+        </div>
+        
+        <div className="absolute left-[65%] top-[70%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm backend-node">
+          <FaServer className="w-6 h-6 text-white" />
+        </div>
+
+        {/* Tool Nodes - Clean and Simple */}
+        <div className="absolute left-[85%] top-[20%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm tool-node">
           <SiGoogledrive className="w-5 h-5 text-white" />
         </div>
         
-        <div className="absolute left-[75%] top-[25%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm tool-node">
+        <div className="absolute left-[85%] top-[35%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm tool-node">
           <SiGmail className="w-5 h-5 text-white" />
         </div>
         
-        <div className="absolute left-[85%] top-[40%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm tool-node">
+        <div className="absolute left-[85%] top-[50%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm tool-node">
           <SiSalesforce className="w-5 h-5 text-white" />
         </div>
         
-        <div className="absolute left-[80%] top-[70%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm tool-node">
+        <div className="absolute left-[85%] top-[65%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm tool-node">
           <SiZillow className="w-5 h-5 text-white" />
         </div>
         
-        <div className="absolute left-[65%] top-[85%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm tool-node">
+        <div className="absolute left-[85%] top-[80%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm tool-node">
           <FaFileContract className="w-5 h-5 text-white" />
         </div>
         
-        <div className="absolute left-[55%] top-[80%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm tool-node">
+        <div className="absolute left-[85%] top-[85%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm tool-node">
           <FaCalendarAlt className="w-5 h-5 text-white" />
-        </div>
-        
-        <div className="absolute left-[45%] top-[75%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm tool-node">
-          <SiDropbox className="w-5 h-5 text-white" />
-        </div>
-        
-        <div className="absolute left-[35%] top-[60%] transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm tool-node">
-          <SiBox className="w-5 h-5 text-white" />
         </div>
       </div>
 
       <style dangerouslySetInnerHTML={{
         __html: `
           .user-node {
-            animation: userActivate 1.5s ease-out forwards;
+            animation: userActivate 1.2s ease-out forwards;
           }
           
           .hub-node {
-            animation: hubActivate 1.5s ease-out forwards;
+            animation: hubActivate 1.2s ease-out forwards;
+          }
+          
+          .backend-node {
+            animation: backendActivate 1.2s ease-out forwards;
           }
           
           .tool-node {
-            animation: toolActivate 1.5s ease-out forwards;
+            animation: toolActivate 1.2s ease-out forwards;
           }
           
           .connection-line {
             stroke-dasharray: 1000;
             stroke-dashoffset: 1000;
-            animation: drawLine 2.0s ease-out forwards;
-            opacity: 0.7;
+            animation: drawLine 1.5s ease-out forwards;
+            opacity: 0.8;
           }
           
-          .hub-line {
+          .backend-line {
             stroke-dasharray: 1000;
             stroke-dashoffset: 1000;
-            animation: drawHubLine 2.0s ease-out forwards;
-            opacity: 0.5;
+            animation: drawBackendLine 1.5s ease-out forwards;
+            opacity: 0.6;
           }
           
           .tool-line {
             stroke-dasharray: 1000;
             stroke-dashoffset: 1000;
-            animation: drawToolLine 2.0s ease-out forwards;
-            opacity: 0.3;
-          }
-          
-          .cross-line {
-            stroke-dasharray: 1000;
-            stroke-dashoffset: 1000;
-            animation: drawCrossLine 2.0s ease-out forwards;
-            opacity: 0.2;
+            animation: drawToolLine 1.5s ease-out forwards;
+            opacity: 0.4;
           }
           
           @keyframes userActivate {
@@ -181,6 +170,24 @@ const NetworkAnimation: React.FC = () => {
             }
           }
           
+          @keyframes backendActivate {
+            0% {
+              opacity: 0;
+              transform: translate(-50%, -50%) scale(0.3);
+            }
+            50% {
+              opacity: 0.8;
+              transform: translate(-50%, -50%) scale(1.05);
+            }
+            70% {
+              transform: translate(-50%, -50%) scale(0.98);
+            }
+            100% {
+              opacity: 1;
+              transform: translate(-50%, -50%) scale(1);
+            }
+          }
+          
           @keyframes toolActivate {
             0% {
               opacity: 0;
@@ -205,25 +212,25 @@ const NetworkAnimation: React.FC = () => {
               opacity: 0;
             }
             50% {
-              opacity: 0.35;
+              opacity: 0.4;
             }
             100% {
               stroke-dashoffset: 0;
-              opacity: 0.7;
+              opacity: 0.8;
             }
           }
           
-          @keyframes drawHubLine {
+          @keyframes drawBackendLine {
             0% {
               stroke-dashoffset: 1000;
               opacity: 0;
             }
             50% {
-              opacity: 0.25;
+              opacity: 0.3;
             }
             100% {
               stroke-dashoffset: 0;
-              opacity: 0.5;
+              opacity: 0.6;
             }
           }
           
@@ -233,67 +240,57 @@ const NetworkAnimation: React.FC = () => {
               opacity: 0;
             }
             50% {
-              opacity: 0.15;
-            }
-            100% {
-              stroke-dashoffset: 0;
-              opacity: 0.3;
-            }
-          }
-          
-          @keyframes drawCrossLine {
-            0% {
-              stroke-dashoffset: 1000;
-              opacity: 0;
-            }
-            50% {
-              opacity: 0.1;
-            }
-            100% {
-              stroke-dashoffset: 0;
               opacity: 0.2;
+            }
+            100% {
+              stroke-dashoffset: 0;
+              opacity: 0.4;
             }
           }
           
           /* Connection hit animations */
           .user-node {
-            animation: userActivate 1.5s ease-out forwards, userBob 0.6s ease-out 0.8s;
+            animation: userActivate 1.2s ease-out forwards, userBob 0.4s ease-out 0.5s;
           }
           
           .hub-node {
-            animation: hubActivate 1.5s ease-out forwards, hubBob 0.6s ease-out 0.8s, hubBob 0.6s ease-out 2.0s, hubBob 0.6s ease-out 2.4s, hubBob 0.6s ease-out 2.8s, hubBob 0.6s ease-out 3.2s, hubBob 0.6s ease-out 3.6s, hubBob 0.6s ease-out 4.0s, hubBob 0.6s ease-out 4.4s, hubBob 0.6s ease-out 4.8s;
+            animation: hubActivate 1.2s ease-out forwards, hubBob 0.4s ease-out 0.5s, hubBob 0.4s ease-out 1.0s, hubBob 0.4s ease-out 1.2s, hubBob 0.4s ease-out 1.4s;
+          }
+          
+          .backend-node:nth-child(1) {
+            animation: backendActivate 1.2s ease-out forwards, backendBob 0.4s ease-out 1.0s, backendBob 0.4s ease-out 2.0s, backendBob 0.4s ease-out 2.2s;
+          }
+          
+          .backend-node:nth-child(2) {
+            animation: backendActivate 1.2s ease-out forwards, backendBob 0.4s ease-out 1.2s, backendBob 0.4s ease-out 2.4s, backendBob 0.4s ease-out 2.6s;
+          }
+          
+          .backend-node:nth-child(3) {
+            animation: backendActivate 1.2s ease-out forwards, backendBob 0.4s ease-out 1.4s, backendBob 0.4s ease-out 2.8s, backendBob 0.4s ease-out 3.0s;
           }
           
           .tool-node:nth-child(1) {
-            animation: toolActivate 1.5s ease-out forwards, toolBob 0.6s ease-out 2.0s, toolInteractionBob 0.6s ease-out 5.5s, toolInteractionBob 0.6s ease-out 7.6s, toolInteractionBob 0.6s ease-out 8.0s;
+            animation: toolActivate 1.2s ease-out forwards, toolBob 0.4s ease-out 2.0s;
           }
           
           .tool-node:nth-child(2) {
-            animation: toolActivate 1.5s ease-out forwards, toolBob 0.6s ease-out 2.4s, toolInteractionBob 0.6s ease-out 5.5s, toolInteractionBob 0.6s ease-out 5.8s, toolInteractionBob 0.6s ease-out 8.3s;
+            animation: toolActivate 1.2s ease-out forwards, toolBob 0.4s ease-out 2.2s;
           }
           
           .tool-node:nth-child(3) {
-            animation: toolActivate 1.5s ease-out forwards, toolBob 0.6s ease-out 2.8s, toolInteractionBob 0.6s ease-out 5.8s, toolInteractionBob 0.6s ease-out 6.1s, toolInteractionBob 0.6s ease-out 8.6s;
+            animation: toolActivate 1.2s ease-out forwards, toolBob 0.4s ease-out 2.4s;
           }
           
           .tool-node:nth-child(4) {
-            animation: toolActivate 1.5s ease-out forwards, toolBob 0.6s ease-out 3.2s, toolInteractionBob 0.6s ease-out 6.1s, toolInteractionBob 0.6s ease-out 6.4s, toolInteractionBob 0.6s ease-out 8.0s, toolInteractionBob 0.6s ease-out 8.9s;
+            animation: toolActivate 1.2s ease-out forwards, toolBob 0.4s ease-out 2.6s;
           }
           
           .tool-node:nth-child(5) {
-            animation: toolActivate 1.5s ease-out forwards, toolBob 0.6s ease-out 3.6s, toolInteractionBob 0.6s ease-out 6.4s, toolInteractionBob 0.6s ease-out 6.7s, toolInteractionBob 0.6s ease-out 8.3s, toolInteractionBob 0.6s ease-out 9.2s;
+            animation: toolActivate 1.2s ease-out forwards, toolBob 0.4s ease-out 2.8s;
           }
           
           .tool-node:nth-child(6) {
-            animation: toolActivate 1.5s ease-out forwards, toolBob 0.6s ease-out 4.0s, toolInteractionBob 0.6s ease-out 6.7s, toolInteractionBob 0.6s ease-out 7.0s, toolInteractionBob 0.6s ease-out 8.6s, toolInteractionBob 0.6s ease-out 8.9s;
-          }
-          
-          .tool-node:nth-child(7) {
-            animation: toolActivate 1.5s ease-out forwards, toolBob 0.6s ease-out 4.4s, toolInteractionBob 0.6s ease-out 7.0s, toolInteractionBob 0.6s ease-out 7.3s, toolInteractionBob 0.6s ease-out 8.9s;
-          }
-          
-          .tool-node:nth-child(8) {
-            animation: toolActivate 1.5s ease-out forwards, toolBob 0.6s ease-out 4.8s, toolInteractionBob 0.6s ease-out 7.3s, toolInteractionBob 0.6s ease-out 7.6s, toolInteractionBob 0.6s ease-out 9.2s;
+            animation: toolActivate 1.2s ease-out forwards, toolBob 0.4s ease-out 3.0s;
           }
           
           @keyframes userBob {
@@ -320,7 +317,7 @@ const NetworkAnimation: React.FC = () => {
             }
           }
           
-          @keyframes toolBob {
+          @keyframes backendBob {
             0% {
               transform: translate(-50%, -50%) scale(1);
             }
@@ -332,12 +329,12 @@ const NetworkAnimation: React.FC = () => {
             }
           }
           
-          @keyframes toolInteractionBob {
+          @keyframes toolBob {
             0% {
               transform: translate(-50%, -50%) scale(1);
             }
             50% {
-              transform: translate(-50%, -50%) scale(1.1);
+              transform: translate(-50%, -50%) scale(1.05);
             }
             100% {
               transform: translate(-50%, -50%) scale(1);
