@@ -27,7 +27,7 @@ import {
 
 const NetworkAnimation: React.FC = () => {
   return (
-    <div className="relative w-full h-96 bg-gradient-to-br from-slate-900 via-slate-800/50 to-slate-900 rounded-2xl overflow-hidden border border-slate-700/50">
+    <div className="relative w-full h-96 bg-gradient-to-br from-gray-900 via-orange-900/20 to-teal-900/30 rounded-2xl overflow-hidden border border-orange-500/20">
       {/* SVG Connections */}
       <svg className="absolute inset-0 w-full h-full">
         {/* User to Atlas connection */}
