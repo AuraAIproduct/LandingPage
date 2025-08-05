@@ -97,9 +97,9 @@ const About: React.FC = () => {
               <div className="w-12 h-12 bg-teal-500/10 border border-teal-500/20 flex items-center justify-center mb-8 hover-lift">
                 <ContractIcon className="w-6 h-6 text-teal-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4 tracking-tight">Why Others Lack</h3>
+              <h3 className="text-xl font-semibold text-white mb-4 tracking-tight">What Makes Us Different</h3>
               <p className="text-gray-300 leading-relaxed font-light">
-                Most AI tools are built generically and don't understand the specific challenges real estate teams face daily.
+                Built by real estate professionals who understand the unique challenges and workflows of the industry.
               </p>
             </div>
           </motion.div>

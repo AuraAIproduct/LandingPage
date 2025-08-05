@@ -5,15 +5,15 @@ import { User } from 'lucide-react';
 const questions = [
   "What does Atlas do?",
   "How does it actually help agents?",
-  "What's the real benefit?",
-  "Why should I trust it?"
+  "What makes Atlas different?",
+  "How does it handle compliance?"
 ];
 
 const responses = [
   "Atlas is an AI admin for real estate teams.",
   "Atlas automates compliance checks, lead follow-ups, and lead generation workflows.",
-  "Saves 15+ hours per week and reduces missed deadlines by 90%.",
-  "Built by agents who lived the pain, its not just another generic AI chatbot."
+  "Built by real estate agents for real estate agents, not a generic AI tool.",
+  "Automated compliance monitoring with real-time alerts and deadline tracking."
 ];
 
 const ChatbotDemo: React.FC = () => {
