@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, CheckCircle, Mail, Building, User } from 'lucide-react';
+import { sendDemoRequestEmail } from '../utils/emailService';
 
 const DemoRequest: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -9,12 +10,60 @@ const DemoRequest: React.FC = () => {
     role: '',
     message: ''
   });
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    setIsSubmitted(true);
+    setIsSubmitting(true);
+    setError('');
+
+    try {
+      // For local development, we'll use a different approach
+      const isDevelopment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+      
+      let response;
+      
+      if (isDevelopment) {
+        // In development, use the email service
+        console.log('Development mode: Using real email API');
+        
+        try {
+          const result = await sendDemoRequestEmail(formData);
+          response = {
+            ok: true,
+            json: async () => result
+          };
+        } catch (error) {
+          console.error('Email sending error:', error);
+          throw error;
+        }
+      } else {
+        // Production: use actual API
+        response = await fetch('/api/send-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+      }
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to submit request');
+      }
+
+      setIsSubmitted(true);
+    } catch (err) {
+      console.error('Form submission error:', err);
+      setError(err instanceof Error ? err.message : 'Something went wrong');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -153,13 +202,35 @@ const DemoRequest: React.FC = () => {
                 />
               </div>
               
+              {error && (
+                <div className="text-center">
+                  <p className="text-red-400 text-sm bg-red-900/20 border border-red-500/30 px-4 py-3 rounded-lg">
+                    {error}
+                  </p>
+                </div>
+              )}
+              
               <div className="text-center pt-4">
                 <button 
                   type="submit"
-                  className="group bg-white text-black px-10 py-5 font-semibold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center mx-auto tracking-wide hover-lift glow-on-hover"
+                  disabled={isSubmitting}
+                  className={`group bg-white text-black px-10 py-5 font-semibold text-lg transition-all duration-300 flex items-center justify-center mx-auto tracking-wide hover-lift glow-on-hover ${
+                    isSubmitting 
+                      ? 'opacity-50 cursor-not-allowed' 
+                      : 'hover:bg-gray-100'
+                  }`}
                 >
-                  Request Demo
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  {isSubmitting ? (
+                    <>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-black mr-2"></div>
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      Request Demo
+                      <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </>
+                  )}
                 </button>
               </div>
             </form>
