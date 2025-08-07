@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { User } from 'lucide-react';
 
 const questions = [
-  "What does Atlas do?",
+  "What exactly is Atlas?",
   "How does it actually help agents?",
   "What makes Atlas different?",
   "How does it help scale my business?",
@@ -46,12 +46,12 @@ const ChatbotDemo: React.FC = () => {
       for (let i = 0; i <= question.length; i++) {
         if (!isMounted) return;
         setDisplayedText(question.slice(0, i));
-        await new Promise(resolve => setTimeout(resolve, 100));
+        await new Promise(resolve => setTimeout(resolve, 60));
       }
       setIsTyping(false);
 
       // Wait a moment
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 800));
       if (!isMounted) return;
 
       // Agent thinking
@@ -72,13 +72,13 @@ const ChatbotDemo: React.FC = () => {
       for (let i = question.length; i >= 0; i--) {
         if (!isMounted) return;
         setDisplayedText(question.slice(0, i));
-        await new Promise(resolve => setTimeout(resolve, 50));
+        await new Promise(resolve => setTimeout(resolve, 35));
       }
 
       // Move to next question
       setCurrentQuestion((prev) => (prev + 1) % questions.length);
       // Wait before next cycle
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 800));
       if (!isMounted) return;
       setTimeout(() => {
         if (isMounted) {
