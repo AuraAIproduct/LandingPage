@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ArrowRight, CheckCircle, Mail, Building, User } from 'lucide-react';
-import { sendDemoRequestEmail } from '../utils/emailService';
 
 const DemoRequest: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -21,40 +20,24 @@ const DemoRequest: React.FC = () => {
     setError('');
 
     try {
-      // For local development, we'll use a different approach
-      const isDevelopment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-      
-      let response;
-      
-      if (isDevelopment) {
-        // In development, use the email service
-        console.log('Development mode: Using real email API');
-        
-        try {
-          const result = await sendDemoRequestEmail(formData);
-          response = {
-            ok: true,
-            json: async () => result
-          };
-        } catch (error) {
-          console.error('Email sending error:', error);
-          throw error;
-        }
-      } else {
-        // Production: use actual API
-        response = await fetch('/api/send-email', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
-        });
-      }
-
-      const result = await response.json();
+      // Use Formspree for both development and production
+      const response = await fetch('https://formspree.io/f/mvgqwjjp', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          role: formData.role,
+          message: formData.message,
+          subject: `New Demo Request: ${formData.name} from ${formData.company}`
+        })
+      });
 
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to submit request');
+        throw new Error('Failed to submit request');
       }
 
       setIsSubmitted(true);
