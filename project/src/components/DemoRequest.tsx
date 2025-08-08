@@ -14,39 +14,18 @@ const DemoRequest: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = (e: React.FormEvent) => {
+    // Let the form submit naturally to Formspree
+    // This avoids CORS issues and JSON parsing errors
     setIsSubmitting(true);
     setError('');
-
-    try {
-      // Use Formspree for both development and production
-      const response = await fetch('https://formspree.io/f/mvgqwjjp', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          company: formData.company,
-          role: formData.role,
-          message: formData.message,
-          subject: `New Demo Request: ${formData.name} from ${formData.company}`
-        })
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to submit request');
-      }
-
+    
+    // The form will submit to Formspree and redirect back
+    // We'll handle the success state after the redirect
+    setTimeout(() => {
       setIsSubmitted(true);
-    } catch (err) {
-      console.error('Form submission error:', err);
-      setError(err instanceof Error ? err.message : 'Something went wrong');
-    } finally {
       setIsSubmitting(false);
-    }
+    }, 1000);
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -92,7 +71,11 @@ const DemoRequest: React.FC = () => {
         {/* Form Panel */}
         <div className="relative">
           <div className="relative bg-white/5 border border-white/20 p-12 hover-lift">
-            <form onSubmit={handleSubmit} className="space-y-8">
+            <form action="https://formspree.io/f/mvgqwjjp" method="POST" onSubmit={handleSubmit} className="space-y-8">
+              {/* Hidden fields for Formspree */}
+              <input type="hidden" name="_subject" value="New Atlas Demo Request" />
+              <input type="hidden" name="_next" value={typeof window !== 'undefined' ? window.location.href : ''} />
+              <input type="hidden" name="_captcha" value="false" />
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-3">
