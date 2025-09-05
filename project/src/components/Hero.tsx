@@ -111,7 +111,7 @@ const Hero: React.FC = () => {
               </h1>
               
               <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl mt-12 font-light">
-                Atlas is a deployable AI assistant for real estate agents and ops teams. It handles end-to-end workflows like lead management, showings, contracts, and compliance — replacing fragmented tools with one intelligent app.
+                Atlas is an intelligence‑first co‑pilot for real estate teams. Agents get prioritized leads, contextual property/email insights, and one‑click draft messages. Team leads get at‑risk deal flags, coaching metrics, and conversational BI. Integrates with Follow Up Boss, Gmail, and property data (RentCast/MLS). Runs serverlessly on Vercel with Supabase Auth and Pinecone RAG powered by Gemini.
               </p>
             </motion.div>
             

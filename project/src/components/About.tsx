@@ -64,7 +64,7 @@ const About: React.FC = () => {
             variants={itemVariants}
             className="text-xl text-gray-300 max-w-4xl mx-auto font-light"
           >
-            Piloted with real estate teams who know the inner workings of the entire process.
+            Built with and for real estate teams to reduce missed follow‑ups, accelerate deals, and bring all context into one AI‑first workspace.
           </motion.p>
         </motion.div>
         
@@ -82,9 +82,9 @@ const About: React.FC = () => {
               <div className="w-12 h-12 bg-orange-500/10 border border-orange-500/20 flex items-center justify-center mb-8 hover-lift">
                 <PropertyIcon className="w-6 h-6 text-orange-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4 tracking-tight">Real Estate Expertise</h3>
+              <h3 className="text-xl font-semibold text-white mb-4 tracking-tight">Lead Intelligence First</h3>
               <p className="text-gray-300 leading-relaxed font-light">
-                Built from hands-on experience with every aspect of real estate operations, from lead management to closing deals.
+                Prioritization powered by Gemini + LangChain. Reasons are transparent: recency, sentiment, activity, and property interest.
               </p>
             </div>
           </motion.div>
@@ -97,9 +97,9 @@ const About: React.FC = () => {
               <div className="w-12 h-12 bg-teal-500/10 border border-teal-500/20 flex items-center justify-center mb-8 hover-lift">
                 <ContractIcon className="w-6 h-6 text-teal-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4 tracking-tight">Integrates With Your Tools</h3>
+              <h3 className="text-xl font-semibold text-white mb-4 tracking-tight">Connects to Your Stack</h3>
               <p className="text-gray-300 leading-relaxed font-light">
-                Connects to your CRM, email, calendar, MLS, and 20+ tools to automate workflows end‑to‑end.
+                FUB + Gmail today. Property data via RentCast now; MLS, Twilio SMS, Meet/Zoom next. Serverless on Vercel.
               </p>
             </div>
           </motion.div>
@@ -112,9 +112,9 @@ const About: React.FC = () => {
               <div className="w-12 h-12 bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-8 hover-lift">
                 <ComplianceIcon className="w-6 h-6 text-blue-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4 tracking-tight">Purpose-Built Solution</h3>
+              <h3 className="text-xl font-semibold text-white mb-4 tracking-tight">Team‑Safe by Design</h3>
               <p className="text-gray-300 leading-relaxed font-light">
-                Atlas is designed specifically for real estate workflows, not adapted from generic business tools.
+                Agent RAGs are isolated per user; team leads see aggregated insights and activity—not private content. Pinecone namespaces per team.
               </p>
             </div>
           </motion.div>

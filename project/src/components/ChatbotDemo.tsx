@@ -4,18 +4,18 @@ import { User } from 'lucide-react';
 
 const questions = [
   "What exactly is Atlas?",
-  "How does it actually help agents?",
-  "What makes Atlas different?",
-  "How does it help scale my business?",
-  "How do I know it actually works?"
+  "How does the agent co‑pilot work?",
+  "What does the team lead get?",
+  "What does it connect to today?",
+  "How does RAG/privacy work?"
 ];
 
 const responses = [
-  "Atlas is an AI admin for real estate teams.",
-  "Atlas automates compliance checks, lead follow-ups, and lead generation workflows.",
-  "It's built by real estate agents for real estate agents, not just another generic AI chatbot.",
-  "Automates repetitive tasks so you can focus on closing more deals and growing your team.",
-  "Piloted with real teams seeing 15+ hours saved weekly and 90% fewer missed deadlines."
+  "Atlas is an intelligence‑first AI co‑pilot for real estate teams.",
+  "Agents get prioritized leads, context from property + email, and one‑click drafts.",
+  "Team leads see at‑risk deals, agent activity metrics, and conversational BI.",
+  "Follow Up Boss, Gmail, and RentCast now. MLS, Twilio SMS, Meet/Zoom next.",
+  "Each agent has a private RAG; team lead views aggregated insights only. Pinecone namespaces per team."
 ];
 
 const ChatbotDemo: React.FC = () => {

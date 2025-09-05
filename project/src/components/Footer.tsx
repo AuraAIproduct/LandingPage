@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
               <span className="text-lg font-semibold tracking-tight">Atlas AI</span>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed font-light">
-              Intelligence Uncompromised. Privacy Unmatched. The vertical-specific real estate intelligence platform that connects to your tools and provides intelligent real estate workflows.
+              Intelligence‑first co‑pilot for real estate teams. Agents get context and actions; team leads get clarity and control. Built on Vercel + Supabase + Pinecone with Gemini.
             </p>
             <div className="flex space-x-4">
               <a href="https://www.linkedin.com/in/arnav-arora-12a280189/" className="text-gray-400 hover:text-white transition-colors">

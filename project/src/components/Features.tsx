@@ -48,7 +48,7 @@ const Features: React.FC = () => {
             variants={cardVariants}
             className="text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight font-serif"
           >
-            What Atlas Does
+            What Atlas Delivers (MVP)
           </motion.h2>
         </motion.div>
         
@@ -65,6 +65,42 @@ const Features: React.FC = () => {
           >
             <ChatbotDemo />
           </motion.div>
+        </motion.div>
+
+        {/* MVP Pillars */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16"
+        >
+          {[
+            {
+              title: 'Lead Prioritization',
+              desc: 'Scores leads using FUB activity + Gmail signals; surfaces reasons and next best actions.',
+            },
+            {
+              title: 'Contextual Co‑Pilot',
+              desc: 'Agent chat with personal RAG: property data (RentCast/MLS), email history, and call notes.',
+            },
+            {
+              title: 'Team Command Center',
+              desc: 'At‑risk deal flags, agent activity metrics, and conversational BI for coaching.',
+            },
+            {
+              title: 'Plug‑in Integrations',
+              desc: 'FUB, Gmail, RentCast today. MLS, Twilio SMS, Zoom/Meet next.',
+            },
+          ].map((card, i) => (
+            <motion.div
+              key={i}
+              variants={cardVariants}
+              className="bg-white/5 border border-white/20 p-6"
+            >
+              <h3 className="text-lg font-semibold text-white mb-2">{card.title}</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">{card.desc}</p>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>
