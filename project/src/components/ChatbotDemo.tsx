@@ -124,7 +124,8 @@ const ChatbotDemo: React.FC = () => {
         {/* Agent - Always Visible */}
         <div className="flex justify-start">
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center shadow-sm">
+            <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center shadow-sm relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 animate-[sweep_2.5s_linear_infinite]"></div>
               <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                 <polyline points="9,22 9,12 15,12 15,22" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} />

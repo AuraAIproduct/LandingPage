@@ -178,6 +178,12 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Gradient sweep animation for agent avatar */
+@keyframes sweep {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
 /* Selection styling */
 ::selection {
   background: #ffffff;
