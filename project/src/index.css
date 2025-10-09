@@ -205,6 +205,17 @@ button:focus, a:focus {
   outline: none;
 }
 
+/* Image optimization for founder photos */
+.founder-image {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: high-quality;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
 /* Improve spacing consistency */
 section {
   padding-left: 1.5rem;

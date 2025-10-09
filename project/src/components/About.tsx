@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { PropertyIcon, ContractIcon, ComplianceIcon } from './RealEstateIcons';
+import { Linkedin, ExternalLink } from 'lucide-react';
 
 const About: React.FC = () => {
   const [ref, inView] = useInView({
@@ -117,6 +118,91 @@ const About: React.FC = () => {
                 Agent RAGs are isolated per user; team leads see aggregated insights and activity—not private content. Pinecone namespaces per team.
               </p>
             </div>
+          </motion.div>
+        </motion.div>
+
+        {/* Founders Section */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          className="mt-32"
+        >
+          <motion.div
+            variants={itemVariants}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight font-serif">
+              Meet the Founders
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto font-light">
+              Built by real estate professionals who understand the challenges of the industry.
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto"
+          >
+            {/* Arnav */}
+            <motion.div
+              variants={cardVariants}
+              className="bg-white/5 border border-white/20 p-8 text-center"
+            >
+              <div className="w-32 h-32 mx-auto mb-6">
+                <img 
+                  src="/arnav-arora.jpg" 
+                  alt="Arnav Arora" 
+                  className="founder-image w-full h-full rounded-full object-cover border-2 border-orange-500/30 shadow-lg"
+                />
+              </div>
+              <h3 className="text-2xl font-semibold text-white mb-2">Arnav Arora</h3>
+              <p className="text-gray-400 mb-6">Co-Founder & CEO</p>
+              <p className="text-gray-300 leading-relaxed mb-6 font-light">
+                Real estate technology expert with deep experience in AI and automation solutions for the industry.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/arnav-arora-12a280189/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-orange-400 hover:text-orange-300 transition-colors"
+              >
+                <Linkedin className="w-5 h-5 mr-2" />
+                Connect on LinkedIn
+                <ExternalLink className="w-4 h-4 ml-2" />
+              </a>
+            </motion.div>
+
+            {/* Julien */}
+            <motion.div
+              variants={cardVariants}
+              className="bg-white/5 border border-white/20 p-8 text-center"
+            >
+              <div className="w-32 h-32 mx-auto mb-6">
+                <img 
+                  src="/julien-perez.jpg" 
+                  alt="Julien Paul Perez" 
+                  className="founder-image w-full h-full rounded-full object-cover border-2 border-teal-500/30 shadow-lg"
+                />
+              </div>
+              <h3 className="text-2xl font-semibold text-white mb-2">Julien Paul Perez</h3>
+              <p className="text-gray-400 mb-6">Co-Founder & CTO</p>
+              <p className="text-gray-300 leading-relaxed mb-6 font-light">
+                Technical architect specializing in scalable AI systems and real estate data integration.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/julien-paul-perez-549053236/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-orange-400 hover:text-orange-300 transition-colors"
+              >
+                <Linkedin className="w-5 h-5 mr-2" />
+                Connect on LinkedIn
+                <ExternalLink className="w-4 h-4 ml-2" />
+              </a>
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>
