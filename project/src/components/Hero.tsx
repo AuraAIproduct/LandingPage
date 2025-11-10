@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Play, Sparkles, Zap } from 'lucide-react';
+import { ArrowRight, Sparkles, Zap } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import NetworkAnimation from './NetworkAnimation';
@@ -129,18 +129,6 @@ const Hero: React.FC = () => {
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </motion.button>
-              
-              <motion.a 
-                href="https://youtu.be/-h-cMQ1PZMY" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="group bg-white/10 text-white px-10 py-5 font-semibold text-lg border border-white/20 hover:border-white/40 transition-all duration-300 flex items-center justify-center tracking-wide hover-lift"
-              >
-                <Play className="mr-2 w-5 h-5" />
-                Watch Demo
-              </motion.a>
             </motion.div>
             
             {/* Stats */}

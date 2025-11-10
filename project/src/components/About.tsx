@@ -133,7 +133,7 @@ const About: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight font-serif">
-              Meet the Founders
+              Meet the Team
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto font-light">
               Built by real estate professionals who understand the challenges of the industry.
@@ -188,7 +188,7 @@ const About: React.FC = () => {
                 />
               </div>
               <h3 className="text-2xl font-semibold text-white mb-2">Julien Paul Perez</h3>
-              <p className="text-gray-400 mb-6">Co-Founder & CTO</p>
+              <p className="text-gray-400 mb-6">Founding Engineer</p>
               <p className="text-gray-300 leading-relaxed mb-6 font-light">
                 Technical architect specializing in scalable AI systems and real estate data integration.
               </p>
