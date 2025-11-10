@@ -136,7 +136,7 @@ const About: React.FC = () => {
               Meet the Team
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto font-light">
-              Built by real estate professionals who understand the challenges of the industry.
+              Built by devlopers embedded in real estate who understand the challenges of the industry.
             </p>
           </motion.div>
 

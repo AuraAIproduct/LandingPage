@@ -6,7 +6,6 @@ import Features from './components/Features';
 import DemoRequest from './components/DemoRequest';
 import About from './components/About';
 import Footer from './components/Footer';
-import PitchDeck from './components/PitchDeck';
 import Videos from './components/Videos';
 
 function HomePage() {
@@ -42,14 +41,6 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/pitch-deck" element={
-          <div className="min-h-screen">
-            <Header />
-            <div className="h-16 bg-black"></div>
-            <PitchDeck />
-            <Footer />
-          </div>
-        } />
         <Route path="/videos" element={
           <div className="min-h-screen">
             <Header />
