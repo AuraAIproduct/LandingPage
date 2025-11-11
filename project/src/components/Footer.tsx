@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Linkedin, Twitter, Github, Mail, Phone } from 'lucide-react';
+import { Shield, Linkedin, Twitter, Mail, Phone } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -25,9 +25,6 @@ const Footer: React.FC = () => {
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Twitter className="w-5 h-5" />
-              </a>
-              <a href="https://github.com/AuraAIproduct" className="text-gray-400 hover:text-white transition-colors">
-                <Github className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -57,7 +54,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li className="flex items-center text-gray-400 text-sm">
                 <Mail className="w-4 h-4 mr-2" />
-                hello@atlas.ai
+                arnavarora@tryatlasai.com
               </li>
               <li className="flex items-center text-gray-400 text-sm">
                 <Phone className="w-4 h-4 mr-2" />
