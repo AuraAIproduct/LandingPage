@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, Play, ExternalLink, Presentation } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Presentation } from 'lucide-react';
 
 const Videos: React.FC = () => {
   const navigate = useNavigate();
@@ -38,15 +38,6 @@ const Videos: React.FC = () => {
     navigate('/');
   };
 
-  const founderVideo = {
-    id: 'founder-intro',
-    title: 'Founder Introduction',
-    description: 'Meet the team behind AtlasAI and learn about our mission to revolutionize real estate with AI-powered intelligence.',
-    youtubeId: 'pItNH80HGqw',
-    url: 'https://youtu.be/pItNH80HGqw',
-    thumbnail: 'https://img.youtube.com/vi/pItNH80HGqw/maxresdefault.jpg'
-  };
-
   return (
     <section className="min-h-screen bg-black py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,68 +58,15 @@ const Videos: React.FC = () => {
             </button>
             
             <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight font-serif">
-              Founder & Pitch Deck
+              Pitch Deck
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl font-light">
-              Meet our founders and explore our vision for transforming real estate with AI-powered intelligence.
+              Our vision for transforming real estate with AI-powered intelligence.
             </p>
-          </motion.div>
-
-          {/* Founder Video Section */}
-          <motion.div variants={itemVariants} className="mb-20">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              {/* Video Embed */}
-              <div className="relative">
-                <div className="relative w-full" style={{ paddingBottom: '56.25%', height: 0 }}>
-                  <iframe
-                    src={`https://www.youtube.com/embed/${founderVideo.youtubeId}`}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="absolute top-0 left-0 w-full h-full rounded-lg border border-white/20"
-                    title={founderVideo.title}
-                  />
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="space-y-6">
-                <div>
-                  <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 tracking-tight font-serif">
-                    {founderVideo.title}
-                  </h2>
-                  <p className="text-lg text-gray-300 leading-relaxed font-light">
-                    {founderVideo.description}
-                  </p>
-                </div>
-
-                <div className="flex justify-center">
-                  <a
-                    href={founderVideo.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center bg-orange-500 text-white px-8 py-4 font-semibold hover:bg-orange-600 transition-all duration-300 tracking-wide hover-lift"
-                  >
-                    <Play className="w-5 h-5 mr-2" />
-                    Watch on YouTube
-                    <ExternalLink className="w-4 h-4 ml-2" />
-                  </a>
-                </div>
-              </div>
-            </div>
           </motion.div>
 
           {/* Pitch Deck Section */}
           <motion.div variants={itemVariants} className="mb-12">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 tracking-tight font-serif">
-                Pitch Deck
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xl mx-auto font-light">
-                Our vision for transforming real estate with AI-powered intelligence and automation.
-              </p>
-            </div>
-            
             <div className="relative w-full" style={{ paddingBottom: '56.25%', height: 0 }}>
               <iframe
                 src="https://docs.google.com/presentation/d/1RGo4z5598lB47h_TEhzJYcv_ZYEON915gTEOyXI_ph0/embed?start=false&loop=false&delayms=3000"

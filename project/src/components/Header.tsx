@@ -64,11 +64,11 @@ const Header: React.FC = () => {
               About
             </button>
             <Link 
-              to="/videos"
+              to="/pitch-deck"
               className="text-sm text-gray-300 hover:text-white transition-colors font-medium tracking-wide flex items-center"
             >
               <Play className="w-4 h-4 mr-1" />
-              Founder & Pitch
+              Pitch
             </Link>
             <button 
               onClick={() => scrollToSection('demo-request')}
@@ -105,12 +105,12 @@ const Header: React.FC = () => {
               About
             </button>
             <Link 
-              to="/videos"
+              to="/pitch-deck"
               className="block w-full text-left py-3 text-sm text-gray-300 hover:text-white transition-colors font-medium flex items-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <Play className="w-4 h-4 mr-2" />
-              Founder & Pitch
+              Pitch
             </Link>
             <button 
               onClick={() => scrollToSection('demo-request')}

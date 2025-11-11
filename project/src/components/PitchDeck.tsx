@@ -58,7 +58,7 @@ const PitchDeck: React.FC = () => {
             </button>
             
             <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight font-serif">
-              AtlasAI Pitch Deck
+              Pitch Deck
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl font-light">
               Our vision for transforming real estate with AI-powered intelligence and automation.
@@ -89,41 +89,6 @@ const PitchDeck: React.FC = () => {
               >
                 <ExternalLink className="w-4 h-4 mr-2" />
                 Open in Google Slides
-              </a>
-            </div>
-          </motion.div>
-
-          {/* Additional Resources */}
-          <motion.div variants={itemVariants} className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white/5 border border-white/20 p-8 rounded-lg">
-              <h3 className="text-2xl font-semibold text-white mb-4">Founder Introduction</h3>
-              <p className="text-gray-300 mb-6 font-light">
-                Meet the team behind AtlasAI and learn about our mission to revolutionize real estate.
-              </p>
-              <a
-                href="https://youtu.be/pItNH80HGqw"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-orange-400 hover:text-orange-300 transition-colors"
-              >
-                <ExternalLink className="w-4 h-4 mr-2" />
-                Watch Founder Intro
-              </a>
-            </div>
-
-            <div className="bg-white/5 border border-white/20 p-8 rounded-lg">
-              <h3 className="text-2xl font-semibold text-white mb-4">Product Demo</h3>
-              <p className="text-gray-300 mb-6 font-light">
-                See AtlasAI in action with our comprehensive product demonstration.
-              </p>
-              <a
-                href="https://youtu.be/-h-cMQ1PZMY"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-orange-400 hover:text-orange-300 transition-colors"
-              >
-                <ExternalLink className="w-4 h-4 mr-2" />
-                Watch Demo Video
               </a>
             </div>
           </motion.div>
